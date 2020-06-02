@@ -1,0 +1,13 @@
+android_app {
+    // the build system in pi-dev can't quite handle R.java in kt
+    // so we will have a mix of java and kotlin files
+    srcs: ["src/**/*.java", "src/**/*.kt"],
+    resource_dirs: ["res"],
+    name: "DT2W-Service-Marble",
+    certificate: "platform",
+    platform_apis: true,
+    optimize: {
+        enabled: false,
+    },
+    privileged: true
+}
