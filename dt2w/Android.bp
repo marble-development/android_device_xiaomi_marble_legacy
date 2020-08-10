@@ -10,4 +10,15 @@ android_app {
         enabled: false,
     },
     privileged: true
+
+    required: [
+        "privapp-permissions_org.lineageos.dt2w.Marble"
+    ],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions_org.lineageos.dt2w.Marble",
+    sub_dir: "permissions",
+    src: "privapp-permissions_org.lineageos.dt2w.Marble.xml",
+    filename_from_src: true,
 }
