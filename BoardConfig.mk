@@ -137,6 +137,9 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 
+# Power
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
+
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/properties/product.prop

@@ -2,7 +2,8 @@
 vendor.camera.aux.packagelist=org.lineageos.aperture
 
 # DPM
-persist.vendor.dpm.feature=1
+persist.vendor.dpm.feature=11
 
 # RIL
+ro.telephony.sim_slots.count=2
 telephony.active_modems.max_count=2
