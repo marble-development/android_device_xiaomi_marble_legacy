@@ -92,9 +92,27 @@ public class DiracUtils {
         return PlaybackState.STATE_NONE;
     }
 
+    private void refreshPlaybackIfNecessary() {
+        if (mMediaSessionManager == null) return;
+
+        final List<MediaController> sessions
+                = mMediaSessionManager.getActiveSessionsForUser(
+                null, UserHandle.ALL);
+        for (MediaController aController : sessions) {
+            if (PlaybackState.STATE_PLAYING ==
+                    getMediaControllerPlaybackState(aController)) {
+                triggerPlayPause(aController);
+                break;
+            }
+        }
+    }
+
     public void setEnabled(boolean enable) {
         mDiracSound.setEnabled(enable);
         mDiracSound.setMusic(enable ? 1 : 0);
+        if (enable) {
+            refreshPlaybackIfNecessary();
+        }
     }
 
     public boolean isDiracEnabled() {
