@@ -291,6 +291,7 @@ vendor.gatekeeper.disable_spu=true
 # Graphics
 persist.sys.sf.color_saturation=1.0
 persist.sys.sf.color_mode=0
+debug.cpurend.vsync=false
 debug.sf.hw=0
 debug.egl.hw=0
 debug.sf.latch_unsignaled=1
