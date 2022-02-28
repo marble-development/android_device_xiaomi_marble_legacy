@@ -395,6 +395,7 @@ persist.vendor.radio.sib16_support=1
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.enableadvancedscan=true
+persist.vendor.radio.redir_party_num=0
 
 # RCS
 persist.vendor.rcs.singlereg.feature=1
