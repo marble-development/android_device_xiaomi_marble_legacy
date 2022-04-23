@@ -31,4 +31,3 @@ dex_import {
 	jars: ["qti-telephony-common.jar"],
 	system_ext_specific: true,
 }
-
