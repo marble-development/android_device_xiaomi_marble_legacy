@@ -392,26 +392,6 @@ on property:sys.shutdown.requested=*
     write /sys/kernel/qcom_rproc/shutdown_in_progress 1
     stop vendor.per_proxy
 
-#on property:vold.decrypt=trigger_restart_framework
-#   start vendor.cnss_diag
-
-#on property:ro.debuggable=1
-#    start vendor.cnss_diag
-#    start vendor.tcpdump
-
-on property:persist.vendor.cnss_diag.enable=true
-    start vendor.cnss_diag
-
-on property:persist.vendor.cnss_diag.enable=false
-    stop vendor.cnss_diag
-
-service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM -b 2048 --time_interval 11 -s
-   class main
-   user system
-   group system wifi inet sdcard_rw media_rw diag
-   disabled
-   oneshot
-
 service vendor.nv_mac /vendor/bin/nv_mac
     class late_start
     user system
