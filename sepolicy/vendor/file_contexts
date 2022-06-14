@@ -1,0 +1,5 @@
+# Battery
+/vendor/bin/batterysecret                            u:object_r:batterysecret_exec:s0
+
+# Thermal
+/vendor/bin/mi_thermald                              u:object_r:mi_thermald_exec:s0

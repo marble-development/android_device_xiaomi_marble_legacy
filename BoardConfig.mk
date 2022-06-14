@@ -217,6 +217,8 @@ VENDOR_SECURITY_PATCH := 2023-08-01
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # Vendor boot
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
