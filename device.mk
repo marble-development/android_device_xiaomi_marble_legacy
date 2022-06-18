@@ -128,6 +128,10 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     ueventd-odm.rc
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.1-service.xiaomi-multihal
+
 # Telephony
 PRODUCT_PACKAGES += \
     extphonelib \
