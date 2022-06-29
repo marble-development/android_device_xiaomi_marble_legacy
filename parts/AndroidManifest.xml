@@ -202,6 +202,11 @@
         </service>
 
         <service
+            android:name=".doze.PocketService"
+            android:permission="PocketService">
+        </service>
+
+        <service
             android:name=".display.ColorService"
             android:permission="ColorService">
         </service>

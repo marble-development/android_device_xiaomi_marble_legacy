@@ -29,6 +29,7 @@ import org.lineageos.settings.camera.NfcCameraService;
 import org.lineageos.settings.display.ColorService;
 import org.lineageos.settings.dolby.DolbyUtils;
 import org.lineageos.settings.doze.DozeUtils;
+import org.lineageos.settings.doze.PocketService;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 
@@ -39,6 +40,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, Intent intent) {
+        if (!intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) return;
+
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
 
         // Dolby Atmos
@@ -52,6 +55,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Thermal Profiles
         ThermalUtils.startService(context);
+
+        // Pocket
+        PocketService.startService(context);
 
         // DisplayFeature
         ColorService.startService(context);
