@@ -19,9 +19,6 @@
     <!-- The package name for the platform number verification supplier app. -->
     <string name="platform_number_verification_package" translatable="false">com.google.android.gms</string>
 
-    <!-- String indicating the package name of the device GbaService implementation. -->
-    <string name="config_gba_package" translatable="false">com.qualcomm.qti.uimGbaApp</string>
-
     <!-- Determine whether we should show the "listen for instructions" screen after
          successfully placing the OTA call -->
     <integer name="OtaShowListeningScreen">1</integer>
