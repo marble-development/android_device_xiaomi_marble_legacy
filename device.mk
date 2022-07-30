@@ -121,6 +121,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/keylayout/Vendor_054c_Product_0ce6.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Vendor_054c_Product_0ce6.kl \
     $(DEVICE_PATH)/configs/keylayout/Vendor_057e_Product_2009.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Vendor_057e_Product_2009.kl \
     $(DEVICE_PATH)/configs/keylayout/Vendor_0810_Product_0001.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Vendor_0810_Product_0001.kl \
+    $(DEVICE_PATH)/configs/keylayout/Vendor_0e6f_Product_f501.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Vendor_0e6f_Product_f501.kl \
     $(DEVICE_PATH)/configs/keylayout/Vendor_1038_Product_1412.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Vendor_1038_Product_1412.kl \
     $(DEVICE_PATH)/configs/keylayout/Vendor_146b_Product_0d01.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Vendor_146b_Product_0d01.kl
 
