@@ -26,6 +26,15 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_vendor=erofs \
     POSTINSTALL_OPTIONAL_vendor=true
 
+# Bluetooth Audio (System-side HAL, sysbta)
+PRODUCT_PACKAGES += \
+    audio.sysbta.default \
+    android.hardware.bluetooth.audio-service-system
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration.xml \
+    $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration_7_0.xml
+
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
