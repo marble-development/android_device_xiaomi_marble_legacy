@@ -80,6 +80,10 @@ PRODUCT_PACKAGES += \
     f2fs_io \
     check_f2fs
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl.recovery
+
 # Input
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-fpc.idc \
