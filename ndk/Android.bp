@@ -1,0 +1,41 @@
+cc_library_shared {
+    name: "vendor.qti.hardware.display.config-V1-ndk_platform",
+    shared_libs: ["vendor.qti.hardware.display.config-V1-ndk"],
+    system_ext_specific: true,
+    vendor_available: true,
+}
+
+cc_library_shared {
+    name: "vendor.qti.hardware.display.config-V2-ndk_platform",
+    shared_libs: ["vendor.qti.hardware.display.config-V2-ndk"],
+    system_ext_specific: true,
+    vendor_available: true,
+}
+
+cc_library_shared {
+    name: "vendor.qti.hardware.display.config-V3-ndk_platform",
+    shared_libs: ["vendor.qti.hardware.display.config-V3-ndk"],
+    system_ext_specific: true,
+    vendor_available: true,
+}
+
+cc_library_shared {
+    name: "vendor.qti.hardware.display.config-V4-ndk_platform",
+    shared_libs: ["vendor.qti.hardware.display.config-V4-ndk"],
+    system_ext_specific: true,
+    vendor_available: true,
+}
+
+cc_library_shared {
+    name: "vendor.qti.hardware.display.config-V5-ndk_platform",
+    shared_libs: ["vendor.qti.hardware.display.config-V5-ndk"],
+    system_ext_specific: true,
+    vendor_available: true,
+}
+
+cc_library_shared {
+    name: "vendor.qti.hardware.display.config-V6-ndk_platform",
+    shared_libs: ["vendor.qti.hardware.display.config-V6-ndk"],
+    system_ext_specific: true,
+    vendor_available: true,
+}
