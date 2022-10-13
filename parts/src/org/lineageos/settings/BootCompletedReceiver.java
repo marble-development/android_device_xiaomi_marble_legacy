@@ -35,7 +35,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
-        DiracUtils.initialize(context);
+        DiracUtils.onBootCompleted(context);
         DozeUtils.checkDozeService(context);
         RefreshUtils.initialize(context);
         ThermalUtils.startService(context);
