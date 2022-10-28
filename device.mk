@@ -47,7 +47,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Bluetooth Audio (System-side HAL, sysbta)
 PRODUCT_PACKAGES += \
     audio.sysbta.default \
-    android.hardware.bluetooth.audio-service-system
+    android.hardware.bluetooth.audio-service-system \
+    libldacBT_abr \
+    libldacBT_bco \
+    libldacBT_enc
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
