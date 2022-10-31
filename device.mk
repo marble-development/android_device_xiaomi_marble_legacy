@@ -80,6 +80,9 @@ PRODUCT_PACKAGES += \
     TelephonyResCommon \
     WifiResCommon
 
+PRODUCT_PACKAGES += \
+    ApertureResOverlay
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 #PRODUCT_BUILD_SUPER_PARTITION := true
