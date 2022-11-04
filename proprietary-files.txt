@@ -2314,11 +2314,6 @@ vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 
-# QCOM system daemon
-vendor/bin/qcom-system-daemon
-vendor/lib/libsubsystem_control.so
-vendor/lib64/libsubsystem_control.so
-
 # QCV
 vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
@@ -2961,6 +2956,8 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/bin/ssr_diag
 vendor/bin/ssr_setup
 vendor/bin/subsystem_ramdump
+vendor/lib/libsubsystem_control.so
+vendor/lib64/libsubsystem_control.so
 
 # SXR
 vendor/bin/hw/sxrservice
