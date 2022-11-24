@@ -628,4 +628,7 @@
      vibrator is capable of subtle vibrations -->
     <bool name="config_vibrateOnIconAnimation">true</bool>
 
+    <!-- Whether or not wcg mode should be enabled on this device -->
+    <bool name="config_enableWcgMode">true</bool>
+
 </resources>
