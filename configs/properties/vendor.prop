@@ -183,7 +183,6 @@ bluetooth.profile.sap.server.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
 persist.bluetooth.a2dp_offload.disabled=false
 persist.bluetooth.sbc_hd_higher_bitrate=1
-persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac-lhdc
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true
