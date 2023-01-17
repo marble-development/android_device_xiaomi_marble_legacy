@@ -117,6 +117,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ApertureResOverlayMarble
 
+PRODUCT_PACKAGES += \
+    SettingsOverlayGlobal \
+    SettingsOverlayIndia \
+    SettingsOverlayChina
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 #PRODUCT_BUILD_SUPER_PARTITION := true
