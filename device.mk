@@ -50,7 +50,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AospWifiResOverlayMarbleChina \
     AospWifiResOverlayMarbleGlobal \
-    AospWifiResOverlayMarbleIndia
+    AospWifiResOverlayMarbleIndia \
+    SettingsOverlayGlobal \
+    SettingsOverlayIndia \
+    SettingsOverlayChina
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

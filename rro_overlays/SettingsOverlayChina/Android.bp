@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "SettingsOverlayChina",
+    product_specific: true,
+}

@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "SettingsOverlayIndia",
+    product_specific: true,
+}
