@@ -36,6 +36,10 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 
+# Radio VoNR Calling
+persist.radio.is_vonr_enabled_0=true
+persist.radio.is_vonr_enabled_1=true
+
 # MGLRU Config
 persist.device_config.mglru_native.lru_gen_config=all
 
