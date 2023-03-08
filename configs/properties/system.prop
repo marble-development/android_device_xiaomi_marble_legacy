@@ -35,6 +35,10 @@ ro.lmk.psi_scrit_complete_stall_ms=150
 ro.lmk.direct_reclaim_pressure=45
 ro.lmk.reclaim_scan_threshold=0
 
+# Radio VoNR Calling
+persist.radio.is_vonr_enabled_0=true
+persist.radio.is_vonr_enabled_1=true
+
 # MGLRU Config
 persist.device_config.mglru_native.lru_gen_config=all
 
