@@ -555,6 +555,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
             <name>ICameraProvider</name>
             <instance>legacy/1</instance>
         </interface>
+        <fqname>@2.4::ICameraProvider/legacy/0</fqname>
     </hal>
 
     <!-- WifiStats HAL service -->
