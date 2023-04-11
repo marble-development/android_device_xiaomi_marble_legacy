@@ -352,6 +352,9 @@ sys.haptic.intensityforkeyboard=true
 # Incremental
 ro.incremental.enable=yes
 
+# HWUI
+ro.hwui.render_ahead=10
+
 # LMK
 persist.sys.lmk.camera_minfree_levels=18432:0,23040:100,27648:200,64512:300,115712:800,216370:900
 persist.sys.lmkd.double_watermark.enable=true
