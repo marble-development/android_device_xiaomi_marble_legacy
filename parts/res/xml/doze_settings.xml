@@ -33,21 +33,6 @@
         android:persistent="false" />
 
     <PreferenceCategory
-        android:key="pickup_sensor"
-        android:title="@string/pickup_sensor_title">
-
-        <ListPreference
-            android:key="gesture_pick_up_type"
-            android:defaultValue="0"
-            android:icon="@drawable/ic_doze_pickup"
-            android:title="@string/pick_up_gesture_title"
-            android:summary="%s"
-            android:entries="@array/pick_up_gesture_entries"
-            android:entryValues="@array/pick_up_gesture_values" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="proximity_sensor"
         android:title="@string/proximity_sensor_title">
 
