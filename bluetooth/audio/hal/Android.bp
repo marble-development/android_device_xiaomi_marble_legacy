@@ -36,5 +36,8 @@ cc_binary {
         "android.hardware.audio@6.0-impl-system",
         "android.hardware.audio@7.0-impl-system",
         "android.hardware.audio@7.1-impl-system",
+        // Sysbta audio configs
+        "sysbta_audio_policy_configuration.xml",
+        "sysbta_audio_policy_configuration_7_0.xml",
     ],
 }
