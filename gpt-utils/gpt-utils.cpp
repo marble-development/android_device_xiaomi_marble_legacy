@@ -241,9 +241,9 @@ static int gpt_boot_chain_swap(const uint8_t *pentries_start,
         uint8_t ptn_swap[PTN_ENTRY_SIZE];
         //Skip the xbl, multiimgoem, multiimgqti partitions on UFS devices. That is handled
         //seperately.
-        if (gpt_utils_is_ufs_device() && !strncmp(ptn_swap_list[i],PTN_XBL,strlen(PTN_XBL))
+        if (gpt_utils_is_ufs_device() && (!strncmp(ptn_swap_list[i],PTN_XBL,strlen(PTN_XBL))
             || !strncmp(ptn_swap_list[i],PTN_MULTIIMGOEM,strlen(PTN_MULTIIMGOEM))
-            || !strncmp(ptn_swap_list[i],PTN_MULTIIMGQTI,strlen(PTN_MULTIIMGQTI)))
+            || !strncmp(ptn_swap_list[i],PTN_MULTIIMGQTI,strlen(PTN_MULTIIMGQTI))))
             continue;
 
         ptn_entry = gpt_pentry_seek(ptn_swap_list[i], pentries_start,
