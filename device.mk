@@ -53,6 +53,15 @@ PRODUCT_PACKAGES += \
     f2fs_io \
     check_f2fs
 
+# Input
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-fpc.idc \
+    $(LOCAL_PATH)/configs/idc/uinput-goodix.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-goodix.idc \
+    $(LOCAL_PATH)/configs/idc/uinput-fortsense.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-fortsense.idc \
+    $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
+    $(LOCAL_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl \
+    $(LOCAL_PATH)/configs/keylayout/uinput-fortsense.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fortsense.kl
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 #PRODUCT_BUILD_SUPER_PARTITION := true

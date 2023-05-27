@@ -1,0 +1,5 @@
+# Single Tap
+key 353   DPAD_CENTER  VIRTUAL
+
+# Double Tap
+key 306   BUTTON_C     VIRTUAL
