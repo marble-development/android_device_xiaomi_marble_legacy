@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Configure tcp buffer sizes per network type in the form:
+         network-type:rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max
+
+         The network-type must be a valid DataConfigNetworkType value. If no value is found for the
+         network-type in use, config_tcp_buffers will be used instead.
+    -->
+    <string-array name="config_network_type_tcp_buffers">
+        <item>NR_SA_MMWAVE:2097152,6291456,16777216,512000,2097152,8388608</item>
+        <item>NR_SA:2097152,6291456,16777216,512000,2097152,8388608</item>
+        <item>NR_NSA_MMWAVE:2097152,6291456,16777216,512000,2097152,8388608</item>
+        <item>NR_NSA:2097152,6291456,16777216,512000,2097152,8388608</item>
+        <item>LTE:2097152,4194304,8388608,262144,524288,1048576</item>
+        <item>LTE_CA:4096,6291456,12582912,4096,1048576,2097152</item>
+        <item>UMTS:4094,87380,1220608,4096,16384,1220608</item>
+        <item>HSPA:4094,87380,1220608,4096,16384,1220608</item>
+        <item>HSUPA:4094,87380,1220608,4096,16384,1220608</item>
+        <item>HSDPA:4094,87380,1220608,4096,16384,1220608</item>
+        <item>HSPA+:4094,87380,1220608,4096,16384,1220608</item>
+        <item>EDGE:4093,26280,35040,4096,16384,35040</item>
+        <item>GPRS:4092,8760,11680,4096,8760,11680</item>
+        <item>EvDo_0:4094,87380,524288,4096,16384,262144</item>
+        <item>EvDo_A:4094,87380,524288,4096,16384,262144</item>
+        <item>EvDo_B:4094,87380,524288,4096,16384,262144</item>
+    </string-array>
+
+    <!-- Whether to adopt the predefined handover policies for IWLAN.
+         {@see CarrierConfigManager#KEY_IWLAN_HANDOVER_POLICY_STRING_ARRAY}
+    -->
+    <bool name="config_enable_iwlan_handover_policy">false</bool>
+
+    <!-- IWLAN data service package name to bind to by default. If none is specified in an overlay,
+         an empty string is passed in -->
+    <string name="config_wlan_data_service_package" translatable="false">vendor.qti.iwlan</string>
+
+    <!-- IWLAN network service package name to bind to by default. If none is specified in an
+         overlay, an empty string is passed in -->
+    <string name="config_wlan_network_service_package" translatable="false">vendor.qti.iwlan</string>
+
+    <!-- Telephony qualified networks service package name to bind to by default. -->
+    <string name="config_qualified_networks_service_package" translatable="false">vendor.qti.iwlan</string>
+
+    <!-- Whether enhanced IWLAN handover check is enabled. If enabled, telephony frameworks
+         will not perform handover if the target transport is out of service, or VoPS not
+         supported. The network will be torn down on the source transport, and will be
+         re-established on the target transport when condition is allowed for bringing up a
+         new network. -->
+    <bool name="config_enhanced_iwlan_handover_check">false</bool>
+</resources>

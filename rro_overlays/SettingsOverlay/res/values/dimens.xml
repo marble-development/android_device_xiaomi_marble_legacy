@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <item name="fingerprint_sensor_location_fraction_x" type="fraction">100%</item>
+    <item name="fingerprint_sensor_location_fraction_y" type="fraction">43%</item>
+</resources>
