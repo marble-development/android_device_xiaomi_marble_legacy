@@ -106,6 +106,10 @@ PRODUCT_PACKAGES += \
     init.recovery.usb.rc \
     init.qcom.rc
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
