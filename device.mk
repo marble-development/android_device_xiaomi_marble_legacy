@@ -96,6 +96,10 @@ PRODUCT_PACKAGES += \
     Ims \
     QtiTelephony
 
+# Perf
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.3
+
 # Rootdir
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
