@@ -100,6 +100,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     XiaomiParts
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti
+
 # Properties
 include $(DEVICE_PATH)/configs/properties/default.mk
 
@@ -118,9 +122,6 @@ PRODUCT_PACKAGES += \
     init.recovery.usb.rc \
     init.qcom.rc
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

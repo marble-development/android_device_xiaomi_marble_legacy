@@ -1,0 +1,1 @@
+allow untrusted_app_29 qemu_hw_prop:file { read };

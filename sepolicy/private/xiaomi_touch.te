@@ -1,0 +1,8 @@
+type xiaomi_touch, domain, coredomain;
+type xiaomi_touch_exec, file_type, exec_type, system_file_type;
+
+type touchfeature_device, dev_type;
+
+init_daemon_domain(xiaomi_touch)
+
+allow xiaomi_touch touchfeature_device:chr_file rw_file_perms;

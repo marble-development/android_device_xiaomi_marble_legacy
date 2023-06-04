@@ -88,8 +88,6 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_APPEND_DTB := false
 BOARD_KERNEL_SEPARATED_DTBO := true
@@ -155,6 +153,12 @@ BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := false
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# Sepolicy
+include device/qcom/sepolicy/SEPolicy.mk
+
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # Vendor boot
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilts/modules/ramdisk/*.ko)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilts/modules/ramdisk/modules.load))
@@ -171,12 +175,6 @@ BOARD_VENDOR_RAMDISK_FRAGMENT.dlkm.KERNEL_MODULE_DIRS := top
 BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilts/modules/vendor/*.ko)
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilts/modules/vendor/modules.load))
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE :=  $(DEVICE_PATH)/prebuilts/modules/vendor/modules.blocklist
-
-# Sepolicy
-include device/qcom/sepolicy/SEPolicy.mk
-
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
-SELINUX_IGNORE_NEVERALLOWS := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
