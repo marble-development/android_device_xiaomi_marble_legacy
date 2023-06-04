@@ -89,7 +89,7 @@ PRODUCT_PACKAGES += \
     XiaomiParts
 
 # Properties
-include $(LOCAL_PATH)/properties/default.mk
+include $(DEVICE_PATH)/configs/properties/default.mk
 
 # RIL
 PRODUCT_PACKAGES += \
