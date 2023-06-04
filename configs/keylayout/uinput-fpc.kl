@@ -19,7 +19,7 @@
 #key 108   DPAD_DOWN VIRTUAL
 
 # Single Tap
-key 105   DPAD_CENTER VIRTUAL
+#key 105   DPAD_CENTER VIRTUAL
 
 # Double Tap
 key 106   BUTTON_C VIRTUAL
