@@ -1,0 +1,27 @@
+//
+// Copyright (C) 2023 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app_import {
+    name: "Ims",
+    owner: "xiaomi",
+    apk: "Ims.apk",
+    certificate: "platform",
+    dex_preopt: {
+         enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
+}
+android_app_import {
+    name: "QtiTelephony",
+    owner: "xiaomi",
+    apk: "QtiTelephony.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    system_ext_specific: true,
+}
