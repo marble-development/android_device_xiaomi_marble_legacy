@@ -84,6 +84,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 #PRODUCT_BUILD_SUPER_PARTITION := true
 
+# Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # Properties
 include $(LOCAL_PATH)/properties/default.mk
 
