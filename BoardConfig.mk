@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit from the proprietary version
+-include vendor/xiaomi/marble/BoardConfigVendor.mk
+
 DEVICE_PATH := device/xiaomi/marble
 
 # A/B

@@ -33,6 +33,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Inherit device configurations
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
+# Inherit from the proprietary version
+$(call inherit-product, vendor/xiaomi/marble/marble-vendor.mk)
+
 ## Device identifier
 PRODUCT_DEVICE := marble
 PRODUCT_NAME := lineage_marble

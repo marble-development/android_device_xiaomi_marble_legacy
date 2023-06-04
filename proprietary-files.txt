@@ -1,1 +1,83 @@
-Just an empty file.
+# Diag
+system_ext/lib/libdiag_system.so
+system_ext/lib/libdiag_system.qti.so
+system_ext/lib/vendor.qti.diaghal@1.0.so
+system_ext/lib64/libdiag_system.so
+system_ext/lib64/libdiag_system.qti.so
+system_ext/lib64/vendor.qti.diaghal@1.0.so
+
+# DPM
+system_ext/bin/dpmd
+system_ext/bin/tcmd
+system_ext/etc/dpm/dpm.conf
+system_ext/etc/init/dpmd.rc
+system_ext/etc/init/tcmd.rc
+system_ext/etc/permissions/com.qti.dpmframework.xml
+system_ext/etc/permissions/dpmapi.xml
+system_ext/etc/seccomp_policy/tcmd.policy
+system_ext/framework/com.qti.dpmframework.jar
+system_ext/framework/dpmapi.jar
+system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so
+system_ext/lib64/libdpmctmgr.so
+system_ext/lib64/libdpmfdmgr.so
+system_ext/lib64/libdpmframework.so
+system_ext/lib64/libdpmtcm.so
+system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so
+system_ext/lib64/vendor.qti.hardware.dpmservice@1.1.so
+system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
+
+# Postprocessing
+system_ext/lib/vendor.display.color@1.0.so
+system_ext/lib/vendor.display.color@1.1.so
+system_ext/lib/vendor.display.color@1.2.so
+system_ext/lib/vendor.display.color@1.3.so
+system_ext/lib64/vendor.display.color@1.0.so
+system_ext/lib64/vendor.display.color@1.1.so
+system_ext/lib64/vendor.display.color@1.2.so
+system_ext/lib64/vendor.display.color@1.3.so
+
+# Power off alarm
+product/app/PowerOffAlarm/PowerOffAlarm.apk
+system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
+
+# QMI
+system/etc/sysconfig/qti_whitelist.xml
+system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
+system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
+
+# RIL
+product/app/uimgbaservice/uimgbaservice.apk
+product/etc/permissions/UimGba.xml
+product/etc/permissions/UimGbaManager.xml
+product/etc/permissions/UimService.xml
+product/framework/uimgbalibrary.jar
+product/framework/uimgbamanagerlibrary.jar
+product/framework/uimservicelibrary.jar
+system_ext/app/ImsRcsService/ImsRcsService.apk
+system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
+system_ext/etc/permissions/qcrilhook.xml
+system_ext/etc/permissions/qti_permissions.xml
+system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
+system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
+system_ext/framework/qcrilhook.jar
+system_ext/framework/qti-telephony-common.jar
+system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar
+system_ext/lib64/lib-imsvideocodec.so
+system_ext/lib64/lib-imsvt.so
+system_ext/lib64/lib-imsvtextutils.so
+system_ext/lib64/lib-imsvtutils.so
+system_ext/lib64/libdiag_system.so
+system_ext/lib64/libimscamera_jni.so
+system_ext/lib64/libimsmedia_jni.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
+system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
