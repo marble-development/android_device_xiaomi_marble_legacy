@@ -1,0 +1,28 @@
+# Charger
+ro.charger.enable_suspend=1
+
+# CNE
+persist.vendor.cne.feature=1
+
+# Enable system-side generic bluetooth audio HAL
+persist.bluetooth.system_audio_hal.enabled=1
+
+# RIL
+DEVICE_PROVISIONED=1
+persist.vendor.data.mode=concurrent
+ril.subscription.types=NV,RUIM
+ro.telephony.default_network=33,33
+telephony.lteOnCdmaDevice=1
+
+# Sensors
+persist.vendor.sensors.enable.mag_filter=true
+
+# Set the Bluetooth Class of Device
+# Service Field: 0x5A -> 90
+#    Bit 17: Networking
+#    Bit 19: Capturing
+#    Bit 20: Object Transfer
+#    Bit 22: Telephony
+# MAJOR_CLASS: 0x02 -> 2 (Phone)
+# MINOR_CLASS: 0x0C -> 12 (Smart Phone)
+bluetooth.device.class_of_device=90,2,12

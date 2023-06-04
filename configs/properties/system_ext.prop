@@ -1,0 +1,10 @@
+# Bluetooth
+persist.bluetooth.bluetooth_audio_hal.disabled=false
+persist.bluetooth.a2dp_offload.disabled=true
+ro.bluetooth.a2dp_offload.supported=false
+
+# DPM
+persist.vendor.dpm.feature=1
+
+# RIL
+telephony.active_modems.max_count=2

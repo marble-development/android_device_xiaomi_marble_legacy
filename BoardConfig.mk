@@ -134,6 +134,11 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno725
 QCOM_BOARD_PLATFORMS += xiaomi_sm7475
 BOARD_USES_QCOM_HARDWARE := true
 
+# Properties
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/properties/product.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/properties/system.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/configs/properties/system_ext.prop
+
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
