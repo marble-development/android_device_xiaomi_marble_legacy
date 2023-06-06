@@ -7,8 +7,6 @@
 # Inherit from the proprietary version
 -include vendor/xiaomi/marble/BoardConfigVendor.mk
 
-DEVICE_PATH := device/xiaomi/marble
-
 # A/B
 AB_OTA_UPDATER := true
 
