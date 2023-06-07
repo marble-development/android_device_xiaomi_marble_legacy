@@ -110,7 +110,8 @@ include $(DEVICE_PATH)/configs/properties/default.mk
 # RIL
 PRODUCT_PACKAGES += \
     Ims \
-    QtiTelephony
+    QtiTelephony \
+    qti-telephony-common
 
 # Perf
 PRODUCT_PACKAGES += \
@@ -121,7 +122,6 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.recovery.usb.rc \
     init.qcom.rc
-
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

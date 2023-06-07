@@ -5,7 +5,6 @@ Redmi Note 12 Turbo (codenamed _"marble"_) is a high-end, mid-range smartphone f
 It was announced & released on March 2023.
 
 ## Known issues
-- SMS reception is only valid after the first boot, once rebooted it will fail.
 - SELinux allows NEVERALLOWS, because using sysbta.
 
 ## Device specifications
