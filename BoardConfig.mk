@@ -91,6 +91,10 @@ PRODUCT_COPY_FILES += \
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config/config.fs
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_marble
+TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_marble
+
 # Kernel
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_BASE := 0x00000000
