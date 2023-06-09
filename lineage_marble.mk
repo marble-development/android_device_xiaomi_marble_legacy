@@ -17,8 +17,6 @@ $(call inherit-product, device/xiaomi/marble/device.mk)
 ## Device identifier
 PRODUCT_DEVICE := marble
 PRODUCT_NAME := lineage_marble
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi Note 12 Turbo
 PRODUCT_MANUFACTURER := Xiaomi
 
 # GMS
