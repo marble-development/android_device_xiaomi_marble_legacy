@@ -16,6 +16,11 @@ ro.lmk.nstrat_psi_complete_ms=70
 ro.lmk.psi_scrit_complete_stall_ms=400
 ro.lmk.nstrat_wmark_boost_factor=4
 
+# Render backend
+debug.hwui.renderer=skiagl
+debug.renderengine.backend=skiaglthreaded
+renderthread.skia.reduceopstasksplitting=true
+
 # RIL
 DEVICE_PROVISIONED=1
 persist.vendor.data.mode=concurrent
