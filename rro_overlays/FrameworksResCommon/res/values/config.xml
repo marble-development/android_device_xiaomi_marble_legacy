@@ -100,18 +100,9 @@
     <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
     <integer-array name="config_availableColorModes">
         <item>0</item>
-        <item>1</item>
+	<item>1</item>
+	<item>2</item>
         <item>3</item>
-        <item>256</item>
-        <item>257</item>
-        <item>258</item>
-        <item>259</item>
-        <item>260</item>
-        <item>261</item>
-        <item>262</item>
-        <item>263</item>
-        <item>264</item>
-        <item>265</item>
     </integer-array>
 
     <!-- Is the device capable of hot swapping an UICC Card -->

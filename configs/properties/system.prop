@@ -4,6 +4,23 @@ ro.charger.enable_suspend=1
 # CNE
 persist.vendor.cne.feature=1
 
+# Low Memory Killer
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=100
+ro.lmk.thrashing_threshold=30
+ro.lmk.thrashing_decay=2
+ro.lmk.thrashing_limit_pct=30
+ro.lmk.nstrat_low_swap=30
+ro.lmk.nstrat_psi_partial_ms=70
+ro.lmk.nstrat_psi_complete_ms=70
+ro.lmk.psi_scrit_complete_stall_ms=400
+ro.lmk.nstrat_wmark_boost_factor=4
+
+# Render backend
+debug.hwui.renderer=skiagl
+debug.renderengine.backend=skiaglthreaded
+renderthread.skia.reduceopstasksplitting=true
+
 # RIL
 DEVICE_PROVISIONED=1
 persist.vendor.data.mode=concurrent
