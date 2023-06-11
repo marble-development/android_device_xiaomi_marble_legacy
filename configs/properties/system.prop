@@ -4,6 +4,11 @@ ro.charger.enable_suspend=1
 # CNE
 persist.vendor.cne.feature=1
 
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
 # Low Memory Killer
 ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=100
