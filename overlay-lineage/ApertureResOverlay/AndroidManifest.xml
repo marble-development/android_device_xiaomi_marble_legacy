@@ -6,5 +6,5 @@
     package="org.lineageos.aperture.overlay.marble">
     <overlay android:targetPackage="org.lineageos.aperture"
         android:isStatic="true"
-        android:priority="100" />
+        android:priority="1000" />
 </manifest>

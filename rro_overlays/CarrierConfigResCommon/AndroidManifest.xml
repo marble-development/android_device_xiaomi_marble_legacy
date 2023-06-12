@@ -6,5 +6,5 @@
      package="com.android.carrierconfig.overlay.common">
      <overlay android:targetPackage="com.android.carrierconfig"
           android:isStatic="true"
-          android:priority="100" />
+          android:priority="900" />
 </manifest>

@@ -6,5 +6,5 @@
      package="com.android.settings.overlay.common">
      <overlay android:targetPackage="com.android.settings"
           android:isStatic="true"
-          android:priority="100" />
+          android:priority="900" />
 </manifest>

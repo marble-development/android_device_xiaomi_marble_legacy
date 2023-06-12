@@ -6,5 +6,5 @@
       package="com.android.systemui.overlay.marble">
       <overlay android:targetPackage="com.android.systemui"
             android:isStatic="true"
-            android:priority="1" />
+            android:priority="1000" />
 </manifest>
