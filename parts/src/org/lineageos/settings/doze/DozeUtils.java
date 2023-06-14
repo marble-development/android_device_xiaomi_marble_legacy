@@ -45,7 +45,7 @@ public final class DozeUtils {
 
     protected static final String DOZE_ENABLE = "doze_enable";
 
-    protected static final String GESTURE_PICK_UP_KEY = "gesture_pick_up";
+    protected static final String GESTURE_PICK_UP_KEY = "gesture_pick_up_type";
     protected static final String GESTURE_HAND_WAVE_KEY = "gesture_hand_wave";
     protected static final String GESTURE_POCKET_KEY = "gesture_pocket";
 
@@ -120,7 +120,13 @@ public final class DozeUtils {
     }
 
     protected static boolean isPickUpEnabled(Context context) {
-        return isGestureEnabled(context, GESTURE_PICK_UP_KEY);
+        return !PreferenceManager.getDefaultSharedPreferences(context)
+                .getString(GESTURE_PICK_UP_KEY, "0").equals("0");
+    }
+
+    protected static boolean isPickUpSetToWake(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getString(GESTURE_PICK_UP_KEY, "0").equals("2");
     }
 
     protected static boolean isHandwaveGestureEnabled(Context context) {

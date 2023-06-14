@@ -16,7 +16,12 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/dirac_title">
+
+    <com.android.settingslib.widget.IllustrationPreference
+            android:key="dirac_logo"
+            app:lottie_rawRes="@drawable/dirac_logo"/>
 
     <com.android.settingslib.widget.MainSwitchPreference
         android:defaultValue="false"
@@ -24,11 +29,12 @@
         android:title="@string/dirac_enable" />
 
     <ListPreference
-        android:key="dirac_scenario_pref"
-        android:entries="@array/dirac_scenario_pref_titles"
-        android:entryValues="@array/dirac_scenario_pref_values"
+        android:key="scenario_selection"
+        android:entries="@array/scenario_selector_titles"
+        android:entryValues="@array/scenario_selector_values"
         android:defaultValue="4"
-        android:title="@string/dirac_headset_optimization"
+        android:icon="@drawable/ic_scenes"
+        android:title="@string/music_headset_scenario_select"
         android:summary="%s" />
 
     <ListPreference
@@ -36,6 +42,7 @@
         android:entries="@array/dirac_headset_pref_entries"
         android:entryValues="@array/dirac_headset_pref_values"
         android:defaultValue="0"
+        android:icon="@drawable/ic_dirac_headphone"
         android:title="@string/dirac_headset_title"
         android:summary="%s" />
 
@@ -44,6 +51,7 @@
         android:entries="@array/dirac_preset_pref_entries"
         android:entryValues="@array/dirac_preset_pref_values"
         android:defaultValue="0,0,0,0,0,0,0"
+        android:icon="@drawable/ic_dirac_preset"
         android:title="@string/dirac_preset_title"
         android:summary="%s" />
 
@@ -54,6 +62,7 @@
         <SwitchPreference
             android:key="dirac_hifi_pref"
             android:defaultValue="false"
+            android:icon="@drawable/ic_hifi"
             android:title="@string/dirac_hifi_enable_title"
             android:summary="@string/dirac_hifi_summary"/>
 

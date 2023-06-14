@@ -37,11 +37,11 @@ public class DiracSettingsFragment extends PreferenceFragment implements
     private static final String PREF_HEADSET = "dirac_headset_pref";
     private static final String PREF_HIFI = "dirac_hifi_pref";
     private static final String PREF_PRESET = "dirac_preset_pref";
-    private static final String PREF_SCENARIO = "dirac_scenario_pref";
+    private static final String PREF_SCENE = "scenario_selection";
 
     private MainSwitchPreference mSwitchBar;
 
-    private ListPreference mScenario;
+    private ListPreference mScenes;
     private ListPreference mHeadsetType;
     private ListPreference mPreset;
     private SwitchPreference mHifi;
@@ -57,8 +57,9 @@ public class DiracSettingsFragment extends PreferenceFragment implements
         mSwitchBar.addOnSwitchChangeListener(this);
         mSwitchBar.setChecked(enhancerEnabled);
 
-        mScenario = (ListPreference) findPreference(PREF_SCENARIO);
-        mScenario.setOnPreferenceChangeListener(this);
+        mScenes = (ListPreference) findPreference(PREF_SCENE);
+        mScenes.setOnPreferenceChangeListener(this);
+        mScenes.setEnabled(enhancerEnabled);
 
         mHeadsetType = (ListPreference) findPreference(PREF_HEADSET);
         mHeadsetType.setOnPreferenceChangeListener(this);
@@ -72,6 +73,7 @@ public class DiracSettingsFragment extends PreferenceFragment implements
         boolean hifiEnable = DiracUtils.getHifiMode();
         mHeadsetType.setEnabled(!hifiEnable && enhancerEnabled);
         mPreset.setEnabled(!hifiEnable && enhancerEnabled);
+        mHifi.setEnabled(enhancerEnabled);
     }
 
     @Override
@@ -90,7 +92,7 @@ public class DiracSettingsFragment extends PreferenceFragment implements
             case PREF_PRESET:
                 DiracUtils.setLevel((String) newValue);
                 return true;
-            case PREF_SCENARIO:
+            case PREF_SCENE:
                 DiracUtils.setScenario(Integer.parseInt(newValue.toString()));
                 return true;
             default:
@@ -102,11 +104,15 @@ public class DiracSettingsFragment extends PreferenceFragment implements
     public void onSwitchChanged(Switch switchView, boolean isChecked) {
         mSwitchBar.setChecked(isChecked);
 
-        DiracUtils.setMusic(isChecked);
+        DiracUtils.setEnabled(isChecked);
+        mHifi.setEnabled(isChecked);
+        mHeadsetType.setEnabled(isChecked);
+        mPreset.setEnabled(isChecked);
+        mScenes.setEnabled(isChecked);
 
-        if (!DiracUtils.getHifiMode()) {
-            mHeadsetType.setEnabled(isChecked);
-            mPreset.setEnabled(isChecked);
+        if (!isChecked){
+            mHifi.setChecked(false);
+            DiracUtils.setHifiMode(0);
         }
     }
 }
