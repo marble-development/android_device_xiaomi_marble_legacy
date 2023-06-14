@@ -108,6 +108,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor \
     libldacBT_abr \
+    libldacBT_bco \
     libldacBT_enc
 
 PRODUCT_COPY_FILES += \

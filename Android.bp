@@ -11,3 +11,7 @@ soong_namespace {
         "vendor/qcom/opensource/commonsys-intf/display",
     ],
 }
+
+cc_library_shared {
+    name: "libldacBT_bco",
+}
