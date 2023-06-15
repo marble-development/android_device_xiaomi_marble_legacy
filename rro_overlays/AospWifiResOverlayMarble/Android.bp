@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "AospWifiResOverlay",
+    name: "AospWifiResOverlayMarble",
     product_specific: true,
 }

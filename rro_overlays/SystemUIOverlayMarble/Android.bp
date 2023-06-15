@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "SystemUIOverlay",
+    name: "SystemUIOverlayMarble",
     product_specific: true,
 }

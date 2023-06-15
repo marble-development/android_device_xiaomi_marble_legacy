@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "SettingsOverlay",
+    name: "SettingsOverlayMarble",
     product_specific: true,
 }
