@@ -53,7 +53,10 @@ PRODUCT_PACKAGES += \
     AospWifiResOverlayMarbleIndia \
     SettingsOverlayGlobal \
     SettingsOverlayIndia \
-    SettingsOverlayChina
+    SettingsOverlayChina \
+    SettingsProviderOverlayGlobal \
+    SettingsProviderOverlayIndia \
+    SettingsProviderOverlayChina
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
