@@ -120,7 +120,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SettingsOverlayGlobal \
     SettingsOverlayIndia \
-    SettingsOverlayChina
+    SettingsOverlayChina \
+    SettingsProviderOverlayGlobal \
+    SettingsProviderOverlayIndia \
+    SettingsProviderOverlayChina \
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
