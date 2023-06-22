@@ -102,7 +102,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     AospWifiResOverlayMarble \
-    ApertureResOverlayMarble \
     CarrierConfigResCommon \
     FrameworksResCommon \
     FrameworksResOverlayMarble \
