@@ -4,6 +4,43 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Screen brightness used to dim the screen when the user activity
+         timeout expires.  May be less than the minimum allowed brightness setting
+         that can be set by the user. -->
+    <integer name="config_screenBrightnessDim">15</integer>
+    <item name="config_screenBrightnessDimFloat" format="float" type="dimen">0.000854597</item>
+
+    <!-- Minimum screen brightness setting allowed by power manager.
+         -2 is invalid so setting will resort to int value specified above.
+         Set this to 0.0 to allow screen to go to minimal brightness.
+         The user is forbidden from setting the brightness below this level. -->
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.000854597</item>
+
+    <!-- Maximum screen brightness allowed by the power manager.
+         -2 is invalid so setting will resort to int value specified above.
+         Set this to 1.0 for maximum brightness range.
+         The user is forbidden from setting the brightness above this level. -->
+    <item name="config_screenBrightnessSettingMaximumFloat" format="float" type="dimen">1.0</item>
+
+    <!-- Default screen brightness setting set.
+         -2 is invalid so setting will resort to int value specified above.
+         Must be in the range specified by minimum and maximum. -->
+    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.07496032</item>
+
+    <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
+         for debouncing the light sensor.  Different constants are used to debounce the light sensor
+         when adapting to brighter or darker environments.  This parameter controls how quickly
+         brightness changes occur in response to an observed change in light level that exceeds the
+         hysteresis threshold. -->
+    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
+
+    <!-- Fast brightness animation ramp rate in brightness units per second -->
+    <integer translatable="false" name="config_brightness_ramp_rate_fast">4932</integer>
+
+    <!-- Slow brightness animation ramp rate in brightness units per second -->
+    <integer translatable="false" name="config_brightness_ramp_rate_slow">3946</integer>
+
     <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
          percent. The length of this array is assumed to be one greater than
          config_ambientThresholdLevels. The brightening threshold is calculated as
@@ -11,7 +48,14 @@
          the screen brightness is recalculated. See the config_ambientThresholdLevels
          description for how the constraint value is chosen. -->
     <integer-array name="config_ambientBrighteningThresholds">
+        <item>2</item>
+        <item>5</item>
+        <item>10</item>
+        <item>30</item>
         <item>100</item>
+        <item>400</item>
+        <item>600</item>
+        <item>1000</item>
     </integer-array>
 
     <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
@@ -21,7 +65,35 @@
          the screen brightness is recalculated. See the config_ambientThresholdLevels
          description for how the constraint value is chosen. -->
     <integer-array name="config_ambientDarkeningThresholds">
-        <item>200</item>
+        <item>800</item>
+        <item>800</item>
+        <item>500</item>
+        <item>500</item>
+        <item>500</item>
+        <item>500</item>
+        <item>500</item>
+        <item>500</item>
+    </integer-array>
+
+    <!-- Array of ambient lux threshold values. This is used for determining hysteresis constraint
+         values by calculating the index to use for lookup and then setting the constraint value
+         to the corresponding value of the array. The new brightening hysteresis constraint value
+         is the n-th element of config_ambientBrighteningThresholds, and the new darkening
+         hysteresis constraint value is the n-th element of config_ambientDarkeningThresholds.
+
+         The (zero-based) index is calculated as follows: (MAX is the largest index of the array)
+         condition                       calculated index
+         value < level[0]                0
+         level[n] <= value < level[n+1]  n+1
+         level[MAX] <= value             MAX+1 -->
+    <integer-array name="config_ambientThresholdLevels">
+        <item>2</item>
+        <item>10</item>
+        <item>30</item>
+        <item>100</item>
+        <item>800</item>
+        <item>2000</item>
+        <item>4000</item>
     </integer-array>
 
     <!-- Array of desired screen brightness in nits corresponding to the lux values
@@ -36,68 +108,27 @@
          This array should have size one greater than the size of the config_autoBrightnessLevels
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
-    <integer-array name="config_autoBrightnessDisplayValuesNits">
-        <item>3</item>
-        <item>4</item>
-        <item>6</item>
-        <item>15</item>
-        <item>21</item>
-        <item>27</item>
-        <item>36</item>
-        <item>52</item>
-        <item>71</item>
-        <item>87</item>
-        <item>97</item>
-        <item>98</item>
-        <item>98</item>
-        <item>98</item>
-        <item>99</item>
-        <item>99</item>
-        <item>100</item>
-        <item>100</item>
-        <item>100</item>
-        <item>101</item>
-        <item>101</item>
-        <item>102</item>
-        <item>103</item>
-        <item>103</item>
-        <item>103</item>
-        <item>106</item>
-        <item>108</item>
-        <item>110</item>
-        <item>112</item>
-        <item>114</item>
-        <item>116</item>
-        <item>118</item>
-        <item>119</item>
-        <item>122</item>
-        <item>123</item>
-        <item>125</item>
-        <item>128</item>
-        <item>130</item>
-        <item>131</item>
-        <item>134</item>
-        <item>136</item>
-        <item>137</item>
-        <item>140</item>
-        <item>142</item>
-        <item>144</item>
-        <item>169</item>
-        <item>196</item>
-        <item>222</item>
-        <item>248</item>
-        <item>270</item>
-        <item>300</item>
-        <item>320</item>
-        <item>335</item>
-        <item>400</item>
-        <item>416</item>
-        <item>433</item>
-        <item>450</item>
-        <item>466</item>
-        <item>483</item>
-        <item>500</item>
-    </integer-array>
+    <array name="config_autoBrightnessDisplayValuesNits">
+        <item>10.45935</item>   <!-- 0-1 -->
+        <item>29.25559</item>   <!-- 1-2 -->
+        <item>34.240692</item>  <!-- 2-3 -->
+        <item>37.514347</item>  <!-- 3-4 -->
+        <item>40.018696</item>  <!-- 4-8 -->
+        <item>46.885098</item>  <!-- 8-12 -->
+        <item>51.626434</item>  <!-- 12-20 -->
+        <item>58.610405</item>  <!-- 20-33 -->
+        <item>66.890915</item>  <!-- 33-55 -->
+        <item>77.61644</item>   <!-- 55-90 -->
+        <item>90.221886</item>  <!-- 90-148 -->
+        <item>105.80314</item>  <!-- 148-245 -->
+        <item>126.073845</item> <!-- 245-403 -->
+        <item>154.16931</item>  <!-- 403-665 -->
+        <item>191.83717</item>  <!-- 665-1097 -->
+        <item>240.74442</item>  <!-- 1097-1808 -->
+        <item>294.84857</item>  <!-- 1808-2981 -->
+        <item>348.05453</item>  <!-- 2981-5000 -->
+        <item>394.98703</item>  <!-- 5000+ -->
+    </array>
 
     <!-- Array of light sensor lux values to define our levels for auto backlight brightness
     support.
@@ -123,72 +154,29 @@
     <integer-array name="config_autoBrightnessLevels">
         <item>1</item>
         <item>2</item>
+        <item>3</item>
         <item>4</item>
-        <item>6</item>
         <item>8</item>
-        <item>10</item>
-        <item>15</item>
+        <item>12</item>
         <item>20</item>
-        <item>25</item>
-        <item>30</item>
-        <item>35</item>
-        <item>40</item>
-        <item>45</item>
-        <item>50</item>
+        <item>33</item>
         <item>55</item>
-        <item>60</item>
-        <item>65</item>
-        <item>70</item>
-        <item>75</item>
-        <item>80</item>
-        <item>85</item>
         <item>90</item>
-        <item>95</item>
-        <item>100</item>
-        <item>120</item>
-        <item>140</item>
-        <item>160</item>
-        <item>180</item>
-        <item>200</item>
-        <item>220</item>
-        <item>240</item>
-        <item>260</item>
-        <item>280</item>
-        <item>300</item>
-        <item>320</item>
-        <item>340</item>
-        <item>360</item>
-        <item>380</item>
-        <item>400</item>
-        <item>420</item>
-        <item>440</item>
-        <item>460</item>
-        <item>480</item>
-        <item>500</item>
-        <item>700</item>
-        <item>900</item>
-        <item>1100</item>
-        <item>1300</item>
-        <item>1500</item>
-        <item>1700</item>
-        <item>1900</item>
-        <item>2000</item>
-        <item>2500</item>
-        <item>3000</item>
-        <item>3500</item>
-        <item>4000</item>
-        <item>4500</item>
+        <item>148</item>
+        <item>245</item>
+        <item>403</item>
+        <item>665</item>
+        <item>1097</item>
+        <item>1808</item>
+        <item>2981</item>
         <item>5000</item>
-        <item>5500</item>
     </integer-array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
          values in the config_screenBrightnessNits array.
          This array should be equal in size to config_screenBrightnessBacklight. -->
     <array name="config_screenBrightnessBacklight">
-        <item>2</item>
-        <item>3</item>
-        <item>10</item>
+        <item>0</item>
         <item>15</item>
         <item>30</item>
         <item>45</item>
@@ -215,26 +203,24 @@
          brightness modes but only the maximum brightness value obtainable in a sustainable manner.
          This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
-        <item>2</item>
-        <item>4</item>
-        <item>22</item>
-        <item>30</item>
-        <item>68</item>
-        <item>95</item>
-        <item>133</item>
-        <item>165</item>
-        <item>192</item>
-        <item>218</item>
-        <item>255</item>
-        <item>300</item>
-        <item>345</item>
-        <item>375</item>
-        <item>399</item>
-        <item>410</item>
-        <item>432</item>
-        <item>445</item>
-        <item>454</item>
-        <item>485</item>
+        <item>0</item>
+        <item>26.11</item>
+        <item>50.5</item>
+        <item>74.17</item>
+        <item>96.89</item>
+        <item>118.3</item>
+        <item>139.8</item>
+        <item>162.9</item>
+        <item>189.8</item>
+        <item>217.4</item>
+        <item>240.4</item>
+        <item>265.3</item>
+        <item>288.7</item>
+        <item>316</item>
+        <item>340.8</item>
+        <item>357.9</item>
+        <item>376.2</item>
+        <item>392.9</item>
     </array>
 
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
@@ -367,10 +353,10 @@
          enables the power manager to suspend the application processor while the
          display is on.
 
-        This resource should be set to "true" when a doze component has been specified
-        to maximize power savings but not all devices support it.
+         This resource should be set to "true" when a doze component has been specified
+         to maximize power savings but not all devices support it.
 
-        Refer to autosuspend.h for details.
+         Refer to autosuspend.h for details.
     -->
     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">false</bool>
 
@@ -415,7 +401,7 @@
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
-    <bool name="config_showNavigationBar">false</bool>
+    <bool name="config_showNavigationBar">true</bool>
 
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
          on the headphone/microphone jack. When false use the older uevent framework. -->
