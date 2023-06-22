@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "ApertureResOverlay",
+    name: "ApertureResOverlayMarble",
     product_specific: true,
 }
