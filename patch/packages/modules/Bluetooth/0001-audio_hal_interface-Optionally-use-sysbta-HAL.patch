@@ -19,16 +19,16 @@ index efdc469de4..3dd65b5394 100644
 @@ -56,7 +56,7 @@ BluetoothAudioClientInterface::BluetoothAudioClientInterface(
  
  bool BluetoothAudioClientInterface::is_aidl_available() {
-   auto service = AServiceManager_checkService(
+   return AServiceManager_isDeclared(
 -      kDefaultAudioProviderFactoryInterface.c_str());
 +      audioProviderFactoryInterface().c_str());
-   return (service != nullptr);
  }
  
+ std::vector<AudioCapabilities>
 @@ -73,7 +73,7 @@ BluetoothAudioClientInterface::GetAudioCapabilities(SessionType session_type) {
    }
    auto provider_factory = IBluetoothAudioProviderFactory::fromBinder(
-       ::ndk::SpAIBinder(AServiceManager_getService(
+       ::ndk::SpAIBinder(AServiceManager_waitForService(
 -          kDefaultAudioProviderFactoryInterface.c_str())));
 +          audioProviderFactoryInterface().c_str())));
  
@@ -37,7 +37,7 @@ index efdc469de4..3dd65b5394 100644
 @@ -101,7 +101,7 @@ void BluetoothAudioClientInterface::FetchAudioProvider() {
    }
    auto provider_factory = IBluetoothAudioProviderFactory::fromBinder(
-       ::ndk::SpAIBinder(AServiceManager_getService(
+       ::ndk::SpAIBinder(AServiceManager_waitForService(
 -          kDefaultAudioProviderFactoryInterface.c_str())));
 +          audioProviderFactoryInterface().c_str())));
  
