@@ -41,6 +41,7 @@
         <item>@string/dirac_headset_bluetooth_collar</item>
         <item>@string/dirac_headset_bluetooth_linefree</item>
         <item>@string/dirac_headset_redmi_earphones</item>
+        <item>@string/dirac_headset_dual_driver_in_ear</item>
     </string-array>
 
     <string-array name="dirac_headset_pref_values" translatable="false">
@@ -68,6 +69,7 @@
         <item>26</item>
         <item>27</item>
         <item>28</item>
+        <item>29</item>
     </string-array>
 
     <!-- Values for Dirac preset pref -->
