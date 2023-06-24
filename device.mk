@@ -122,12 +122,15 @@ PRODUCT_PACKAGES += \
     WifiResCommon
 
 PRODUCT_PACKAGES += \
+    AospWifiResOverlayMarbleChina \
+    AospWifiResOverlayMarbleGlobal \
+    AospWifiResOverlayMarbleIndia \
     SettingsOverlayGlobal \
-    SettingsOverlayIndia \
     SettingsOverlayChina \
+    SettingsOverlayIndia \
+    SettingsProviderOverlayChina \
     SettingsProviderOverlayGlobal \
-    SettingsProviderOverlayIndia \
-    SettingsProviderOverlayChina
+    SettingsProviderOverlayIndia
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

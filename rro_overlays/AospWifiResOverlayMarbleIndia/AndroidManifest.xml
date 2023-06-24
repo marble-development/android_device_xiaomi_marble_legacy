@@ -1,0 +1,13 @@
+<!--
+     Copyright (C) 2023 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+     package="com.android.wifi.resources.overlay.india">
+     <application android:hasCode="false" />
+     <overlay android:targetPackage="com.android.wifi.resources"
+              android:targetName="WifiCustomization"
+              android:requiredSystemPropertyName="ro.boot.hwc"
+              android:requiredSystemPropertyValue="IN"
+              android:isStatic="true" />
+</manifest>
