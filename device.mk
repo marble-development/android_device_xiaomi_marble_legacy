@@ -47,6 +47,11 @@ PRODUCT_PACKAGES += \
     WifiResMarble \
     WifiResTarget
 
+PRODUCT_PACKAGES += \
+    AospWifiResOverlayMarbleChina \
+    AospWifiResOverlayMarbleGlobal \
+    AospWifiResOverlayMarbleIndia
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
