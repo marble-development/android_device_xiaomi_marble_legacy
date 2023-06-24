@@ -488,4 +488,7 @@
     <!-- The maximum range of gamma adjustment possible using the screen
          auto-brightness adjustment setting. -->
     <fraction name="config_autoBrightnessAdjustmentMaxGamma">150%</fraction>
+
+    <!-- True if the device supports Sustained Performance Mode-->
+    <bool name="config_sustainedPerformanceModeSupported">true</bool>
 </resources>
