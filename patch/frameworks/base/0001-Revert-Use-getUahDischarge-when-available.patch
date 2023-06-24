@@ -1,0 +1,99 @@
+From d4ebf703eefb87760ef301ceb5a674f968903c43 Mon Sep 17 00:00:00 2001
+From: YuKongA <70465933+YuKongA@users.noreply.github.com>
+Date: Sat, 24 Jun 2023 07:27:00 +0000
+Subject: [PATCH] Revert "Use getUahDischarge when available"
+
+This reverts commit 9f08c607f8fae67888313853ce2323099090c6c4.
+---
+ .../internal/os/BatteryChargeCalculator.java  |  9 +----
+ .../os/BatteryChargeCalculatorTest.java       | 38 ++-----------------
+ 2 files changed, 5 insertions(+), 42 deletions(-)
+
+diff --git a/core/java/com/android/internal/os/BatteryChargeCalculator.java b/core/java/com/android/internal/os/BatteryChargeCalculator.java
+index 912ec8f6a6ba..759af8ba3a6c 100644
+--- a/core/java/com/android/internal/os/BatteryChargeCalculator.java
++++ b/core/java/com/android/internal/os/BatteryChargeCalculator.java
+@@ -67,14 +67,9 @@ public class BatteryChargeCalculator extends PowerCalculator {
+             builder.setChargeTimeRemainingMs(chargeTimeRemainingMs / 1000);
+         }
+ 
+-        long dischargeMah = batteryStats.getUahDischarge(BatteryStats.STATS_SINCE_CHARGED) / 1000;
+-        if (dischargeMah == 0) {
+-            dischargeMah = (long) ((dischargedPowerLowerBoundMah + dischargedPowerUpperBoundMah) / 2
+-                    + 0.5);
+-        }
+-
+         builder.getAggregateBatteryConsumerBuilder(
+                 BatteryUsageStats.AGGREGATE_BATTERY_CONSUMER_SCOPE_DEVICE)
+-                .setConsumedPower(dischargeMah);
++                .setConsumedPower(
++                        (dischargedPowerLowerBoundMah + dischargedPowerUpperBoundMah) / 2);
+     }
+ }
+diff --git a/core/tests/coretests/src/com/android/internal/os/BatteryChargeCalculatorTest.java b/core/tests/coretests/src/com/android/internal/os/BatteryChargeCalculatorTest.java
+index 96d6a7e84ee2..fc2829573541 100644
+--- a/core/tests/coretests/src/com/android/internal/os/BatteryChargeCalculatorTest.java
++++ b/core/tests/coretests/src/com/android/internal/os/BatteryChargeCalculatorTest.java
+@@ -35,13 +35,11 @@ public class BatteryChargeCalculatorTest {
+     private static final double PRECISION = 0.00001;
+ 
+     @Rule
+-    public final BatteryUsageStatsRule mStatsRule = new BatteryUsageStatsRule();
++    public final BatteryUsageStatsRule mStatsRule = new BatteryUsageStatsRule()
++            .setAveragePower(PowerProfile.POWER_BATTERY_CAPACITY, 1234.0); // Should be ignored
+ 
+     @Test
+     public void testDischargeTotals() {
+-        // Nominal battery capacity should be ignored
+-        mStatsRule.setAveragePower(PowerProfile.POWER_BATTERY_CAPACITY, 1234.0);
+-
+         final BatteryStatsImpl batteryStats = mStatsRule.getBatteryStats();
+ 
+         batteryStats.setBatteryStateLocked(BatteryManager.BATTERY_STATUS_DISCHARGING, 100,
+@@ -59,7 +57,7 @@ public class BatteryChargeCalculatorTest {
+         BatteryUsageStats batteryUsageStats = mStatsRule.apply(calculator);
+ 
+         assertThat(batteryUsageStats.getConsumedPower())
+-                .isWithin(PRECISION).of(1200.0);        // 3,600 - 2,400
++                .isWithin(PRECISION).of(380.0);
+         assertThat(batteryUsageStats.getDischargePercentage()).isEqualTo(10);
+         assertThat(batteryUsageStats.getDischargedPowerRange().getLower())
+                 .isWithin(PRECISION).of(360.0);
+@@ -79,34 +77,4 @@ public class BatteryChargeCalculatorTest {
+ 
+         assertThat(batteryUsageStats.getChargeTimeRemainingMs()).isEqualTo(100_000);
+     }
+-
+-    @Test
+-    public void testDischargeTotals_chargeUahUnavailable() {
+-        mStatsRule.setAveragePower(PowerProfile.POWER_BATTERY_CAPACITY, 4000.0);
+-
+-        final BatteryStatsImpl batteryStats = mStatsRule.getBatteryStats();
+-
+-        batteryStats.setBatteryStateLocked(BatteryManager.BATTERY_STATUS_DISCHARGING, 100,
+-                /* plugType */ 0, 90, 72, 3700, 0, 0, 0,
+-                1_000_000, 1_000_000, 1_000_000);
+-        batteryStats.setBatteryStateLocked(BatteryManager.BATTERY_STATUS_DISCHARGING, 100,
+-                /* plugType */ 0, 85, 72, 3700, 0, 0, 0,
+-                1_500_000, 1_500_000, 1_500_000);
+-        batteryStats.setBatteryStateLocked(BatteryManager.BATTERY_STATUS_DISCHARGING, 100,
+-                /* plugType */ 0, 80, 72, 3700, 0, 0, 0,
+-                2_000_000, 2_000_000, 2_000_000);
+-
+-        BatteryChargeCalculator calculator = new BatteryChargeCalculator();
+-        BatteryUsageStats batteryUsageStats = mStatsRule.apply(calculator);
+-
+-        assertThat(batteryUsageStats.getConsumedPower())
+-                .isWithin(PRECISION).of(380.0);  // 9.5% of 4,000.
+-        assertThat(batteryUsageStats.getDischargePercentage()).isEqualTo(10);
+-        assertThat(batteryUsageStats.getDischargedPowerRange().getLower())
+-                .isWithin(PRECISION).of(360.0);  // 9% of 4,000
+-        assertThat(batteryUsageStats.getDischargedPowerRange().getUpper())
+-                .isWithin(PRECISION).of(400.0);  // 10% of 4,000
+-        assertThat(batteryUsageStats.getBatteryTimeRemainingMs()).isEqualTo(8_000_000);
+-        assertThat(batteryUsageStats.getChargeTimeRemainingMs()).isEqualTo(-1);
+-    }
+ }
+-- 
+2.41.0
+
