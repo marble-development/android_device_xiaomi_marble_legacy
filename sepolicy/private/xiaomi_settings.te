@@ -1,4 +1,5 @@
 type xiaomi_settings, domain;
+typeattribute xiaomi_settings mlstrustedsubject;
 
 app_domain(xiaomi_settings)
 
@@ -33,3 +34,9 @@ allow xiaomi_settings cgroup:file rw_file_perms;
 # Allow xiaomi_settings to read and write to sysfs_graphics
 allow xiaomi_settings sysfs_graphics:dir search;
 allow xiaomi_settings sysfs_graphics:file rw_file_perms;
+
+# Allow xiaomi_settings to search system_data_file
+allow xiaomi_settings system_data_file:dir search;
+
+# Allow xiaomi_settings to read default_prop
+allow xiaomi_settings default_prop:file read;
