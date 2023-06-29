@@ -1,7 +1,7 @@
--keep class org.lineageos.settings.dirac.* {
+-keep class org.leafos.settings.dirac.* {
   *;
 }
 
--keep class org.lineageos.settings.doze.* {
+-keep class org.leafos.settings.doze.* {
   *;
 }
