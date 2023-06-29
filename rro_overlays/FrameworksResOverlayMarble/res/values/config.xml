@@ -32,8 +32,8 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">3000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">3500</integer>
 
     <!-- Fast brightness animation ramp rate in brightness units per second -->
     <integer translatable="false" name="config_brightness_ramp_rate_fast">4932</integer>
