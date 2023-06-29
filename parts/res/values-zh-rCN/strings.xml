@@ -15,6 +15,10 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Ambient settings -->
+    <string name="ambient_display_title">主动显示</string>
+    <string name="ambient_display_enable_title">使用主动显示</string>
+
     <!-- Dirac settings -->
     <string name="dirac_enable">启用米音</string>
     <string name="dirac_title">米音</string>

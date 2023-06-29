@@ -57,20 +57,18 @@
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
-            <meta-data android:name="com.android.settings.category"
-                       android:value="com.android.settings.category.ia.sound" />
-            <meta-data android:name="com.android.settings.summary"
-                       android:resource="@string/dirac_summary" />
+            <meta-data 
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.sound" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/dirac_summary" />
         </activity>
 
-        <provider
-            android:name="androidx.startup.InitializationProvider"
-            android:authorities="${applicationId}.androidx-startup"
-            tools:replace="android:authorities"/>
-
-        <service android:name=".doze.DozeService"
-                 android:permission="XiaomiDozeService"
-                 android:exported="true">
+        <service
+            android:name=".doze.DozeService"
+            android:exported="true"
+            android:permission="DozeService">
         </service>
 
         <activity
@@ -101,7 +99,7 @@
         <activity
             android:name=".refreshrate.RefreshActivity"
             android:label="@string/refresh_title"
-            android:exported="false">
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -117,6 +115,17 @@
             android:name=".refreshrate.RefreshService"
             android:exported="true"
             android:permission="RefreshService">
+        </service>
+
+        <service
+            android:name=".refreshrate.RefreshTileService"
+            android:icon="@drawable/ic_qs_refresh_rate"
+            android:label="@string/refresh_title"
+            android:exported="true"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
         </service>
 
         <activity
