@@ -39,7 +39,7 @@ static const variant_info_t marblein_info = {
 };
 
 static const variant_info_t marble_info = {
-    .hwc_value = "",
+    .hwc_value = "CN",
     .sku_value = "",
 
     .brand = "Xiaomi",
