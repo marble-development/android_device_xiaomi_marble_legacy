@@ -2,6 +2,7 @@
 persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptiver2-aac-ldac-lhdc
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptiver2-aac-ldac-lhdc
 persist.vendor.btstack.enable.twsplus=true
+persist.vendor.btstack.enable.twsplussho=true
 
 # Charger
 ro.charger.enable_suspend=1
