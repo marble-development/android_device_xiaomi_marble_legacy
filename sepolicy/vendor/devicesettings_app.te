@@ -1,0 +1,6 @@
+allow devicesettings_app vendor_sysfs_graphics:dir search;
+allow devicesettings_app vendor_sysfs_graphics:file rw_file_perms;
+
+allow devicesettings_app vendor_sysfs_kgsl:dir search;
+
+allow devicesettings_app vendor_sysfs_kgsl:{ file lnk_file } rw_file_perms;
