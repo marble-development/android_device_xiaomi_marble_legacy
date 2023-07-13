@@ -11,6 +11,3 @@ persist.camera.capture.misegment.dump u:object_r:exported_system_prop:s0
 # Fingerprint
 sys.fp.vendor				u:object_r:vendor_fingerprint_prop:s0
 gf.debug.				u:object_r:vendor_fingerprint_prop:s0
-
-# SettingsLib
-settingsdebug.instant.packages u:object_r:settingslib_prop:s0
