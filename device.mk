@@ -93,10 +93,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl \
     $(DEVICE_PATH)/configs/keylayout/uinput-fortsense.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fortsense.kl
 
-# MultiGen LRU
-PRODUCT_SYSTEM_PROPERTIES += \
-    persist.device_config.mglru_native.lru_gen_config=all
-
 # NFC
 PRODUCT_PACKAGES += \
     NfcNci \
@@ -169,10 +165,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
-# Storage
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.fuse.passthrough.enable=true
-
 # Telephony
 PRODUCT_PACKAGES += \
     extphonelib \
@@ -204,7 +196,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
-
-# USAP Pool
-PRODUCT_SYSTEM_PROPERTIES += \
-    persist.device_config.runtime_native.usap_pool_enabled=true
