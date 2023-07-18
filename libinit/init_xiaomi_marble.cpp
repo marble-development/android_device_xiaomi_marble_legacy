@@ -11,7 +11,7 @@
 #include "vendor_init.h"
 
 #define FINGERPRINT_GL "POCO/marble_global/marble:13/SKQ1.221022.001/V14.0.1.0.TMRMIXM:user/release-keys"
-#define FINGERPRINT_CN "Xiaomi/marble/marble:13/SKQ1.221022.001/V14.0.19.0.TMRCNXM:user/release-keys"
+#define FINGERPRINT_CN "Redmi/marble/marble:13/SKQ1.221022.001/V14.0.19.0.TMRCNXM:user/release-keys"
 #define FINGERPRINT_IN "POCO/marblein/marblein:13/SKQ1.221022.001/V14.0.1.0.TMRMIXM:user/release-keys"
 
 static const variant_info_t marble_global_info = {
@@ -42,7 +42,7 @@ static const variant_info_t marble_info = {
     .hwc_value = "CN",
     .sku_value = "",
 
-    .brand = "Xiaomi",
+    .brand = "Redmi",
     .device = "marble",
     .marketname = "Redmi Note 12 Turbo",
     .model = "23049RAD8C",
