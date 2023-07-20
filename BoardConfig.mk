@@ -31,7 +31,7 @@ TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_VARIANT := cortex-a76
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_2ND_ARCH_VARIANT := armv8-2a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_VARIANT := cortex-a76
 
@@ -41,8 +41,7 @@ SOONG_CONFIG_ufsbsg += ufsframework
 SOONG_CONFIG_ufsbsg_ufsframework := bsg
 
 # Bootloader
-PRODUCT_PLATFORM := taro
-TARGET_BOOTLOADER_BOARD_NAME := marble
+TARGET_BOOTLOADER_BOARD_NAME := taro
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
@@ -71,8 +70,8 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     disable_dma32=on \
-    bootinfo.fingerprint=$(LINEAGE_VERSION) \
-    mtdoops.fingerprint=$(LINEAGE_VERSION)
+    bootinfo.fingerprint=$(PROD_VERSION) \
+    mtdoops.fingerprint=$(PROD_VERSION)
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
@@ -117,20 +116,12 @@ $(foreach p, $(BOARD_PARTITION_LIST), $(eval TARGET_COPY_OUT_$(p) := $(call to-l
 BOARD_PREBUILT_ODMIMAGE := vendor/xiaomi/marble/prebuilts/odm.img
 BOARD_PREBUILT_VENDORIMAGE := vendor/xiaomi/marble/prebuilts/vendor.img
 
-TARGET_COPY_OUT_ODM := odm
-TARGET_COPY_OUT_PRODUCT := product
-TARGET_COPY_OUT_SYSTEM_EXT := system_ext
-TARGET_COPY_OUT_VENDOR := vendor
-TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
-
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_USES_VENDOR_DLKMIMAGE := true
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 
 # Platform
-TARGET_BOARD_PLATFORM := xiaomi_sm7475
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno725
-QCOM_BOARD_PLATFORMS += xiaomi_sm7475
+TARGET_BOARD_PLATFORM := taro
 BOARD_USES_QCOM_HARDWARE := true
 
 # Properties

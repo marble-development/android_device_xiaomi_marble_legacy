@@ -15,20 +15,35 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Ambient settings -->
-    <string name="ambient_display_title">主动显示</string>
-    <string name="ambient_display_enable_title">使用主动显示</string>
-
-    <!-- Dirac settings -->
-    <string name="dirac_enable">启用米音</string>
+    <!-- Ambient Settings -->
+    <string name="ambient_display_title">环境显示</string>
+    <string name="ambient_display_always_on_title">始终开启</string>
+    <string name="ambient_display_always_on_summary">始终显示时间、通知图标等信息, 这会显著增加耗电量</string>
+    <string name="hand_wave_gesture_title">挥手</string>
+    <string name="hand_wave_gesture_summary">挥手时闪烁通知呼吸灯</string>
+    <string name="pickup_sensor_title">拾取传感器</string>
+    <string name="pick_up_gesture_title">拿起</string>
+    <string name="pick_up_gesture_summary">拿起时显示通知</string>
+    <string name="pick_up_wake_gesture_summary">拿起时唤醒设备</string>
+    <string name="pocket_gesture_title">口袋</string>
+    <string name="pocket_gesture_summary">从口袋中拿出时闪烁通知呼吸灯</string>
+    <string name="proximity_wake_title">距离传感器唤醒</string>
+    <string name="proximity_wake_enable_title">距离传感器唤醒</string>
+    <string name="proximity_wake_enable_summary">挥手时唤醒设备</string>
+    <string name="proximity_sensor_title">距离传感器</string>
+    <string name="dialog_ok">确定</string>
+    <string name="doze_settings_help_title">帮助</string>
+    <string name="doze_settings_help_text">这些功能使用传感器启用打盹通知指示灯，选择的传感器将仅在设备收到通知时开启，这将有助于优化电池用量。还有一个选项是当屏幕关闭后立即启用传感器，这会导致更多的电池用量。</string>
+  
+    <!-- Dirac Settings -->
     <string name="dirac_title">米音</string>
     <string name="dirac_summary">使用米音和 Hi-Fi 来优化音质</string>
     <string name="dirac_headset_title">耳机类型</string>
     <string name="dirac_preset_title">声音预设</string>
-    <string name="dirac_hifi_enable_title">启用 Hi-Fi</string>
+    <string name="dirac_hifi_enable_title">Hi-Fi</string>
     <string name="dirac_hifi_summary">减少噪音和失真，提高音频质量</string>
 
-    <!-- Dirac settings: Headset types -->
+    <!-- Dirac Settings: Headset Types -->
     <string name="dirac_headset_default">默认</string>
     <string name="dirac_headset_earbuds">灵动耳塞式</string>
     <string name="dirac_headset_in_ear_2013">灵悦入耳式</string>
@@ -43,9 +58,9 @@
     <string name="dirac_headset_piston_color">小米活塞炫彩版</string>
     <string name="dirac_headset_in_ear">小米圈铁</string>
     <string name="dirac_headset_capsule">小米胶囊</string>
-    <string name="dirac_headset_in_ear_pro">小米圈铁Pro</string>
+    <string name="dirac_headset_in_ear_pro">小米圈铁 Pro</string>
     <string name="dirac_headset_comfort">小米头戴轻松版</string>
-    <string name="dirac_headset_reduction_noise">小米降噪 typeC</string>
+    <string name="dirac_headset_reduction_noise">小米降噪 (Type-C)</string>
     <string name="dirac_headset_cancelling">小米降噪 3.5mm</string>
     <string name="dirac_headset_half_in_ear">小米半入耳式</string>
     <string name="dirac_headset_in_ear2">小米圈铁2</string>
@@ -58,7 +73,7 @@
     <string name="dirac_headset_redmi_earphones">红米耳机</string>
     <string name="dirac_headset_dual_driver_in_ear">小米双单元耳机 (印度版)</string>
 
-    <!-- Dirac settings: Equalizer presets -->
+    <!-- Dirac Settings: Equalizer Presets -->
     <string name="dirac_preset_default">默认</string>
     <string name="dirac_preset_rock">摇滚</string>
     <string name="dirac_preset_jazz">爵士</string>
@@ -78,7 +93,7 @@
     <string name="dirac_preset_soft_bass">柔和低音</string>
     <string name="dirac_preset_soft_treble">柔和高音</string>
     
-    <!-- Dirac settings: Sound Scenes -->
+    <!-- Dirac Settings: Sound Scenes -->
     <string name="music_headset_scenario_select">场景选择</string>
     <string name="music_headset_scenario_intelligent">动态</string>
     <string name="music_headset_scenario_music">音乐</string>
@@ -98,10 +113,10 @@
 
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">扬声器清理</string>
-    <string name="clear_speaker_summary">开启后，自动播放30s音频清理扬声器出音孔灰尘</string>
+    <string name="clear_speaker_summary">开启后，自动播放 30s 音频清理扬声器出音孔灰尘</string>
     <string name="clear_speaker_description">功能说明：\n\n    1.当出现轻微堵孔时，建议执行该功能一到两次;\n\n    2.当出现严重堵孔时，建议执行该功能两到五次，同时完成手握手机向下甩的动作</string>
 
-    <!-- Refresh rate -->
+    <!-- Refresh Rate -->
     <string name="refresh_title">刷新率设置</string>
     <string name="refresh_summary">设置特定应用的最大刷新率</string>
     <string name="refresh_default">默认</string>

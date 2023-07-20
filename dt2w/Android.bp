@@ -29,15 +29,15 @@ android_app {
     },
 
     required: [
-        "privapp-permissions_org.lineageos.dt2w.Marble",
+        "privapp-permissions_com.dt2w.marble",
         "xiaomi-touch"
     ]
 }
 
 prebuilt_etc {
-    name: "privapp-permissions_org.lineageos.dt2w.Marble",
+    name: "privapp-permissions_com.dt2w.marble",
     sub_dir: "permissions",
-    src: "privapp-permissions_org.lineageos.dt2w.Marble.xml",
+    src: "privapp-permissions_com.dt2w.marble.xml",
     filename_from_src: true,
 }
 

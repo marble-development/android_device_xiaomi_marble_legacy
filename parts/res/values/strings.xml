@@ -15,8 +15,27 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Dirac settings -->
-    <string name="dirac_enable">Enable dirac</string>
+    <!-- Device Specific Settings -->
+    <string name="device_settings_app_name">Marble Parts</string>
+
+    <!-- Doze Settings -->
+    <string name="ambient_display_title">Ambient display</string>
+    <string name="ambient_display_always_on_title">Always on</string>
+    <string name="ambient_display_always_on_summary">Show time, notification icons, and other info. Increased battery usage.</string>
+    <string name="hand_wave_gesture_title">Hand wave</string>
+    <string name="hand_wave_gesture_summary">Pulse notifications on hand wave</string>
+    <string name="pickup_sensor_title">Pickup</string>
+    <string name="pick_up_gesture_title">Pick-up</string>
+    <string name="pick_up_gesture_summary">Pulse notifications on pick-up</string>
+    <string name="pick_up_wake_gesture_summary">Wake device on pick-up</string>
+    <string name="pocket_gesture_title">Pocket</string>
+    <string name="pocket_gesture_summary">Pulse notifications on removal from pocket</string>
+    <string name="proximity_sensor_title">Proximity</string>
+    <string name="dialog_ok">OK</string>
+    <string name="doze_settings_help_title">Help</string>
+    <string name="doze_settings_help_text">These features use sensor events to launch a doze notification pulse. The chosen sensor is only enabled when the device receives a notification, this helps to reduce battery usage. There is also an option to enable the chosen sensor as soon as the screen turns off, this will cause higher battery usage.</string>
+
+    <!-- Dirac Settings -->
     <string name="dirac_title">Dirac™ Sound</string>
     <string name="dirac_summary">Optimize audio quality</string>
     <string name="dirac_headset_title">Choose headphones type</string>
@@ -25,7 +44,7 @@
     <string name="dirac_hifi_title">Hi-Fi</string>
     <string name="dirac_hifi_summary">Decrease noise and Distortion and increase audio quality</string>
     
-    <!-- Dirac settings: Headset types -->
+    <!-- Dirac Settings: Headset Types -->
     <string name="dirac_headset_default">Default</string>
     <string name="dirac_headset_earbuds">Mi Earbuds</string>
     <string name="dirac_headset_in_ear_2013">Mi In-Ear (2013)</string>
@@ -55,7 +74,7 @@
     <string name="dirac_headset_redmi_earphones">Redmi Earphones</string>
     <string name="dirac_headset_dual_driver_in_ear">Mi Dual Driver In-ear Earphones</string>
 
-    <!-- Dirac settings: Equalizer presets -->
+    <!-- Dirac Settings: Equalizer Presets -->
     <string name="dirac_preset_default">Default</string>
     <string name="dirac_preset_rock">Rock</string>
     <string name="dirac_preset_jazz">Jazz</string>
@@ -75,7 +94,7 @@
     <string name="dirac_preset_soft_bass">Soft Bass</string>
     <string name="dirac_preset_soft_treble">Soft Treble</string>
     
-    <!-- Dirac settings: Sound Scenes -->
+    <!-- Dirac Settings: Sound Scenes -->
     <string name="music_headset_scenario_select">Choose scene</string>
     <string name="music_headset_scenario_intelligent">Smart</string>
     <string name="music_headset_scenario_music">Music</string>
@@ -98,7 +117,7 @@
     <string name="clear_speaker_summary">Play a 30-second audio to clear the speaker</string>
     <string name="clear_speaker_description">Run this feature once or twice if you find that your speaker is lightly blocked by dust. Set media volume to maximum.\n\nIf the speaker is blocked heavily, run this feature 2-5 times while shaking your device with the speaker facing downwards.\n\nWARNING: Ensure that any headphones are unplugged.</string>
 
-    <!-- Refresh rate -->
+    <!-- Refresh Rate -->
     <string name="refresh_title">Per-app refresh rate</string>
     <string name="refresh_summary">Adjust per-app maximum refresh rate</string>
     <string name="refresh_default">Default</string>

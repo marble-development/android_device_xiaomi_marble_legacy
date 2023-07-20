@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.lineageos.dt2w.Marble"
+    package="com.dt2w.marble"
     android:versionCode="1"
     android:versionName="1.0"
     android:sharedUserId="android.uid.system">
