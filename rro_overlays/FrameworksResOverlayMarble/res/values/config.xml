@@ -636,7 +636,6 @@
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
 
-
     <!-- The default journal mode to use use when Write-Ahead Logging is not active.
          Choices are: OFF, DELETE, TRUNCATE, PERSIST and MEMORY.
          PERSIST may improve performance by reducing how often journal blocks are
