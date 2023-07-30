@@ -1,3 +1,6 @@
+# Bluetooth
+persist.vendor.btstack.enable.twsplus=true
+
 # Charger
 ro.charger.enable_suspend=1
 
