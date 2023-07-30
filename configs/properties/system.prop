@@ -82,3 +82,7 @@ persist.device_config.runtime_native.usap_pool_enabled=true
 # Xiaomi
 ro.miui.notch=1
 ro.product.mod_device=marble_global
+
+# Radio VoNR Calling
+persist.radio.is_vonr_enabled_0=true
+persist.radio.is_vonr_enabled_1=true
