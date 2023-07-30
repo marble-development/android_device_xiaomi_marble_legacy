@@ -66,3 +66,7 @@ ro.nfc.port=I2C
 
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Radio VoNR Calling
+persist.radio.is_vonr_enabled_0=true
+persist.radio.is_vonr_enabled_1=true
