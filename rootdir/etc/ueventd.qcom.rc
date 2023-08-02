@@ -510,3 +510,6 @@ subsystem mem_buf_vm
 
 # devcoredump data attributes
 /sys/class/devcoredump/devcd*                           data                            0600    system  system
+
+# Battery
+/sys/class/qcom-battery                                 input_suspend                   0660    system  system
