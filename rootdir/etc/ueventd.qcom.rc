@@ -525,3 +525,6 @@ subsystem mem_buf_vm
 /sys/bus/platform/devices/soc:fingerprint_fpc* screen           0700   system  system
 /dev/goodix_fp                                                  0666   system  system
 /sys/bus/platform/devices/soc:xiaomi_fingerprint/fingerdown     0664   system  graphics
+
+# Battery
+/sys/class/qcom-battery                                 input_suspend                   0660    system  system
