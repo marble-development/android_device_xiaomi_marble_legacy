@@ -147,6 +147,7 @@ PRODUCT_PACKAGES += \
     SystemUIResCommon \
     TelecommResCommon \
     TelephonyResCommon \
+    TetheringResCommon \
     WifiResCommon
 
 PRODUCT_PACKAGES += \
