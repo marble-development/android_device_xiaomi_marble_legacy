@@ -43,6 +43,7 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayMarble \
     TelecommResCommon \
     TelephonyResCommon \
+    TetheringResCommon \
     WifiResMarble \
     WifiResTarget
 
