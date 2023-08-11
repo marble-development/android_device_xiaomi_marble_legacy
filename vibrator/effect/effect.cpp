@@ -146,6 +146,11 @@ int parse_custom_data(effect_stream *effect) {
             effect->effect_id, path);
 
     rc = stat(path, &file_stat);
+    if (rc && effect->effect_id != 0) {
+        ALOGI("Could not open %s, falling back to click", path);
+        path = fifo_data_paths[0].c_str();
+        rc = stat(path, &file_stat);
+    }
     if (!rc) {
         effect->length = file_stat.st_size;
     } else {
