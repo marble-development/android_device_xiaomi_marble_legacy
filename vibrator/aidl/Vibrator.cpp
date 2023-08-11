@@ -510,6 +510,8 @@ Vibrator::~Vibrator() {
         close(pipefd[1]);
 }
 
+static int getPrimitiveDurationFromSysfs(uint32_t primitive_id, int32_t* durationMs);
+
 ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
     *_aidl_return = IVibrator::CAP_ON_CALLBACK;
 
@@ -522,10 +524,12 @@ ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
     if (ff.mSupportGain)
         *_aidl_return |= IVibrator::CAP_AMPLITUDE_CONTROL;
     if (ff.mSupportEffects) {
-       *_aidl_return |= IVibrator::CAP_PERFORM_CALLBACK;
-        if (access("/sys/class/qcom-haptics/primitive_duration", F_OK) == 0) {
+        *_aidl_return |= IVibrator::CAP_PERFORM_CALLBACK;
+        int32_t primitiveDuration = 0;
+        uint32_t primitiveId = static_cast<uint32_t>(CompositePrimitive::CLICK);
+        getPrimitiveDurationFromSysfs(primitiveId, &primitiveDuration);
+        if (primitiveDuration != 0)
             *_aidl_return |= IVibrator::CAP_COMPOSE_EFFECTS;
-        }
     }
     if (ff.mSupportExternalControl)
         *_aidl_return |= IVibrator::CAP_EXTERNAL_CONTROL;
