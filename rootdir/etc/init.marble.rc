@@ -9,6 +9,10 @@ on boot
     chmod 0664 /sys/bus/platform/devices/soc:xiaomi_fingerprint/fingerdown
     chown system graphics /sys/bus/platform/devices/soc:xiaomi_fingerprint/fingerdown
 
+    # Pocket sensor
+    chown system system /sys/class/touch/touch_dev/palm_sensor
+    chmod 0664 /sys/class/touch/touch_dev/palm_sensor
+
 on post-fs
     chown system system /sys/class/backlight/panel0-backlight/brightness
     chown system system /sys/class/backlight/panel0-backlight/max_brightness
