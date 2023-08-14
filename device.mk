@@ -64,6 +64,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Displayconfig
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/displayconfig/display_id_4630946480857061762.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/display_id_4630946480857061762.xml \
+    $(DEVICE_PATH)/configs/displayconfig/display_id_4630946370515662722.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/display_id_4630946370515662722.xml \
+    $(DEVICE_PATH)/configs/displayconfig/resolution_switch_process_list_backup.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/resolution_switch_process_list_backup.xml \
+    $(DEVICE_PATH)/configs/displayconfig/thermal_brightness_control.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/thermal_brightness_control.xml
+
 # Dtb
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/prebuilts/dtb:dtb.img
