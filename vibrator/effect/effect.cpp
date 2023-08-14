@@ -136,6 +136,45 @@ static const std::string fifo_data_paths[] = {
     "/vendor/firmware/5_heavyClick_P_RTP.bin",
 };
 
+int create_double_click(effect_stream *effect) {
+    const char *path = fifo_data_paths[0].c_str();
+    std::ifstream data;
+    struct stat file_stat;
+    int size = 0;
+    int rc = stat(path, &file_stat);
+
+    if (rc) {
+        ALOGE("Could not open %s", path);
+        return rc;
+    } else {
+        size = file_stat.st_size;
+        // First and last parts of the array contain the click effect, with
+        // blank in between, to stimulate double click
+        effect->length = size * 5;
+    }
+
+    // Create a persistent 8-bit int array which contains the fifo data, one
+    // slot of the array contains one byte of the fifo data from vendor.
+    int8_t *custom_data = new int8_t[effect->length];
+
+    data.open(path, std::ios::in | std::ios::binary);
+    data.read(reinterpret_cast<char *>(custom_data), size);
+    data.close();
+
+    for (int i = 0; i < size; i++) {
+        // Copy the effect onto last part
+        custom_data[size * 4 + i] = custom_data[i];
+        // Blank effect in between
+        custom_data[size + i] = 0;
+        custom_data[size * 2 + i] = 0;
+        custom_data[size * 3 + i] = 0;
+    }
+
+    effect->data = custom_data;
+
+    return rc;
+}
+
 int parse_custom_data(effect_stream *effect) {
     const char *path = fifo_data_paths[effect->effect_id].c_str();
     std::ifstream data;
@@ -147,6 +186,10 @@ int parse_custom_data(effect_stream *effect) {
 
     rc = stat(path, &file_stat);
     if (rc && effect->effect_id != 0) {
+        if (effect->effect_id == 1 /* double click */) {
+            ALOGI("Could not open %s, attempting to create from click", path);
+            return create_double_click(effect);
+        }
         ALOGI("Could not open %s, falling back to click", path);
         path = fifo_data_paths[0].c_str();
         rc = stat(path, &file_stat);
