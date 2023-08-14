@@ -1,0 +1,4 @@
+on boot
+    # Pocket sensor
+    chown system system /sys/class/touch/touch_dev/palm_sensor
+    chmod 0664 /sys/class/touch/touch_dev/palm_sensor
