@@ -391,9 +391,9 @@ on property:sys.shutdown.requested=*
 #on property:vold.decrypt=trigger_restart_framework
 #   start vendor.cnss_diag
 
-on property:ro.debuggable=1
-    start vendor.cnss_diag
-    start vendor.tcpdump
+#on property:ro.debuggable=1
+#    start vendor.cnss_diag
+#    start vendor.tcpdump
 
 on property:persist.vendor.cnss_diag.enable=true
     start vendor.cnss_diag
