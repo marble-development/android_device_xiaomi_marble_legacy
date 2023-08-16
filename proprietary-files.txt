@@ -2988,7 +2988,7 @@ vendor/etc/thermal-map.conf
 vendor/etc/thermal-mgame.conf
 vendor/etc/thermal-navigation.conf
 vendor/etc/thermal-nolimits.conf
-vendor/etc/thermal-normal.conf
+vendor/etc/thermal-normal.conf|f45c23e3efb9418a363e4761eb91cce9d9981356
 vendor/etc/thermal-per-cclassvideo.conf
 vendor/etc/thermal-per-cgame.conf
 vendor/etc/thermal-per-class0.conf
