@@ -589,6 +589,10 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 #WPA
 WPA := wpa_cli
 
+# Wi-Fi
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/qca6490/WCNSS_qcom_cfg.ini
+
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl \
