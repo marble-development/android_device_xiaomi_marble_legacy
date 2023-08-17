@@ -127,4 +127,10 @@ $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 ALL_DEFAULT_INSTALLED_MODULES += \
 	$(IMS_SYMLINKS)
 
+# Kernel headers
+$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr: $(wildcard device/xiaomi/marble/prebuilts/kernel-headers/*)
+	rm -rf $@
+	mkdir -p $@/include
+	cp -a device/xiaomi/marble/prebuilts/kernel-headers/. $@/include
+
 endif

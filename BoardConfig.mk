@@ -25,7 +25,7 @@ AB_OTA_PARTITIONS += \
     vendor_dlkm
 
 # Architecture
-TTARGET_ARCH := arm64
+TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a-branchprot
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
@@ -55,7 +55,7 @@ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
 # Build
 BUILD_BROKEN_DUP_RULES := true
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES  := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 
 # Display
@@ -105,7 +105,7 @@ TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
 
-PRODUCT_VENDOR_KERNEL_HEADERS += $(DEVICE_PATH)/prebuilts/kernel-headers
+TARGET_BOARD_KERNEL_HEADERS += $(DEVICE_PATH)/kernel-headers
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -200,9 +200,9 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
 # VINTF
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE += := \
+DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/configs/vintf/manifest_ukee.xml \
-    $(DEVICE_PATH)/configs/vintf/manifest_xiaomi.xml \
+    $(DEVICE_PATH)/configs/vintf/manifest_xiaomi.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/configs/vintf/vendor_framework_compatibility_matrix.xml \
     $(DEVICE_PATH)/configs/vintf/xiaomi_framework_compatibility_matrix.xml \
