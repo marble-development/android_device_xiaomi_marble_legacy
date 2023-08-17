@@ -58,6 +58,9 @@ TARGET_SCREEN_DENSITY := 440
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_marble
 TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_marble
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
+
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
