@@ -1,9 +1,0 @@
-prebuilt_etc {
-    name: "sysbta_audio_policy_configuration.xml",
-    src: "sysbta_audio_policy_configuration.xml",
-}
-
-prebuilt_etc {
-    name: "sysbta_audio_policy_configuration_7_0.xml",
-    src: "sysbta_audio_policy_configuration_7_0.xml",
-}

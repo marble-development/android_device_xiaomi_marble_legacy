@@ -58,9 +58,6 @@ persist.vendor.sensors.enable.mag_filter=true
 # MINOR_CLASS: 0x0C -> 12 (Smart Phone)
 bluetooth.device.class_of_device=90,2,12
 
-# Sysbta
-persist.bluetooth.system_audio_hal.enabled=1
-
 # System prop for NFC DT
 ro.nfc.port=I2C
 
