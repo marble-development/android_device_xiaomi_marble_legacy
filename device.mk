@@ -113,7 +113,9 @@ TARGET_BOOT_ANIMATION_RES := 1080
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti \
     android.hardware.boot@1.2-impl-qti.recovery \
-    android.hardware.boot@1.2-service
+    android.hardware.boot@1.2-service \
+    bootctrl.taro \
+    bootctrl.taro.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
