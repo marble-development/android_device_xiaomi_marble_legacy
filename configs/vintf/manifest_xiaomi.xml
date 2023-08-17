@@ -1,0 +1,51 @@
+<!--
+     Copyright (C) 2023 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest version="1.0" type="device">
+    <hal format="hidl">
+       <name>android.hardware.ir</name>
+       <transport>hwbinder</transport>
+       <version>1.0</version>
+       <interface>
+           <name>IConsumerIr</name>
+           <instance>default</instance>
+       </interface>
+   </hal>
+   <hal format="hidl">
+       <name>vendor.qti.sla.service</name>
+       <transport>hwbinder</transport>
+       <version>1.0</version>
+       <interface>
+           <name>ISlaService</name>
+           <instance>default</instance>
+       </interface>
+   </hal>
+   <hal format="hidl">
+       <name>vendor.xiaomi.hardware.bgservice</name>
+       <transport>hwbinder</transport>
+       <version>1.0</version>
+       <interface>
+           <name>IBGService</name>
+           <instance>default</instance>
+       </interface>
+   </hal>
+   <hal format="hidl">
+       <name>vendor.xiaomi.hardware.campostproc</name>
+       <transport>hwbinder</transport>
+       <version>1.0</version>
+       <interface>
+           <name>IMiPostProcService</name>
+           <instance>default</instance>
+       </interface>
+   </hal>
+   <hal format="hidl">
+       <name>vendor.xiaomi.hardware.fx.tunnel</name>
+       <transport>hwbinder</transport>
+       <version>1.0</version>
+       <interface>
+           <name>IMiFxTunnel</name>
+           <instance>default</instance>
+       </interface>
+   </hal>
+</manifest>
