@@ -161,13 +161,22 @@ PRODUCT_PACKAGES += \
 
 # Perf
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.3
+    vendor.qti.hardware.perf@2.3.vendor
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    init.recovery.qcom.rc \
-    init.qcom.rc
-
+    charger_fw_fstab.qti \
+    fstab.qcom \
+    init.class_main.sh \
+    init.qcom.class_core.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.rc \
+    init.qcom.sh \
+    init.target.rc \
+    ueventd.qcom.rc \
+    ueventd-odm.rc \
+    init.recovery.qcom.rc
 
 # SHIPPING API
 PRODUCT_SHIPPING_API_LEVEL := 31
