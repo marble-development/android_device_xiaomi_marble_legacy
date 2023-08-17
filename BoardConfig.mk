@@ -131,6 +131,8 @@ DEVICE_MANIFEST_SKUS := ukee
 DEVICE_MANIFEST_UKEE_FILES := $(DEVICE_PATH)/configs/vintf/manifest_ukee.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.device.xml
+ODM_MANIFEST_SKUS += marble
+ODM_MANIFEST_MARBLE_FILES := $(DEVICE_PATH)/configs/vintf/manifest_nfc.xml
 
 # Vendor API
 BOARD_API_LEVEL := 31
