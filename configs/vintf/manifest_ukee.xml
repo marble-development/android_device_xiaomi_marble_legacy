@@ -708,39 +708,4 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
             <instance>MwqemAdapter</instance>
         </interface>
     </hal>
-    <!-- Xiaomi additions -->
-    <hal format="hidl">
-        <name>android.hardware.media.c2</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IComponentStore/dolby</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.ir</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IConsumerIr</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.xiaomi.hardware.bgservice</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IBGService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IBGService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.xiaomi.hardware.campostproc</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMiPostProcService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IMiPostProcService/default</fqname>
-    </hal>
 </manifest>
