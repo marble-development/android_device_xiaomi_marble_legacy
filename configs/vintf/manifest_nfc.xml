@@ -1,0 +1,44 @@
+<!--
+     Copyright (C) 2023 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest version="1.0" type="device">
+    <hal format="hidl">
+        <name>android.hardware.nfc</name>
+        <transport>hwbinder</transport>
+        <version>1.2</version>
+        <interface>
+            <name>INfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" override="true">
+        <name>android.hardware.secure_element</name>
+        <transport>hwbinder</transport>
+        <version>1.2</version>
+        <interface>
+            <name>ISecureElement</name>
+            <instance>SIM1</instance>
+            <instance>SIM2</instance>
+            <instance>eSE1</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.nxp.hardware.nfc</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>INqNfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.esepowermanager</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IEsePowerManager</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</manifest>
