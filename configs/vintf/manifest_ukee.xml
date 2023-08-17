@@ -122,14 +122,14 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         <fqname>@4.1::IKeymasterDevice/default</fqname>
     </hal>
     <hal format="hidl">
-       <name>android.hardware.gatekeeper</name>
-       <transport>hwbinder</transport>
-       <impl level="generic"></impl>
-       <version>1.0</version>
-       <interface>
-           <name>IGatekeeper</name>
-           <instance>default</instance>
-       </interface>
+        <name>android.hardware.gatekeeper</name>
+        <transport>hwbinder</transport>
+        <impl level="generic"></impl>
+        <version>1.0</version>
+        <interface>
+            <name>IGatekeeper</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <!-- QSEECom HAL service -->
     <hal format="hidl">
@@ -288,15 +288,15 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
     <!-- deviceInfo HAL -->
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.internal.deviceinfo</name>
-           <transport>hwbinder</transport>
-           <version>1.0</version>
-           <interface>
-               <name>IDeviceInfo</name>
-               <instance>deviceinfo</instance>
-           </interface>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IDeviceInfo</name>
+            <instance>deviceinfo</instance>
+        </interface>
     </hal>
 
-   <!-- IMS RTP Service -->
+    <!-- IMS RTP Service -->
     <hal format="hidl">
         <name>vendor.qti.imsrtpservice</name>
         <transport>hwbinder</transport>
@@ -317,47 +317,47 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
             <instance>slot2</instance>
         </interface>
     </hal>
-   <!-- IMS UCE Service -->
-   <hal format="hidl">
-       <name>com.qualcomm.qti.uceservice</name>
-       <transport>hwbinder</transport>
-       <version>2.3</version>
-       <interface>
-         <name>IUceService</name>
-         <instance>com.qualcomm.qti.uceservice</instance>
-       </interface>
-   </hal>
-   <!-- IMS callinfo Service -->
-   <hal format="hidl">
-       <name>vendor.qti.ims.callinfo</name>
-       <transport>hwbinder</transport>
-       <version>1.0</version>
-       <interface>
-         <name>IService</name>
-         <instance>default</instance>
-       </interface>
-   </hal>
-   <!-- IMS CM Service -->
-   <hal format="hidl">
-       <name>com.qualcomm.qti.imscmservice</name>
-       <transport>hwbinder</transport>
-       <version>2.2</version>
-       <interface>
-         <name>IImsCmService</name>
-         <instance>qti.ims.connectionmanagerservice</instance>
-       </interface>
-   </hal>
-   <hal format="hidl">
-       <name>vendor.qti.ims.factory</name>
-       <transport>hwbinder</transport>
-       <version>1.1</version>
-       <version>2.1</version>
-       <interface>
-         <name>IImsFactory</name>
-         <instance>default</instance>
-       </interface>
-   </hal>
-       <hal format="hidl">
+    <!-- IMS UCE Service -->
+    <hal format="hidl">
+        <name>com.qualcomm.qti.uceservice</name>
+        <transport>hwbinder</transport>
+        <version>2.3</version>
+        <interface>
+            <name>IUceService</name>
+            <instance>com.qualcomm.qti.uceservice</instance>
+        </interface>
+    </hal>
+    <!-- IMS callinfo Service -->
+    <hal format="hidl">
+        <name>vendor.qti.ims.callinfo</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <!-- IMS CM Service -->
+    <hal format="hidl">
+        <name>com.qualcomm.qti.imscmservice</name>
+        <transport>hwbinder</transport>
+        <version>2.2</version>
+        <interface>
+            <name>IImsCmService</name>
+            <instance>qti.ims.connectionmanagerservice</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.ims.factory</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <version>2.1</version>
+        <interface>
+            <name>IImsFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
         <version>2.5</version>
@@ -368,23 +368,23 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
     </hal>
     <!-- Tether Offload -->
     <hal format="hidl">
-      <name>android.hardware.tetheroffload.config</name>
-      <transport>hwbinder</transport>
-      <version>1.0</version>
-      <interface>
-          <name>IOffloadConfig</name>
-          <instance>default</instance>
-      </interface>
+        <name>android.hardware.tetheroffload.config</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOffloadConfig</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 
     <hal format="hidl">
-      <name>android.hardware.tetheroffload.control</name>
-      <transport>hwbinder</transport>
-      <version>1.1</version>
-      <interface>
-          <name>IOffloadControl</name>
-          <instance>default</instance>
-      </interface>
+        <name>android.hardware.tetheroffload.control</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IOffloadControl</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.data.iwlan</name>
@@ -644,7 +644,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         <interface>
             <name>IPAL</name>
             <instance>default</instance>
-            </interface>
+        </interface>
         <fqname>@1.0::IPAL/default</fqname>
     </hal>
     <!-- QCC HAL Service -->
@@ -667,7 +667,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
             <instance>embmsslServer0</instance>
         </interface>
     </hal>
-     <!-- DpmService HAL service -->
+    <!-- DpmService HAL service -->
     <hal format="hidl">
         <name>vendor.qti.hardware.dpmservice</name>
         <transport>hwbinder</transport>
@@ -677,7 +677,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
             <instance>DpmService</instance>
         </interface>
     </hal>
-<!-- QESDK HAL service -->
+    <!-- QESDK HAL service -->
     <hal format="hidl" optional="true">
         <name>vendor.qti.qesdhal</name>
         <transport>hwbinder</transport>

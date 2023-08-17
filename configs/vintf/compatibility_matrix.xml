@@ -83,8 +83,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>sigmahal</instance>
             <instance>sigmahal64</instance>
         </interface>
-   </hal>
-      <hal format="hidl" optional="true">
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.qccsyshal</name>
         <transport>hwbinder</transport>
         <version>1.0-1</version>
@@ -92,5 +92,5 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IQccsyshal</name>
             <instance>qccsyshal</instance>
         </interface>
-   </hal>
+    </hal>
 </compatibility-matrix>

@@ -127,10 +127,13 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # VINTF
-DEVICE_MANIFEST_SKUS := ukee
-DEVICE_MANIFEST_UKEE_FILES := $(DEVICE_PATH)/configs/vintf/manifest_ukee.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.device.xml
+DEVICE_MANIFEST_FILE += := \
+    $(DEVICE_PATH)/configs/vintf/manifest_ukee.xml \
+    $(DEVICE_PATH)/configs/vintf/manifest_xiaomi.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(DEVICE_PATH)/configs/vintf/vendor_framework_compatibility_matrix.xml \
+    $(DEVICE_PATH)/configs/vintf/xiaomi_framework_compatibility_matrix.xml
 ODM_MANIFEST_SKUS += marble
 ODM_MANIFEST_MARBLE_FILES := $(DEVICE_PATH)/configs/vintf/manifest_nfc.xml
 
