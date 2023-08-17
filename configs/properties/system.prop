@@ -1,10 +1,3 @@
-# Bluetooth
-persist.vendor.btstack.enable.twsplus=true
-persist.vendor.btstack.enable.twsplussho=true
-persist.vendor.bt.a2dp.hal.implementation=true
-persist.vendor.bt.a2dp.aac_whitelist=false
-persist.vendor.btstack.enable.lpa=true
-
 # Charger
 ro.charger.enable_suspend=1
 
@@ -23,6 +16,10 @@ persist.sys.fuse.passthrough.enable=true
 # Graphics
 debug.hwui.renderer=skiagl
 debug.renderengine.backend=skiaglthreaded
+
+# Hint Manager
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
 
 # IMS
 persist.dbg.volte_avail_ovr=1
@@ -48,15 +45,8 @@ telephony.lteOnCdmaDevice=1
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 
-# Set the Bluetooth Class of Device
-# Service Field: 0x5A -> 90
-#    Bit 17: Networking
-#    Bit 19: Capturing
-#    Bit 20: Object Transfer
-#    Bit 22: Telephony
-# MAJOR_CLASS: 0x02 -> 2 (Phone)
-# MINOR_CLASS: 0x0C -> 12 (Smart Phone)
-bluetooth.device.class_of_device=90,2,12
+# SSR
+persist.vendor.ssr.enable_ramdumps=1
 
 # System prop for NFC DT
 ro.nfc.port=I2C
@@ -64,6 +54,5 @@ ro.nfc.port=I2C
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
 
-# Radio VoNR Calling
-persist.radio.is_vonr_enabled_0=true
-persist.radio.is_vonr_enabled_1=true
+# Xiaomi
+ro.product.mod_device=marble_global

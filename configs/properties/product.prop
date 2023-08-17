@@ -1,29 +1,26 @@
 # Audio
-ro.config.vc_call_vol_steps=11
-ro.config.media_vol_steps=25
-  
-# Bluetooth
-bluetooth.profile.a2dp.source.enabled?=true
-bluetooth.profile.asha.central.enabled?=true
-bluetooth.profile.avrcp.target.enabled?=true
-bluetooth.profile.bap.broadcast.assist.enabled?=true
-bluetooth.profile.bap.unicast.client.enabled?=true
-bluetooth.profile.bas.client.enabled?=true
-bluetooth.profile.csip.set_coordinator.enabled?=true
-bluetooth.profile.gatt.enabled?=true
-bluetooth.profile.hap.client.enabled?=true
-bluetooth.profile.hfp.ag.enabled?=true
-bluetooth.profile.hid.device.enabled?=true
-bluetooth.profile.hid.host.enabled?=true
-bluetooth.profile.map.server.enabled?=true
-bluetooth.profile.mcp.server.enabled?=true
-bluetooth.profile.opp.enabled?=true
-bluetooth.profile.pan.nap.enabled?=true
-bluetooth.profile.pan.panu.enabled?=true
-bluetooth.profile.pbap.server.enabled?=true
-bluetooth.profile.sap.server.enabled?=true
-bluetooth.profile.ccp.server.enabled?=true
-bluetooth.profile.vcp.controller.enabled?=true
+vendor.audio_hal.period_size=192
+vendor.audio.tunnel.encode=false
+vendor.audio.offload.buffer.size.kb=32
+vendor.voice.path.for.pcm.voip=true
+vendor.audio.offload.multiaac.enable=true
+vendor.audio.parser.ip.buffer.size=262144
+vendor.audio.flac.sw.decoder.24bit=true
+vendor.audio.use.sw.alac.decoder=true
+vendor.audio.use.sw.ape.decoder=true
+vendor.audio.hw.aac.encoder=true
+af.fast_track_multiplier=1
+audio.offload.video=true
+audio.deep_buffer.media=true
+audio.sys.noisy.broadcast.delay=500
+audio.sys.mute.latency.factor=2
+audio.sys.routing.latency=0
+audio.offload.min.duration.secs=30
+audio.sys.offload.pstimeout.secs=3
+ro.af.client_heap_size_kbyte=7168
+media.stagefright.audio.deep=false
+aaudio.mmap_exclusive_policy=2
+aaudio.hw_burst_min_usec=2000
 
 # Blur
 ro.sf.blurs_are_expensive=1
@@ -31,6 +28,8 @@ ro.surface_flinger.supports_background_blur=1
 
 # Radio
 persist.vendor.radio.hidl_dev_service=true
+ro.vendor.radio.5g=3
+ro.vendor.radio.features_common=3
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true

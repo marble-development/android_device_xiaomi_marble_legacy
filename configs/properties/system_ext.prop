@@ -1,8 +1,3 @@
-# Bluetooth
-persist.bluetooth.bluetooth_audio_hal.disabled=false
-persist.bluetooth.a2dp_offload.disabled=true
-ro.bluetooth.a2dp_offload.supported=false
-
 # Camera
 vendor.camera.aux.packagelist=org.lineageos.aperture
 
@@ -10,5 +5,4 @@ vendor.camera.aux.packagelist=org.lineageos.aperture
 persist.vendor.dpm.feature=1
 
 # RIL
-ro.telephony.sim_slots.count=2
 telephony.active_modems.max_count=2
