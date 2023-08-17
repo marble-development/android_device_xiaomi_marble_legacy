@@ -1,3 +1,0 @@
-allow untrusted_app_29 qemu_hw_prop:file { open read };
-allow untrusted_app_29 zygote:unix_stream_socket { getopt };
-

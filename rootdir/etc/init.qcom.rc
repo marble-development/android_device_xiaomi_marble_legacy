@@ -1,5 +1,0 @@
-on property:dev.bootcomplete=1
-    chmod 0666 /dev/xiaomi-touch
-
-on property:dev.bootcomplete=1 && property:persist.sys.marble.dt2w=*
-    exec /system/bin/xiaomi-touch 14 ${persist.sys.marble.dt2w}

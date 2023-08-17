@@ -1,4 +1,0 @@
-type hal_citsensorservice_xiaomi_default, domain;
-
-# Allow to use wakelock
-wakelock_use(hal_citsensorservice_xiaomi_default)

@@ -24,33 +24,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 DEVICE_PATH := device/xiaomi/marble
 
-# SHIPPING API
-PRODUCT_SHIPPING_API_LEVEL := 31
-
-# VNDK API
-PRODUCT_TARGET_VNDK_VERSION := 32
-PRODUCT_EXTRA_VNDK_VERSIONS := 32
-
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
-    FILESYSTEM_TYPE_system=erofs \
+    FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_vendor=true \
     POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
-    FILESYSTEM_TYPE_vendor=erofs \
+    FILESYSTEM_TYPE_vendor=ext4 \
     POSTINSTALL_OPTIONAL_vendor=true
-
-# Bluetooth Audio (System-side HAL, sysbta)
-PRODUCT_PACKAGES += \
-    audio.sysbta.default \
-    android.hardware.bluetooth.audio-service-system \
-    libldacBT_abr \
-    libldacBT_bco \
-    libldacBT_enc
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -91,13 +76,13 @@ PRODUCT_COPY_FILES += \
 # Input
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-fpc.idc \
-    $(DEVICE_PATH)/configs/idc/uinput-goodix.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-goodix.idc \
-    $(DEVICE_PATH)/configs/idc/uinput-fortsense.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-fortsense.idc
+    $(DEVICE_PATH)/configs/idc/uinput-goodix.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-goodix.idc
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
-    $(DEVICE_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl \
-    $(DEVICE_PATH)/configs/keylayout/uinput-fortsense.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fortsense.kl \
+    $(DEVICE_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl
+
+PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/keylayout/Vendor_0079_Product_0011.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Vendor_0079_Product_0011.kl \
     $(DEVICE_PATH)/configs/keylayout/Vendor_045e_Product_028e.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Vendor_045e_Product_028e.kl \
     $(DEVICE_PATH)/configs/keylayout/Vendor_045e_Product_028f.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Vendor_045e_Product_028f.kl \
@@ -187,6 +172,10 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.qcom.rc
 
+
+# SHIPPING API
+PRODUCT_SHIPPING_API_LEVEL := 31
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
@@ -225,3 +214,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+# VENDOR API
+BOARD_API_LEVEL := 31
+BOARD_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)

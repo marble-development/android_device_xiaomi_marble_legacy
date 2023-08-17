@@ -1,6 +1,0 @@
-type vendor_hal_gnss_qti, domain;
-
-allow vendor_hal_gnss_qti system_suspend_hwservice:hwservice_manager { find };
-
-# Allow to use wakelock
-wakelock_use(vendor_hal_gnss_qti)

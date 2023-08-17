@@ -1,4 +1,0 @@
-type vendor_qmipriod, domain;
-
-r_dir_file(vendor_qmipriod, vendor_qmipriod_data_file)
-allow vendor_qmipriod vendor_qmipriod_data_file:file w_file_perms;
