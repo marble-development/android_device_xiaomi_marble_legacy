@@ -54,6 +54,20 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/etc/camera/marble_motiontuning.xml)
+            sed -i 's/xml=version/xml version/g' "${2}"
+            ;;
+        vendor/etc/camera/marble_enhance_motiontuning.xml)
+            sed -i 's/xml=version/xml version/g' "${2}"
+            ;;
+        vendor/etc/camera/pureView_parameter.xml)
+            sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
+            ;;
+    esac
+}
+
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
