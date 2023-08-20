@@ -171,32 +171,24 @@ vendor.audio.feature.snd_mon.enable=true
 vendor.audio.feature.dmabuf.cma.memory.enable=true
 
 # Bluetooth
-bluetooth.device.class_of_device=90,2,12
 bluetooth.hardware.power.idle_cur_ma=6
 bluetooth.hardware.power.operating_voltage_mv=3700
 bluetooth.hardware.power.rx_cur_ma=28
 bluetooth.hardware.power.tx_cur_ma=36
-bluetooth.profile.a2dp.source.enabled?=true
-bluetooth.profile.asha.central.enabled?=true
-bluetooth.profile.avrcp.target.enabled?=true
-bluetooth.profile.bap.broadcast.assist.enabled?=true
-bluetooth.profile.bap.unicast.client.enabled?=true
-bluetooth.profile.bas.client.enabled?=true
-bluetooth.profile.csip.set_coordinator.enabled?=true
-bluetooth.profile.gatt.enabled?=true
-bluetooth.profile.hap.client.enabled?=true
-bluetooth.profile.hfp.ag.enabled?=true
-bluetooth.profile.hid.device.enabled?=true
-bluetooth.profile.hid.host.enabled?=true
-bluetooth.profile.map.server.enabled?=true
-bluetooth.profile.mcp.server.enabled?=true
-bluetooth.profile.opp.enabled?=true
-bluetooth.profile.pan.nap.enabled?=true
-bluetooth.profile.pan.panu.enabled?=true
-bluetooth.profile.pbap.server.enabled?=true
-bluetooth.profile.sap.server.enabled?=true
-bluetooth.profile.ccp.server.enabled?=true
-bluetooth.profile.vcp.controller.enabled?=true
+bluetooth.profile.a2dp.source.enabled=true
+bluetooth.profile.avrcp.target.enabled=true
+bluetooth.profile.avrcp.controller.enabled=false
+bluetooth.profile.hfp.ag.enabled=true
+bluetooth.profile.asha.central.enabled=true
+bluetooth.profile.gatt.enabled=true
+bluetooth.profile.hid.host.enabled=true
+bluetooth.profile.hid.device.enabled=true
+bluetooth.profile.map.server.enabled=true
+bluetooth.profile.opp.enabled=true
+bluetooth.profile.pan.nap.enabled=true
+bluetooth.profile.pan.panu.enabled=true
+bluetooth.profile.pbap.server.enabled=true
+bluetooth.profile.sap.server.enabled=false
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-lhdc
 ro.bluetooth.a2dp_offload.supported=true
 persist.bluetooth.a2dp_offload.disabled=false
@@ -223,7 +215,6 @@ persist.sys.miui.camera.version=2.7
 persist.sys.miui.camera.boost.killAdj_threshold=100
 
 # Display
-vendor.display.vds_allow_hwc=true
 vendor.display.disable_hw_recovery_dump=1
 vendor.display.enable_early_wakeup=1
 vendor.display.enable_async_vds_creation=1
@@ -241,31 +232,25 @@ vendor.display.enable_optimize_refresh=0
 vendor.display.use_smooth_motion=0
 vendor.display.enable_dpps_dynamic_fps=1
 vendor.display.disable_stc_dimming=1
-ro.vendor.display.video_or_camera_fps.support=true
-ro.vendor.display.set_fps_stat_timer_ms=1000
-ro.vendor.display.dolbyvision.support=true
-ro.vendor.display.papercontrast.opt=true
 vendor.display.idle_time=0
 vendor.display.disable_dynamic_sf_idle=1
-ro.vendor.display.hwc_thermal_dimming=false
-ro.vendor.display.framework_thermal_dimming=true
 vendor.display.enable_fp_monitor=1
 vendor.display.enable_hist_intr=1
 vendor.display.disable_3d_adaptive_tm=0
 vendor.display.enable_fb_scaling=1
-ro.vendor.display.touch.idle.enable=true
-ro.vendor.display.idle_default_fps=60
 vendor.display.use_layer_ext=0
-ro.vendor.display.mi_calib.enable=true
-ro.vendor.display.nature_mode.enable=true
-ro.vendor.display.ai_disp.enable=true
-ro.vendor.display.default_fps=60
-ro.vendor.display.type=oled
+
 
 # Displayfeature
 ro.vendor.displayfeature.dump=true
 ro.vendor.colorpick_adjust=true
 ro.vendor.all_modes.colorpick_adjust=true
+ro.vendor.display.touch.idle.enable=true
+ro.vendor.display.idle_default_fps=60
+ro.vendor.display.mi_calib.enable=true
+ro.vendor.display.nature_mode.enable=true
+ro.vendor.display.ai_disp.enable=true
+ro.vendor.display.default_fps=60
 ro.vendor.display.type=oled
 ro.vendor.xiaomi.bl.poll=true
 ro.vendor.whitepoint_calibration_enable=false
@@ -370,6 +355,11 @@ sys.haptic.intensityforkeyboard=true
 # Incremental
 ro.incremental.enable=yes
 
+# LMK
+persist.sys.lmk.camera_minfree_levels=18432:0,23040:100,27648:200,64512:300,115712:800,216370:900
+persist.sys.lmkd.double_watermark.enable=true
+persist.sys.lmkd.extend_reclaim.enable=true
+
 # Media
 debug.c2.use_dmabufheaps=1
 debug.config.media.video.dolby_vision_suports=true
@@ -424,7 +414,6 @@ persist.vendor.rcs.singlereg.feature=1
 
 # SOC
 ro.soc.manufacturer=QTI
-ro.soc.model=SM7475
 
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE

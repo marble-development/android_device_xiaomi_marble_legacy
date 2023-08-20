@@ -22,22 +22,6 @@ media.stagefright.audio.deep=false
 aaudio.mmap_exclusive_policy=2
 aaudio.hw_burst_min_usec=2000
 
-# Bluetooth
-bluetooth.profile.a2dp.source.enabled=true
-bluetooth.profile.avrcp.target.enabled=true
-bluetooth.profile.avrcp.controller.enabled=false
-bluetooth.profile.hfp.ag.enabled=true
-bluetooth.profile.asha.central.enabled=true
-bluetooth.profile.gatt.enabled=true
-bluetooth.profile.hid.host.enabled=true
-bluetooth.profile.hid.device.enabled=true
-bluetooth.profile.map.server.enabled=true
-bluetooth.profile.opp.enabled=true
-bluetooth.profile.pan.nap.enabled=true
-bluetooth.profile.pan.panu.enabled=true
-bluetooth.profile.pbap.server.enabled=true
-bluetooth.profile.sap.server.enabled=false
-
 # Blur
 ro.sf.blurs_are_expensive=1
 ro.surface_flinger.supports_background_blur=1
@@ -46,6 +30,3 @@ ro.surface_flinger.supports_background_blur=1
 persist.vendor.radio.hidl_dev_service=true
 ro.vendor.radio.5g=3
 ro.vendor.radio.features_common=3
-
-# Sensors
-persist.vendor.sensors.enable.mag_filter=true

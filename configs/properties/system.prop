@@ -51,6 +51,16 @@ persist.vendor.ssr.enable_ramdumps=1
 # System prop for NFC DT
 ro.nfc.port=I2C
 
+# WiFi display
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0
+
+# WLAN
+ro.hardware.wlan.chip=qca6490
+ro.hardware.wlan.dbs=2
+ro.hardware.wlan.mimo=1
+ro.hardware.wlan.vendor=qcom
+
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
 
