@@ -185,7 +185,8 @@ PRODUCT_PACKAGES += \
     libgralloc.qti \
     libgui_vendor \
     libqdMetaData \
-    vendor.display.config@1.14.vendor \
+    vendor.display.config@1.11.vendor \
+    vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator@1.0.vendor \
     vendor.qti.hardware.display.allocator@3.0.vendor \
     vendor.qti.hardware.display.allocator@4.0.vendor \
