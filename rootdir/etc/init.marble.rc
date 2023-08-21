@@ -1,0 +1,18 @@
+
+on boot
+    # Hide permissive selinux
+    chmod 0640 /sys/fs/selinux/enforce
+    chmod 0440 /sys/fs/selinux/policy
+
+service mi_thermald /vendor/bin/mi_thermald
+    class main
+    user root
+    group system
+    override
+
+service citsensor-hal-2-0 /vendor/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service
+    class late_start
+    user system
+    group system input
+    override
+    task_profiles ServiceCapacityLow

@@ -404,15 +404,16 @@ PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
     fstab.qcom \
     init.class_main.sh \
+    init.marble.rc \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.sh \
+    init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc \
-    ueventd-odm.rc \
-    init.recovery.qcom.rc
+    ueventd-odm.rc
 
 # Secure element
 PRODUCT_PACKAGES += \
