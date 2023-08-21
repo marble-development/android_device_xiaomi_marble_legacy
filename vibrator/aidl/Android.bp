@@ -1,0 +1,64 @@
+Common_CFlags = ["-Wall"]
+Common_CFlags += ["-Werror"]
+
+soong_config_module_type {
+    name: "xiaomi_vibrator_hal_cc_defaults",
+    module_type: "cc_defaults",
+    config_namespace: "XIAOMI_VIBRATOR",
+    bool_variables: ["USE_EFFECT_STREAM"],
+    properties: [
+        "cppflags",
+    ],
+}
+
+xiaomi_vibrator_hal_cc_defaults {
+    name: "xiaomi_vibrator_hal_defaults",
+    soong_config_variables: {
+        USE_EFFECT_STREAM: {
+            cppflags: ["-DUSE_EFFECT_STREAM"],
+        },
+    },
+}
+
+cc_library_shared {
+    name: "vendor.qti.hardware.vibrator.impl.xiaomi",
+    defaults: [
+        "xiaomi_vibrator_hal_defaults",
+    ],
+    vendor: true,
+    srcs: [
+        "Vibrator.cpp",
+        "VibratorOffload.cpp",
+    ],
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "liblog",
+        "libqtivibratoreffect.xiaomi",
+        "libqtivibratoreffectoffload.xiaomi",
+        "libbinder_ndk",
+        "android.hardware.vibrator-V2-ndk",
+    ],
+    export_include_dirs: ["include"]
+}
+
+cc_binary {
+    name: "vendor.qti.hardware.vibrator.service.xiaomi",
+    vendor: true,
+    relative_install_path: "hw",
+    init_rc: ["vendor.qti.hardware.vibrator.service.xiaomi.rc"],
+    vintf_fragments: [
+        "vendor.qti.hardware.vibrator.service.xiaomi.xml",
+    ],
+    srcs: [
+        "service.cpp",
+    ],
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "libbase",
+        "libbinder_ndk",
+        "android.hardware.vibrator-V2-ndk",
+        "vendor.qti.hardware.vibrator.impl.xiaomi",
+    ],
+}
