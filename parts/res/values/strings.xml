@@ -105,4 +105,11 @@
     <string name="refresh_standard">60 Hz</string>
     <string name="refresh_high">90 Hz</string>
     <string name="refresh_extreme">120 Hz</string>
+
+    <!-- Dolby Atmos -->
+    <string name="dolby_title">Dolby Atmos</string>
+    <string name="dolby_enable">Enable</string>
+    <string name="dolby_summary">Surround sound</string>
+    <string name="dolby_profile_title">Choose a profile</string>
+    <string name="dolby_profile_dynamic">Dynamic</string>
 </resources>
