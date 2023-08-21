@@ -344,7 +344,8 @@ PRODUCT_PACKAGES += \
     TelecommResCommon \
     TelephonyResCommon \
     TetheringResCommon \
-    WifiResCommon
+    WifiResCommon \
+    WifiResTarget
 
 PRODUCT_PACKAGES += \
     AospWifiResOverlayMarbleChina \
