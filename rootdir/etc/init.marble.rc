@@ -1,8 +1,6 @@
-
-on boot
-    # Hide permissive selinux
-    chmod 0640 /sys/fs/selinux/enforce
-    chmod 0440 /sys/fs/selinux/policy
+on post-fs
+    chown system system /sys/class/backlight/panel0-backlight/brightness
+    chown system system /sys/class/backlight/panel0-backlight/max_brightness
 
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
