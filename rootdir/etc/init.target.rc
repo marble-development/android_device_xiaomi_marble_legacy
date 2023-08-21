@@ -622,25 +622,3 @@ on property:sys.volume.stream.music.device.bluetooth=*
 
 on property:sys.volume.stream.bluetoothsco=*
     setprop vendor.volume.stream.bluetoothsco ${sys.volume.stream.bluetoothsco}
-
-service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
-    override
-    class hal
-    user audioserver
-    # media gid needed for /dev/fm (radio) and for /data/misc/media (tee)
-    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock
-    capabilities BLOCK_SUSPEND
-    ioprio rt 4
-    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
-    socket audio_us_socket_0 seqpacket 0666 system system
-    onrestart restart audioserver
-
-service vendor.sensors-hal-2-1-multihal /vendor/bin/hw/android.hardware.sensors@2.1-service.xiaomi-multihal
-    override
-    class hal
-    user system
-    group system wakelock context_hub
-    writepid /dev/cpuset/system-background/tasks
-    socket audio_us_socket_1 seqpacket 0666 system system
-    capabilities BLOCK_SUSPEND
-    rlimit rtprio 10 10
