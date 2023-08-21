@@ -419,7 +419,7 @@ ro.soc.manufacturer=QTI
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # USB
-ersist.sys.usb.config=none
+persist.sys.usb.config=none
 vendor.usb.use_gadget_hal=0
 vendor.usb.rndis.func.name=gsi
 vendor.usb.rmnet.func.name=gsi
