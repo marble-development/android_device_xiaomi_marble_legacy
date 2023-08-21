@@ -52,7 +52,7 @@
 
 # Dolby
 /data/vendor/dolby(/.*)? u:object_r:vendor_data_file:s0
-/vendor/bin/hw/dolbycodec2 u:object_r:vendorcodec_exec:s0
+/vendor/bin/hw/dolbycodec2                                                u:object_r:mediacodec_exec:s0
 
 # Fingerprint
 /dev/goodix_fp u:object_r:vendor_fingerprint_device:s0

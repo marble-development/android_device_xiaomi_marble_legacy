@@ -328,6 +328,11 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml
 
+# MiSound
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.audio.misound.disable=true \
+    ro.vendor.audio.misound.bluetooth.enable=true
+
 # Network
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor

@@ -211,7 +211,6 @@ vendor/lib64/libbatterylistener.so
 vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2uvvendor.so
-vendor/lib64/libdapparamstorage.so
 vendor/lib64/libfmpal.so
 vendor/lib64/libkaraokepal.so
 vendor/lib64/liblx-ar_util.so
@@ -232,7 +231,6 @@ vendor/lib64/soundfx/libdownmix.so
 vendor/lib64/soundfx/libdynproc.so
 vendor/lib64/soundfx/libeffectproxy.so
 vendor/lib64/soundfx/libhapticgenerator.so
-vendor/lib64/soundfx/libhwdap.so
 vendor/lib64/soundfx/libldnhncr.so
 vendor/lib64/soundfx/libmisoundfx.so
 vendor/lib64/soundfx/libqcompostprocbundle.so
@@ -241,8 +239,6 @@ vendor/lib64/soundfx/libqcomvoiceprocessing.so
 vendor/lib64/soundfx/libreverbwrapper.so
 vendor/lib64/soundfx/libshoebox.so
 vendor/lib64/soundfx/libswdap.so
-vendor/lib64/soundfx/libswgamedap.so
-vendor/lib64/soundfx/libswvqe.so
 vendor/lib64/soundfx/libvisualizer.so
 vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.pal@1.0.so
@@ -1538,12 +1534,17 @@ vendor/lib64/libtinyxml2_1.so
 
 # Dolby music
 vendor/bin/hw/dolbycodec2
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 vendor/etc/dolby/dax-default.xml
 vendor/etc/dolby_vision.cfg
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 vendor/etc/media_codecs_dolby_audio.xml
 vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
+vendor/lib/libdeccfg.so
+vendor/lib/libstagefright_soft_ac4dec.so
+vendor/lib/libstagefright_soft_ddpdec.so
+vendor/lib/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/c2.dolby.avc.dec.so
 vendor/lib64/c2.dolby.avc.sec.dec.so
 vendor/lib64/c2.dolby.client.so
@@ -1552,9 +1553,13 @@ vendor/lib64/c2.dolby.hevc.dec.so
 vendor/lib64/c2.dolby.hevc.enc.so
 vendor/lib64/c2.dolby.hevc.sec.dec.so
 vendor/lib64/c2.dolby.store.so
+vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdlbdsservice.so
 vendor/lib64/libdolbyottcameracontrol.so
 vendor/lib64/libdolbyvision.so
+vendor/lib64/soundfx/libhwdap.so
+vendor/lib64/soundfx/libswgamedap.so
+vendor/lib64/soundfx/libswvqe.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
@@ -1993,7 +1998,6 @@ vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
 vendor/lib/libEvrcSwCodec.so
 vendor/lib/libOmxCore.so
 vendor/lib/libQcelp13SwCodec.so
-vendor/lib/libdeccfg.so
 vendor/lib/libmm-omxcore.so
 vendor/lib/libplatformconfig.so
 vendor/lib/libqc2audio_base.so
@@ -2017,8 +2021,6 @@ vendor/lib/libqcodec2_mockqc2filter.so
 vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
-vendor/lib/libstagefright_soft_ac4dec.so
-vendor/lib/libstagefright_soft_ddpdec.so
 vendor/lib/libstagefright_softomx.so
 vendor/lib/libstagefrighthw.so
 vendor/lib/libvideotxr.so
