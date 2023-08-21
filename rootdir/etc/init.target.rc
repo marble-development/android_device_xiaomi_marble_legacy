@@ -195,10 +195,6 @@ on post-fs-data
     chown system system /sys/class/mi_display/disp-DSI-1/max_brightness_clone
     chmod 0664 /sys/class/mi_display/disp-DSI-1/max_brightness_clone
 
-    # Touch feature
-    chown system system /dev/xiaomi-touch
-    chmod 0660 /dev/xiaomi-touch
-
 on early-boot
     # Enable WLAN cold boot calibration
     write /sys/kernel/cnss/fs_ready 1
