@@ -310,6 +310,7 @@ vendor/lib64/com.qualcomm.mcx.policy.xr.so
 vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/camera.xiaomi.so
+vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/hw/vendor.xiaomi.hardware.quickcamera@1.0-impl.so
 vendor/lib64/libAF.so
 vendor/lib64/libHISCppAlgos.so
