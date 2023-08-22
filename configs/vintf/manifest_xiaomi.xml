@@ -22,11 +22,6 @@
        </interface>
    </hal>
    <hal format="hidl">
-    <name>android.hardware.media.c2</name>
-    <transport>hwbinder</transport>
-    <fqname>@1.0::IComponentStore/dolby</fqname>
-   </hal>
-   <hal format="hidl">
        <name>vendor.xiaomi.hardware.bgservice</name>
        <transport>hwbinder</transport>
        <version>1.0</version>
