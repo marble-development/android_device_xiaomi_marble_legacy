@@ -1,19 +1,6 @@
 # ACDB
-vendor/etc/acdbdata/diwali_idp/IDP_diwali_acdb_cal.acdb
-vendor/etc/acdbdata/diwali_idp/IDP_diwali_workspaceFileXml.qwsp
-vendor/etc/acdbdata/diwali_idp_sku1/IDP_diwali_sku1_acdb_cal.acdb
-vendor/etc/acdbdata/diwali_idp_sku1/IDP_diwali_sku1_workspaceFileXml.qwsp
-vendor/etc/acdbdata/diwali_parrot_qrd/QRD_diwali_parrot_acdb_cal.acdb
-vendor/etc/acdbdata/diwali_parrot_qrd/QRD_diwali_parrot_workspaceFileXml.qwsp
-vendor/etc/acdbdata/diwali_qrd/QRD_diwali_acdb_cal.acdb
-vendor/etc/acdbdata/diwali_qrd/QRD_diwali_workspaceFileXml.qwsp
-vendor/etc/acdbdata/diwali_qrd_sku1/QRD_diwali_sku1_acdb_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_acdb_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_workspaceFileXml.qwsp
-vendor/etc/acdbdata/IDP_UPD_diwali/IDP_UPD_diwali_acdb_cal.acdb
-vendor/etc/acdbdata/IDP_UPD_diwali/IDP_UPD_diwali_workspaceFileXml.qwsp
-vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
-vendor/etc/acdbdata/IDP_UPD/IDP_UPD_workspaceFileXml.qwsp
 vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.36_enpu2_comp.pmd
@@ -122,15 +109,29 @@ vendor/lib/rfsa/adsp/misound_res_spk.bin
 vendor/lib/hw/com.dsi.ant@1.0-impl.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
+# Audio configs
+vendor/etc/audio/sku_ukee/adsp_sleep_monitor.conf
+vendor/etc/audio/sku_ukee/audio_effects.xml
+vendor/etc/audio/sku_ukee/mixer_paths_overlay_dynamic.xml
+vendor/etc/audio/sku_ukee/mixer_paths_overlay_static.xml
+vendor/etc/audio/sku_ukee/mixer_paths_ukee_mtp.xml
+vendor/etc/audio/sku_ukee/resourcemanager_ukee_mtp.xml
+vendor/etc/audio/sku_ukee_qssi/audio_policy_configuration.xml
+vendor/etc/audio_cloud_control_white_list.xml
+vendor/etc/audio_policy_engine_configuration_mi.xml:vendor/etc/audio_policy_engine_configuration.xml
+vendor/etc/audio_policy_engine_default_stream_volumes.xml
+vendor/etc/audio_policy_engine_product_strategies.xml
+vendor/etc/audio_policy_engine_stream_volumes.xml
+vendor/etc/card-defs.xml
+vendor/etc/kvh2xml.xml
+vendor/etc/microphone_characteristics.xml
+vendor/etc/models/acd/event.eai
+vendor/etc/models/acd/music.eai
+vendor/etc/models/acd/speech.eai
+vendor/etc/usecaseKvManager.xml
+
 # Audio firmware
 vendor/firmware/aw882xx_acf.bin
-vendor/firmware/goodix_cfg_group_TM.bin
-vendor/firmware/goodix_cfg_group_TM_Second.bin
-vendor/firmware/goodix_firmware_TM.bin
-vendor/firmware/goodix_firmware_TM_Second.bin
-vendor/firmware/goodix_test_limits_255_TM.csv
-vendor/firmware/goodix_test_limits_255_TM_Second.csv
-vendor/firmware/novatek_spi_fw.bin
 
 # Audio graph manager
 vendor/bin/agmcap
@@ -157,9 +158,6 @@ vendor/lib64/libagmmixer.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
 
 # Audio libraries
-vendor/etc/models/acd/event.eai
-vendor/etc/models/acd/music.eai
-vendor/etc/models/acd/speech.eai
 vendor/lib/hw/gyro_fusion_interface.so
 vendor/lib/libadm.so
 vendor/lib/libadsprpc.so
@@ -1137,8 +1135,6 @@ vendor/lib64/libsdsprpc.so
 vendor/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service
 vendor/etc/init/vendor.xiaomi.sensor.citsensorservice@2.0-service.rc
 vendor/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice@2.0-service.xml
-vendor/lib/vendor.xiaomi.sensor.citsensorservice@1.1.so
-vendor/lib/vendor.xiaomi.sensor.citsensorservice@2.0.so
 vendor/lib64/hw/vendor.xiaomi.sensor.citsensorservice@2.0-impl.so
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice@1.1.so
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice@2.0.so
@@ -1320,11 +1316,13 @@ vendor/etc/init/vendor.qti.hardware.display.composer-service.rc
 vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml
+vendor/lib/libdisplayconfig.qti.so
 vendor/lib/libdisplaydebug.so
 vendor/lib/libgpu_tonemapper.so
 vendor/lib/libgralloccore.so
 vendor/lib/libgrallocutils.so
 vendor/lib/libqservice.so
+vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdisplaydebug.so
 vendor/lib64/libgpu_tonemapper.so
 vendor/lib64/libgralloccore.so
@@ -1525,12 +1523,24 @@ vendor/lib64/libwfddisplayconfig_vendor.so
 vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
 
 # Dolby music
-vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+vendor/bin/hw/dolbycodec2
 vendor/etc/dolby/dax-default.xml
+vendor/etc/dolby_vision.cfg
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
+vendor/etc/media_codecs_dolby_audio.xml
 vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
-vendor/lib/vendor.dolby.hardware.dms@2.0.so
+vendor/lib64/c2.dolby.avc.dec.so
+vendor/lib64/c2.dolby.avc.sec.dec.so
+vendor/lib64/c2.dolby.client.so
+vendor/lib64/c2.dolby.egl.so
+vendor/lib64/c2.dolby.hevc.dec.so
+vendor/lib64/c2.dolby.hevc.enc.so
+vendor/lib64/c2.dolby.hevc.sec.dec.so
+vendor/lib64/c2.dolby.store.so
 vendor/lib64/libdlbdsservice.so
+vendor/lib64/libdolbyottcameracontrol.so
+vendor/lib64/libdolbyvision.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
@@ -1943,23 +1953,21 @@ vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc
 vendor/etc/audio_cloud_control_white_list.xml
 vendor/etc/backend_conf.xml
-vendor/etc/card-defs.xml
-vendor/etc/media_codecs_performance_ukee_vendor.xml
+vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance_ukee.xml
-vendor/etc/media_codecs_ukee_vendor.xml
+vendor/etc/media_codecs_performance_ukee_vendor.xml
 vendor/etc/media_codecs_ukee.xml
-vendor/etc/media_codecs_c2_audio.xml
-vendor/etc/media_codecs_vendor_audio.xml
+vendor/etc/media_codecs_ukee_vendor.xml
+vendor/etc/media_profiles.xml
+vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_ukee.xml
 vendor/etc/media_ukee/video_system_specs.json
-vendor/etc/microphone_characteristics.xml
 vendor/etc/seccomp_policy/c2audio.vendor.base-arm.policy
 vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/c2audio.vendor.ext-arm.policy
 vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
-vendor/etc/usecaseKvManager.xml
 vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
 vendor/lib/libEvrcSwCodec.so
@@ -2957,6 +2965,12 @@ vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib/libtime_genoff.so
 vendor/lib64/libtime_genoff.so
+
+# Touchscreen firmware
+vendor/firmware/goodix_cfg_group_TM.bin
+vendor/firmware/goodix_cfg_group_TM_Second.bin
+vendor/firmware/goodix_firmware_TM.bin
+vendor/firmware/goodix_firmware_TM_Second.bin
 
 # Trusted Execution Environment connector
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service

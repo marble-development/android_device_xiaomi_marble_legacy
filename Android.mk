@@ -105,16 +105,22 @@ ALL_DEFAULT_INSTALLED_MODULES += \
 	$(RFS_MSM_SLPI_SYMLINKS) \
 	$(RFS_MSM_WPSS_SYMLINKS)
 
-WLAN_FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/qca6490/
-$(WLAN_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating WLAN firmware symlinks: $@"
-	@rm -rf $@/*
-	@mkdir -p $@
+FIRMWARE_WLAN_QCA_CLD_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/
+$(FIRMWARE_WLAN_QCA_CLD_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating qca_cld wlan firmware symlinks: $@"
+	mkdir -p $@
+	$(hide) ln -sf /vendor/etc/wifi/WCNSS_qcom_cfg.ini $@/WCNSS_qcom_cfg.ini
+
+FIRMWARE_WLAN_QCA_CLD_QCA6490_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/qca6490/
+$(FIRMWARE_WLAN_QCA_CLD_QCA6490_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating qca6490 qca_cld wlan firmware symlinks: $@"
+	mkdir -p $@
 	$(hide) ln -sf /vendor/etc/wifi/qca6490/WCNSS_qcom_cfg.ini $@/WCNSS_qcom_cfg.ini
 	$(hide) ln -sf /mnt/vendor/persist/qca6490/wlan_mac.bin $@/wlan_mac.bin
 
 ALL_DEFAULT_INSTALLED_MODULES += \
-	$(WLAN_FIRMWARE_SYMLINKS)
+    $(FIRMWARE_WLAN_QCA_CLD_SYMLINKS) \
+    $(FIRMWARE_WLAN_QCA_CLD_QCA6490_SYMLINKS)
 
 IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
 IMS_SYMLINKS := $(addprefix $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/Ims/lib/arm64/,$(notdir $(IMS_LIBS)))

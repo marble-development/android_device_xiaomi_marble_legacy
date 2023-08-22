@@ -65,10 +65,9 @@ PRODUCT_PACKAGES += \
 
 # Audio
 SOONG_CONFIG_NAMESPACES += android_hardware_audio
-SOONG_CONFIG_android_hardware_audio += run_64bit
+SOONG_CONFIG_android_hardware_audio += \
+    run_64bit
 SOONG_CONFIG_android_hardware_audio_run_64bit := true
-
-QCV_FAMILY_SKUS := taro cape ukee
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl \
@@ -286,13 +285,20 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor \
     libkeymaster_messages.vendor
 
+# Keymint
+PRODUCT_PACKAGES += \
+    android.hardware.hardware_keystore.xml
+
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml
+    frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
+    frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
 
 # Media
 PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.2.vendor \
     libcodec2_hidl@1.0.vendor \
     libcodec2_soft_common.vendor \
+    libcodec2_vndk.vendor \
     libsfplugin_ccodec_utils.vendor
 
 PRODUCT_COPY_FILES += \
@@ -314,10 +320,8 @@ PRODUCT_COPY_FILES += \
 # NFC
 PRODUCT_PACKAGES += \
     NfcNci \
-    Tag \
-    SecureElement \
-    com.android.nfc_extras \
-    android.hardware.nfc@1.2.vendor
+    android.hardware.nfc@1.2.vendor \
+    libchrome.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \
@@ -558,9 +562,9 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     android.hardware.wifi.hostapd@1.0.vendor \
     hostapd \
-    hostapd_cli \
-    libwifi-hal-qcom \
     libwpa_client \
+    libwifi-hal-ctrl \
+    libwifi-hal-qcom \
     wpa_cli \
     wpa_supplicant \
     wpa_supplicant.conf
@@ -570,7 +574,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.rtt.xml \
-    frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
+    frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
+
+PRODUCT_VENDOR_MOVE_ENABLED := true
+
+#WPA
+WPA := wpa_cli
 
 # WiFi Display
 PRODUCT_PACKAGES += \
