@@ -1343,6 +1343,7 @@ vendor/etc/init/qdcmss.rc
 vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib/libbacklight-calib.so
 vendor/lib/libdigital-dimming.so
+vendor/lib/libdisplayconfig.qti.so
 vendor/lib/libdpps.so
 vendor/lib/libmemutils.so
 vendor/lib/libqdcm-algo.so
@@ -1357,6 +1358,7 @@ vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/lib64/libbacklight-calib.so
 vendor/lib64/libclient2slpi.notifier.so
 vendor/lib64/libdigital-dimming.so
+vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdpps.so
 vendor/lib64/libhistogram.so
 vendor/lib64/libmemutils.so
