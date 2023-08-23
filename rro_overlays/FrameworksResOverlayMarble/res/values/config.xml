@@ -557,7 +557,7 @@
 
          Refer to power.h for details.
     -->
-     <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
+     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
 
      <!-- Whether device supports double tap to wake -->
      <bool name="config_supportDoubleTapWake">true</bool>
