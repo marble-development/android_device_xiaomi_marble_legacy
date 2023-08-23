@@ -23,6 +23,7 @@ debug.hwui.target_cpu_time_percent=30
 
 # LMK properties
 ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=50
 
 # MGLRU Config
 persist.device_config.mglru_native.lru_gen_config=all
