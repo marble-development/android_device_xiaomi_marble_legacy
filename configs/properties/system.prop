@@ -21,6 +21,9 @@ persist.sys.fuse.passthrough.enable=true
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 
+# LMK properties
+ro.lmk.kill_heaviest_task=true
+
 # MGLRU Config
 persist.device_config.mglru_native.lru_gen_config=all
 
