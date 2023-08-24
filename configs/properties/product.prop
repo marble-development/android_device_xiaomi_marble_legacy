@@ -1,26 +1,8 @@
 # Audio
-vendor.audio_hal.period_size=192
-vendor.audio.tunnel.encode=false
-vendor.audio.offload.buffer.size.kb=32
-vendor.voice.path.for.pcm.voip=true
-vendor.audio.offload.multiaac.enable=true
-vendor.audio.parser.ip.buffer.size=262144
-vendor.audio.flac.sw.decoder.24bit=true
-vendor.audio.use.sw.alac.decoder=true
-vendor.audio.use.sw.ape.decoder=true
-vendor.audio.hw.aac.encoder=true
-af.fast_track_multiplier=1
-audio.offload.video=true
-audio.deep_buffer.media=true
-audio.sys.noisy.broadcast.delay=500
 audio.sys.mute.latency.factor=2
 audio.sys.routing.latency=0
 audio.offload.min.duration.secs=30
-audio.sys.offload.pstimeout.secs=3
-ro.af.client_heap_size_kbyte=7168
 media.stagefright.audio.deep=false
-aaudio.mmap_exclusive_policy=2
-aaudio.hw_burst_min_usec=2000
 
 # Blur
 ro.sf.blurs_are_expensive=1

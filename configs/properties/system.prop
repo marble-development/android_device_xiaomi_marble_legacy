@@ -13,10 +13,6 @@ debug.hwui.skia_atrace_enabled=false
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
-# Graphics
-debug.hwui.renderer=skiagl
-debug.renderengine.backend=skiaglthreaded
-
 # Hint Manager
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
