@@ -1315,9 +1315,11 @@ vendor/lib/vendor.qti.diaghal@1.0.so
 vendor/lib64/vendor.qti.diaghal@1.0.so
 
 # Display
+vendor/bin/feature_enabler_client
 vendor/bin/hw/vendor.qti.hardware.display.allocator-service
 vendor/bin/init.qti.display_boot.sh
 vendor/etc/init.panel_info.sh
+vendor/etc/init/feature_enabler_client.rc
 vendor/etc/init/init.qti.display_boot.rc
 vendor/etc/init/vendor.qti.hardware.display.allocator-service.rc
 vendor/etc/init/vendor.qti.hardware.display.composer-service.rc
@@ -1336,6 +1338,10 @@ vendor/lib64/libgpu_tonemapper.so
 vendor/lib64/libgralloccore.so
 vendor/lib64/libgrallocutils.so
 vendor/lib64/libqservice.so
+
+# Display configs
+product/etc/displayconfig/display_id_4630946370515662722.xml:vendor/etc/displayconfig/display_id_4630946370515662722.xml
+product/etc/displayconfig/display_id_4630946480857061762.xml:vendor/etc/displayconfig/display_id_4630946480857061762.xml
 
 # Displayfeature
 vendor/bin/displayfeature
@@ -1422,6 +1428,8 @@ vendor/lib/libhdr_backlight_adapter.so
 vendor/lib/libhdr_tm.so
 vendor/lib64/libhdr_backlight_adapter.so
 vendor/lib64/libhdr_tm.so
+vendor/lib64/libhdrdynamic.so
+vendor/lib64/libhdrdynamicootf.so
 
 # Display HWC
 vendor/bin/hw/vendor.qti.hardware.display.composer-service
@@ -2958,6 +2966,36 @@ vendor/etc/init/android.hardware.thermal@2.0-service.qti-v2.rc
 vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml
 vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
+
+# Thermal configs
+vendor/etc/thermal-4k.conf
+vendor/etc/thermal-camera.conf
+vendor/etc/thermal-cclassvideo.conf
+vendor/etc/thermal-cgame.conf
+vendor/etc/thermal-chg-only.conf
+vendor/etc/thermal-class0.conf
+vendor/etc/thermal-dolbyvision.conf
+vendor/etc/thermal-engine.conf
+vendor/etc/thermal-hp-mgame.conf
+vendor/etc/thermal-hp-normal.conf
+vendor/etc/thermal-huanji.conf
+vendor/etc/thermal-map.conf
+vendor/etc/thermal-mgame.conf
+vendor/etc/thermal-navigation.conf
+vendor/etc/thermal-nolimits.conf
+vendor/etc/thermal-normal.conf
+vendor/etc/thermal-per-cclassvideo.conf
+vendor/etc/thermal-per-cgame.conf
+vendor/etc/thermal-per-class0.conf
+vendor/etc/thermal-per-navigation.conf
+vendor/etc/thermal-per-normal.conf
+vendor/etc/thermal-per-video.conf
+vendor/etc/thermal-phone.conf
+vendor/etc/thermal-tgame.conf
+vendor/etc/thermal-video.conf
+vendor/etc/thermal-videochat.conf
+vendor/etc/thermal-yuanshen.conf
+vendor/etc/thermald-devices.conf
 
 # Thermal engine
 vendor/bin/mi_thermald
