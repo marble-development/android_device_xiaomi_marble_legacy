@@ -111,12 +111,18 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
 # Audio configs
 vendor/etc/audio/sku_ukee/adsp_sleep_monitor.conf
+vendor/etc/audio/sku_ukee/audio_effects.conf
 vendor/etc/audio/sku_ukee/audio_effects.xml
 vendor/etc/audio/sku_ukee/mixer_paths_overlay_dynamic.xml
 vendor/etc/audio/sku_ukee/mixer_paths_overlay_static.xml
+vendor/etc/audio/sku_ukee/mixer_paths_ukee_cdp.xml
 vendor/etc/audio/sku_ukee/mixer_paths_ukee_mtp.xml
+vendor/etc/audio/sku_ukee/mixer_paths_ukee_qrd.xml
+vendor/etc/audio/sku_ukee/resourcemanager_ukee_cdp.xml
 vendor/etc/audio/sku_ukee/resourcemanager_ukee_mtp.xml
-vendor/etc/audio/sku_ukee_qssi/audio_policy_configuration.xml
+vendor/etc/audio/sku_ukee/resourcemanager_ukee_qrd.xml
+vendor/etc/audio/sku_ukee/resourcemanager_upd.xml
+vendor/etc/audio/sku_ukee/resourcemanager_waipio_mtp.xml
 vendor/etc/audio_cloud_control_white_list.xml
 vendor/etc/audio_policy_engine_configuration_mi.xml:vendor/etc/audio_policy_engine_configuration.xml
 vendor/etc/audio_policy_engine_default_stream_volumes.xml
@@ -166,6 +172,7 @@ vendor/lib/libar-gpr.so
 vendor/lib/libar-gsl.so
 -vendor/lib/libar-pal.so
 vendor/lib/libats.so
+vendor/lib/libawcal.so
 vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudiocloudctrl.so
 vendor/lib/libaudioroute_ext.so
@@ -195,6 +202,7 @@ vendor/lib64/libar-gpr.so
 vendor/lib64/libar-gsl.so
 -vendor/lib64/libar-pal.so
 vendor/lib64/libats.so
+vendor/lib64/libawcal.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudiocloudctrl.so
 vendor/lib64/libaudioroute_ext.so
@@ -208,6 +216,7 @@ vendor/lib64/libkaraokepal.so
 vendor/lib64/liblx-ar_util.so
 vendor/lib64/liblx-osal.so
 vendor/lib64/libmcs.so
+vendor/lib64/lib_misound_asc.so
 vendor/lib64/libpal_net_if.so
 vendor/lib64/libpalclient.so
 vendor/lib64/libqtigefar.so
