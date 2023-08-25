@@ -15,9 +15,10 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, device/xiaomi/marble/device.mk)
 
 ## Device identifier
+PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := marble
-PRODUCT_NAME := lineage_marble
 PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_NAME := lineage_marble
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
