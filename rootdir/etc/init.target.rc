@@ -489,7 +489,7 @@ service vendor.sniffer.circular /vendor/bin/tcpdump -i wlan0 -W 3 -C 300 -w /dat
     oneshot
 
 on property:sys.boot_completed=1
-    write /sys/devices/virtual/thermal/thermal_message/sconfig 20
+    write /sys/devices/virtual/thermal/thermal_message/sconfig 1
     enable vendor.qvirtmgr
     start  vendor.qvirtmgr
 
