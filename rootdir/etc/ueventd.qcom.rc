@@ -512,7 +512,7 @@ subsystem mem_buf_vm
 /sys/class/devcoredump/devcd*                           data                            0600    system  system
 
 # Battery
-/sys/class/qcom-battery                                 input_suspend                   0666   system  system
+/sys/class/qcom-battery                                 input_suspend                   0660    system  system
 
 # Fingerprint
 /dev/goodix_fp                                                         0666   system     system

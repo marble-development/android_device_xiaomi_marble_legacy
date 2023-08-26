@@ -8,3 +8,6 @@ persist.vendor.sensors.               u:object_r:exported_system_prop:s0
 ro.fota.oem                           u:object_r:exported_system_prop:s0
 persist.camera.capture.misegment.dump u:object_r:exported_system_prop:s0
 
+# Fingerprint
+sys.fp.vendor				u:object_r:vendor_fingerprint_prop:s0
+gf.debug.				u:object_r:vendor_fingerprint_prop:s0

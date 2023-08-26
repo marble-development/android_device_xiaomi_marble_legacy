@@ -1,0 +1,2 @@
+allow vendor_modprobe self:capability sys_admin;
+

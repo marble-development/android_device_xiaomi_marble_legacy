@@ -1,0 +1,12 @@
+type goodix_fingerprint_service, service_manager_type;
+
+type goodix_fingerprint_vndservice, vndservice_manager_type;
+
+allow system_app goodix_fingerprint_service:service_manager { add find };
+allow untrusted_app goodix_fingerprint_service:service_manager { find };
+
+allow hal_fingerprint_default vendor_fingerprint_data_file:dir { read write create open add_name search };
+allow hal_fingerprint_default vendor_fingerprint_data_file:file {read write create getattr append open };
+
+allow tee vendor_fingerprint_data_file:dir create_dir_perms;
+allow tee vendor_fingerprint_data_file:file create_file_perms;

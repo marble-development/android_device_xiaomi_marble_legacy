@@ -53,9 +53,12 @@
 /vendor/bin/hw/dolbycodec2 u:object_r:vendorcodec_exec:s0
 
 # Fingerprint
+/dev/goodix_fp u:object_r:vendor_fingerprint_device:s0
 /data/vendor/fpc(/.*)? u:object_r:vendor_fingerprint_data_file:s0
 /data/vendor/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
-/dev/goodix_fp u:object_r:vendor_fingerprint_device:s0
+/data/vendor/fpdump(/.*)?			u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/goodix/gf_data(/.*)?		u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor_de/[0-9]+/goodix(/.*)?		u:object_r:vendor_fingerprint_data_file:s0
 /mnt/vendor/persist/fpc(/.*)? u:object_r:vendor_fingerprint_data_file:s0
 /mnt/vendor/persist/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0

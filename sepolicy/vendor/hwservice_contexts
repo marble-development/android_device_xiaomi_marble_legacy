@@ -4,7 +4,6 @@ vendor.qti.sla.service::ISlaService                          u:object_r:hal_slas
 vendor.xiaomi.sensor.citsensorservice::ICitSensorService   u:object_r:vendor_hal_citsensorservice_xiaomi_hwservice:s0
 vendor.xiaomi.sensor.communicate::ISensorCommunicate  u:object_r:vendor_hal_sensorcommunicate_hwservice:s0
 vendor.xiaomi.hardware.quickcamera::IQuickCameraService    u:object_r:hal_quickcamera_hwservice:s0
-
 vendor.dolby.hardware.dms::IDms          u:object_r:hal_dms_hwservice:s0
 vendor.xiaomi.hardware.mfidoca::IFidoService       u:object_r:hal_mfidoca_hwservice:s0
 vendor.xiaomi.hardware.mlipay::IMlipayService       u:object_r:hal_mlipay_hwservice:s0
@@ -12,3 +11,4 @@ vendor.xiaomi.hardware.mtdservice::IMTService       u:object_r:hal_mtdservice_hw
 vendor.xiaomi.hardware.tidaservice::ITidaService       u:object_r:hal_tidaservice_hwservice:s0
 vendor.xiaomi.hardware.bgservice::IBGService                 u:object_r:vendor_hal_camerapostproc_xiaomi_hwservice:s0
 vendor.xiaomi.hardware.fx.tunnel::IMiFxTunnel                                        u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
+com.fingerprints.extension::IFingerprintNavigation            u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
