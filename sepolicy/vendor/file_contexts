@@ -9,6 +9,7 @@
 /(vendor|system/vendor)/bin/batterysecret u:object_r:batterysecret_exec:s0
 
 # Camera
+/data/user/0/com.android.camera(/.*)? u:object_r:app_data_file:s0
 /(vendor|system/vendor)/bin/hw/vendor.xiaomi.hardware.quickcamera@1.0-service u:object_r:hal_quickcamera_default_exec:s0
 /mnt/vendor/persist/camera(/.*)? u:object_r:camera_persist_file:s0
 #/vendor/bin/camera_cal u:object_r:DualCameraCal_exec:s0

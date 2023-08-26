@@ -10,6 +10,7 @@ allow platform_app vendor_qdsp_device:chr_file { ioctl open read write };
 allow platform_app vendor_camera_data_file:dir { append map r_dir_perms write };
 allow platform_app vendor_camera_data_file:file { getattr open read };
 allow platform_app vendor_hal_soter_hwservice:hwservice_manager { find };
+allow platform_app app_data_file:file { execute };
 
 # Properties
 allow platform_app vendor_display_prop:file read;
