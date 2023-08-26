@@ -358,11 +358,6 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libstagefrighthw
 
-# MiSound
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.audio.misound.disable=true \
-    ro.vendor.audio.misound.bluetooth.enable=true
-
 # Mlipay
 PRODUCT_PACKAGES += \
     IFAAService

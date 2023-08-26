@@ -75,6 +75,11 @@ TARGET_USES_HWC2 := true
 MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
+# Dolby Vision
+SOONG_CONFIG_NAMESPACES += dolby_vision
+SOONG_CONFIG_dolby_vision += enabled
+SOONG_CONFIG_dolby_vision_enabled := true
+
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
