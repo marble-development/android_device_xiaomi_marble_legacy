@@ -1,0 +1,18 @@
+type hal_dms_default, domain;
+type hal_dms_default_exec, exec_type, file_type, vendor_file_type;
+type hal_dms_hwservice, hwservice_manager_type;
+#hal_attribute(dms)
+allow hal_dms_client hal_dms_server:binder { call transfer };
+allow hal_dms_client hal_dms_server:binder transfer;
+allow hal_dms_client hal_dms_server:fd *;
+allow hal_dms_client hal_dms_hwservice:hwservice_manager find;
+allow hal_dms_server hal_dms_client:binder transfer;
+allow hal_dms_server hal_dms_client:binder { call transfer };
+allow hal_dms_server hal_dms_client:fd *;
+allow hal_dms_default hal_dms_hwservice:hwservice_manager add;
+allow hal_dms_default vendor_data_file:dir rw_dir_perms;
+allow hal_dms_default vendor_data_file:file create_file_perms;
+init_daemon_domain(hal_dms_default)
+set_prop(hal_dms_default, vendor_audio_prop)
+hal_server_domain(hal_dms_default, hal_dms)
+add_hwservice(hal_dms_server, hal_dms_hwservice)

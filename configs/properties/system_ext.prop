@@ -1,3 +1,11 @@
+# Audio
+ro.qc.sdk.audio.ssr=false
+ro.qc.sdk.audio.fluencetype=none
+persist.audio.fluence.voicecomm=true
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=true
+
 # Camera
 vendor.camera.aux.packagelist=org.lineageos.aperture
 

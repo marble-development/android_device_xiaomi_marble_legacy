@@ -1,0 +1,27 @@
+allow bluetooth hal_audio:binder { call transfer };
+allow bluetooth hal_audio:fd *;
+allow bluetooth sysfs_bluetooth_writable:file w_file_perms;
+allow bluetooth media_rw_data_file:dir create_dir_perms;
+allow bluetooth media_rw_data_file:file create_file_perms;
+allow bluetooth serial_device:chr_file rw_file_perms;
+allow bluetooth uhid_device:chr_file rw_file_perms;
+allow bluetooth vendor_bt_device:chr_file rw_file_perms;
+allow bluetooth vendor_smd_device:chr_file rw_file_perms;
+allow bluetooth vendor_hal_iop_hwservice:hwservice_manager find;
+allow bluetooth vendor_default_prop:file { getattr map };
+allow bluetooth vendor_bt_data_file:dir search;
+allow bluetooth vendor_bt_data_file:file { getattr open read };
+allow bluetooth system_app_data_file:dir getattr;
+allow bluetooth system_app_data_file:file { getattr open read };
+allow bluetooth self:socket { create getopt read write };
+#allow bluetooth self:socket ioctl;
+allow bluetooth servicemanager:fd *;
+allow bluetooth system_app:binder { call transfer };
+allow bluetooth system_app:fd *;
+allow bluetooth vendor_dun_service:service_manager find;
+allow bluetooth hal_audio_hwservice:hwservice_manager find;
+#allowxperm bluetooth self:ioctl socket ((range 0xc300 0xc305));
+dontaudit bluetooth netd_service:service_manager find;
+get_prop(bluetooth, vendor_display_prop)
+get_prop(bluetooth, vendor_audio_prop)
+binder_use(bluetooth)

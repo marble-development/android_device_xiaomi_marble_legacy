@@ -1,0 +1,10 @@
+type vendor_displayfeature_device, dev_type;
+type sound_device, dev_type, mlstrustedobject;
+type stmvl53l5_device, dev_type;
+type vendor_fingerprint_device, dev_type;
+type touchfeature_device, dev_type;
+type vendor_radio_smd_device, dev_type;
+type ir_spi_device, dev_type;
+type ddr_partition, dev_type;
+type minidump_data_file, data_file_type, file_type;
+

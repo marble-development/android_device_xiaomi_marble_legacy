@@ -1,0 +1,8 @@
+allow hal_sensors_default audio_socket:sock_file rw_file_perms;
+allow hal_sensors_default hal_audio_default:unix_stream_socket connectto;
+allow hal_sensors_default sound_device:chr_file rw_file_perms;
+allow hal_sensors_default vendor_sysfs_graphics:dir r_dir_perms;
+allow hal_sensors_default vendor_sysfs_graphics:file r_file_perms;
+allow hal_sensors_default stmvl53l5_device:chr_file { ioctl open read write };
+
+allow hal_sensors_default sysfs_tp_fodstatus:file r_file_perms;

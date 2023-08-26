@@ -1,0 +1,2 @@
+type mi_ric, domain;
+type mi_ric_exec, exec_type, vendor_file_type, file_type;

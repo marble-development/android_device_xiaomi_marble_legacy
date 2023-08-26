@@ -4,10 +4,21 @@ on boot
     chmod 0660 /dev/xiaomi-touch
 
     # Fingerprint
-    chmod 0666 /dev/goodix_fp
-    chown system system /dev/goodix_fp
-    chmod 0664 /sys/bus/platform/devices/soc:xiaomi_fingerprint/fingerdown
-    chown system graphics /sys/bus/platform/devices/soc:xiaomi_fingerprint/fingerdown
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/irq
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/irq_enable
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/wakeup_enable
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/hw_reset
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/device_prepare
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/fingerdown_wait
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/vendor
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/request_vreg
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/simulate_irq
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/finger_irq
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/request_vreg
+    chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/power_cfg
+
+    chown system system /sys/bus/platform/devices/fpc1020/soc:fingerprint_fpc/irq
+    chown system system /sys/bus/platform/devices/fpc1020/soc:fingerprint_fpc/wakeup_enable
 
     # Pocket sensor
     chown system system /sys/class/touch/touch_dev/palm_sensor
@@ -28,7 +39,7 @@ on post-fs-data
 service citsensor-hal-2-0 /vendor/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service
     class late_start
     user system
-    group system input
+    group system input wakelock
     override
     task_profiles ServiceCapacityLow
 

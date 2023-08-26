@@ -1,0 +1,10 @@
+# MIUI
+ro.miui.                              u:object_r:exported_system_prop:s0
+ro.product.mod_device                 u:object_r:exported_default_prop:s0 exact string
+ro.product.marketname                 u:object_r:exported_default_prop:s0 exact string
+ro.cust.test                          u:object_r:exported_system_prop:s0
+ro.carrier                            u:object_r:exported_default_prop:s0 exact string
+persist.vendor.sensors.               u:object_r:exported_system_prop:s0
+ro.fota.oem                           u:object_r:exported_system_prop:s0
+persist.camera.capture.misegment.dump u:object_r:exported_system_prop:s0
+

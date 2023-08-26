@@ -1,0 +1,34 @@
+type hal_tidaservice_default, domain;
+type hal_tidaservice_default_exec, exec_type, file_type, vendor_file_type;
+type hal_tidaservice_hwservice, hwservice_manager_type;
+hal_attribute(tidaservice)
+allow hal_tidaservice_client hal_tidaservice_server:binder { call transfer };
+allow hal_tidaservice_client hal_tidaservice_server:binder transfer;
+allow hal_tidaservice_client hal_tidaservice_server:fd *;
+allow hal_tidaservice_client hal_tidaservice_hwservice:hwservice_manager find;
+allow hal_tidaservice_server hal_tidaservice_client:binder transfer;
+allow hal_tidaservice_server hal_tidaservice_client:binder { call transfer };
+allow hal_tidaservice_server hal_tidaservice_client:fd *;
+allow hal_tidaservice_default hal_mtdservice_default:binder { call transfer };
+allow hal_tidaservice_default hal_mtdservice_default:fd *;
+allow hal_tidaservice_default tee_device:chr_file rw_file_perms;
+allow hal_tidaservice_default firmware_file:dir r_dir_perms;
+allow hal_tidaservice_default firmware_file:file r_file_perms;
+allow hal_tidaservice_default ion_device:chr_file rw_file_perms;
+allow hal_tidaservice_default rootfs:lnk_file r_file_perms;
+allow hal_tidaservice_default hal_mtdservice_hwservice:hwservice_manager find;
+allow hal_tidaservice_default platform_app:binder transfer;
+allow hal_tidaservice_default vendor_hal_tui_comm_hwservice:hwservice_manager find;
+allow hal_tidaservice_default vendor_hal_tui_comm_hwservice:binder { call transfer };
+allow hal_tidaservice_default vendor_hal_tui_comm_qti:binder { call transfer };
+allow hal_tidaservice_default sysfs:dir { open read };
+allow hal_tidaservice_default sysfs:file { open read write };
+allow hal_tidaservice_default vendor_dmabuf_qseecom_heap_device:chr_file { ioctl open read };
+allow hal_tidaservice_default vendor_dmabuf_qseecom_ta_heap_device:chr_file { ioctl open read };
+init_daemon_domain(hal_tidaservice_default)
+get_prop(hal_tidaservice_default, vendor_fp_prop)
+get_prop(hal_tidaservice_default, vendor_system_prop)
+get_prop(hal_tidaservice_default, vendor_payment_security_prop)
+hwbinder_use(hal_tidaservice_default)
+hal_server_domain(hal_tidaservice_default, hal_tidaservice)
+add_hwservice(hal_tidaservice_server, hal_tidaservice_hwservice)

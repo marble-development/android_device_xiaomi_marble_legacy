@@ -1,0 +1,37 @@
+attribute vendor_hal_camerapostproc_xiaomi;
+attribute vendor_hal_camerapostproc_xiaomi_client;
+attribute vendor_hal_camerapostproc_xiaomi_server;
+type vendor_hal_camerapostproc_xiaomi_hwservice, hwservice_manager_type;
+
+allow vendor_hal_camerapostproc_xiaomi_client vendor_hal_camerapostproc_xiaomi_server:binder { call transfer };
+allow vendor_hal_camerapostproc_xiaomi_client vendor_hal_camerapostproc_xiaomi_server:binder transfer;
+allow vendor_hal_camerapostproc_xiaomi_client vendor_hal_camerapostproc_xiaomi_server:fd *;
+allow vendor_hal_camerapostproc_xiaomi_client vendor_hal_camerapostproc_xiaomi_hwservice:hwservice_manager find;
+allow vendor_hal_camerapostproc_xiaomi_server vendor_hal_camerapostproc_xiaomi_client:binder transfer;
+allow vendor_hal_camerapostproc_xiaomi_server vendor_hal_camerapostproc_xiaomi_client:binder { call transfer };
+allow vendor_hal_camerapostproc_xiaomi_server vendor_hal_camerapostproc_xiaomi_client:fd *;
+allow vendor_hal_camerapostproc_xiaomi platform_app:binder transfer;
+allow vendor_hal_camerapostproc_xiaomi platform_app:binder { call transfer };
+allow vendor_hal_camerapostproc_xiaomi platform_app:fd *;
+allow vendor_hal_camerapostproc_xiaomi priv_app:binder transfer;
+allow vendor_hal_camerapostproc_xiaomi priv_app:binder { call transfer };
+allow vendor_hal_camerapostproc_xiaomi priv_app:fd *;
+allow vendor_hal_camerapostproc_xiaomi system_app:binder transfer;
+allow vendor_hal_camerapostproc_xiaomi system_app:binder { call transfer };
+allow vendor_hal_camerapostproc_xiaomi system_app:fd *;
+add_hwservice(vendor_hal_camerapostproc_xiaomi_server, vendor_hal_camerapostproc_xiaomi_hwservice)
+
+allow hal_camera_client vendor_hal_camerapostproc_xiaomi_hwservice:hwservice_manager find;
+allow hal_camera_default mnt_vendor_file:dir search;
+allow hal_camera_default camera_persist_file:dir search;
+allow hal_camera_default vendor_persist_sensors_file:dir search;
+allow hal_camera_default stmvl53l5_device:chr_file { ioctl open read write };
+allow hal_camera_default hal_quickcamera_hwservice:hwservice_manager { add find };
+dontaudit hal_camera graphics_device:dir search;
+dontaudit hal_camera_default default_prop:file read;
+r_dir_file(hal_camera_default, mnt_vendor_file)
+r_dir_file(hal_camera_default, camera_persist_file)
+r_dir_file(hal_camera_default, vendor_persist_sensors_file)
+hal_server_domain(hal_camera_default, vendor_hal_camerapostproc_xiaomi)
+add_hwservice(hal_camera_server, vendor_hal_camerapostproc_xiaomi_hwservice)
+set_prop(hal_camera_default, vendor_camera_sensor_prop)

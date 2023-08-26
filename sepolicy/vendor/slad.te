@@ -1,0 +1,36 @@
+type slad, domain;
+type slad_exec, exec_type, file_type, vendor_file_type;
+type qti_proc_sla, proc_type;
+allow slad slad_socket:sock_file { getattr read write };
+allow slad slad_socket:sock_file unlink;
+allow slad slad:netlink_socket { bind create read write };
+allow slad proc_net:file { getattr open read };
+allow slad system_file:lnk_file getattr;
+allow slad self:capability { net_admin net_raw setgid setuid };
+allow slad self:netlink_tcpdiag_socket { create_socket_perms_no_ioctl nlmsg_read nlmsg_write };
+allow slad self:netlink_generic_socket { bind create read setopt write };
+allow slad self:rawip_socket { create getopt read setopt write };
+allow slad self:udp_socket { connect create getattr };
+allow slad sla_data_file:dir { add_name create read remove_name search unlink write };
+allow slad sla_data_file:dir create_dir_perms;
+allow slad sla_data_file:file create_file_perms;
+allow slad sla_data_file:file rw_file_perms;
+allow slad socket_device:dir write;
+allow slad socket_device:dir remove_name;
+allow slad socket_device:dir add_name;
+allow slad socket_device:sock_file { create setattr unlink };
+allow slad qti_proc_sla:dir search;
+allow slad qti_proc_sla:file { map open read write };
+allow slad vendor_shell_exec:file execute_no_trans;
+dontaudit slad self:capability dac_read_search;
+init_daemon_domain(slad)
+unix_socket_connect(slad, dnsproxyd, slad)
+unix_socket_connect(slad, dnsproxyd, netd)
+unix_socket_connect(slad, dnsproxyd, init)
+unix_socket_connect(slad, fwmarkd, slad)
+unix_socket_connect(slad, fwmarkd, netd)
+unix_socket_connect(slad, fwmarkd, init)
+unix_socket_connect(slad, property, slad)
+unix_socket_connect(slad, property, netd)
+set_prop(slad, vendor_slad_prop)
+net_domain(slad)

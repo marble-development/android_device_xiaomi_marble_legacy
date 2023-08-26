@@ -1,0 +1,27 @@
+type hal_quickcamera_default, domain;
+type hal_quickcamera_default_exec, exec_type, file_type, vendor_file_type;
+type hal_quickcamera_hwservice, hwservice_manager_type;
+hal_attribute(quickcamera)
+allow hal_quickcamera_client hal_quickcamera_server:binder { call transfer };
+allow hal_quickcamera_client hal_quickcamera_server:binder transfer;
+allow hal_quickcamera_client hal_quickcamera_server:fd *;
+allow hal_quickcamera_client hal_quickcamera_hwservice:hwservice_manager find;
+allow hal_quickcamera_server hal_quickcamera_client:binder transfer;
+allow hal_quickcamera_server hal_quickcamera_client:binder { call transfer };
+allow hal_quickcamera_server hal_quickcamera_client:fd *;
+allow hal_quickcamera_server hidl_base_hwservice:hwservice_manager add;
+allow hal_quickcamera_server hal_quickcamera_hwservice:hwservice_manager { add find };
+allow hal_quickcamera_default platform_app:binder transfer;
+allow hal_quickcamera_default platform_app:binder { call transfer };
+allow hal_quickcamera_default platform_app:fd *;
+allow hal_quickcamera_default system_app:binder transfer;
+allow hal_quickcamera_default system_app:binder { call transfer };
+allow hal_quickcamera_default system_app:fd *;
+allow hal_quickcamera platform_app:binder transfer;
+allow hal_quickcamera platform_app:binder { call transfer };
+allow hal_quickcamera platform_app:fd *;
+allow hal_quickcamera system_app:binder transfer;
+allow hal_quickcamera system_app:binder { call transfer };
+allow hal_quickcamera system_app:fd *;
+init_daemon_domain(hal_quickcamera_default)
+hal_server_domain(hal_quickcamera_default, hal_quickcamera)

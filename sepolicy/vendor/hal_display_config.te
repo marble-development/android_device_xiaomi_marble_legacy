@@ -1,0 +1,2 @@
+allow vendor_hal_display_config_hwservice vendor_hal_displayfeature_xiaomi_default:binder transfer;
+allow vendor_hal_display_config_hwservice vendor_hal_citsensorservice_xiaomi_default:binder transfer;

@@ -1,0 +1,12 @@
+hal_attribute(dms)
+allow hal_audio_default vendor_persist_audio_file:file rw_file_perms;
+allow hal_audio_default mnt_vendor_file:dir r_dir_perms;
+allow hal_audio_default vendor_audio_prop:property_service set;
+allow hal_audio_default audio_socket:sock_file rw_file_perms;
+allow hal_audio_default sound_device:chr_file rw_file_perms;
+allow hal_audio_default sysfs_f0_value:file rw_file_perms;
+allow hal_audio_default sysfs:file rw_file_perms;
+unix_socket_connect(hal_audio_default, property, init)
+unix_socket_connect(hal_audio_default, property, hal_sensors_default)
+hal_client_domain(hal_audio_default, hal_dms)
+set_prop(hal_audio_default, vendor_audio_prop)
