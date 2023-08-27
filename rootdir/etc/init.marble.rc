@@ -1,3 +1,10 @@
+on early-boot
+    # SSR Setup
+    write /sys/class/remoteproc/remoteproc0/recovery enabled
+    write /sys/class/remoteproc/remoteproc1/recovery enabled
+    write /sys/class/remoteproc/remoteproc2/recovery enabled
+    write /sys/class/remoteproc/remoteproc3/recovery enabled
+
 on boot
     # DT2W
     chown system system /dev/xiaomi-touch
