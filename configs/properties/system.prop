@@ -28,9 +28,6 @@ persist.device_config.mglru_native.lru_gen_config=all
 # Property to enable HWC for VDS
 debug.sf.enable_hwc_vds=1
 
-# Property to latch unsignaled buffer
-debug.sf.latch_unsignaled=1
-
 # RIL
 DEVICE_PROVISIONED=1
 persist.vendor.data.mode=concurrent
