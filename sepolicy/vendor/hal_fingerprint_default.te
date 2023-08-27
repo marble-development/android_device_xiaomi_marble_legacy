@@ -21,6 +21,7 @@ allow hal_fingerprint_default {
 }: dir r_dir_perms;
 
 allow hal_fingerprint_default sysfs:file  { write };
+allow hal_fingerprint_default rootfs:dir { read };
 
 # Dev nodes
 allow hal_fingerprint_default {
