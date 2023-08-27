@@ -22,6 +22,7 @@
 /vendor/lib(64)?/libc\+\+_shared\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmialgo_ai_vision\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmialgo_utils\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libmialgoengine\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libsnpe_dsp_domains_v2\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libsnpe_dsp_domains_v3\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libxmi_slow_motion_mein\.so u:object_r:same_process_hal_file:s0
@@ -122,4 +123,3 @@
 
 # Vibrator
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.xiaomi u:object_r:hal_vibrator_default_exec:s0
-

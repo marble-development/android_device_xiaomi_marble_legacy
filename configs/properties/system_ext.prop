@@ -6,9 +6,6 @@ persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=true
 
-# Camera
-vendor.camera.aux.packagelist=org.lineageos.aperture
-
 # DPM
 persist.vendor.dpm.feature=11
 

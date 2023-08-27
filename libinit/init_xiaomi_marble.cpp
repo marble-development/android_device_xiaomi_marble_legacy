@@ -34,7 +34,7 @@ static const variant_info_t marblein_info = {
     .device = "marblein",
     .marketname = "POCO F5",
     .model = "23049PCD8I",
-    .mod_device = "marble_in_global",
+    .mod_device = "marble_global", // Fixed miuicamera crash 
     .build_fingerprint = FINGERPRINT_IN,
 };
 
@@ -46,7 +46,7 @@ static const variant_info_t marble_info = {
     .device = "marble",
     .marketname = "Redmi Note 12 Turbo",
     .model = "23049RAD8C",
-    .mod_device = "marble",
+    .mod_device = "marble_global", // Fixed miuicamera crash
     .build_fingerprint = FINGERPRINT_CN,
 };
 
