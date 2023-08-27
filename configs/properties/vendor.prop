@@ -215,6 +215,8 @@ vendor.display.enable_fp_monitor=1
 vendor.display.enable_hist_intr=1
 vendor.display.disable_3d_adaptive_tm=0
 vendor.display.use_layer_ext=0
+vendor.display.qdcm.disable_factory_mode=1
+vendor.display.qdcm.mode_combine=1
 
 # Displayfeature
 ro.vendor.displayfeature.dump=true
@@ -275,6 +277,7 @@ vendor.gatekeeper.disable_spu=true
 # Graphics
 persist.sys.sf.color_saturation=1.0
 persist.sys.sf.color_mode=0
+persist.sys.sf.native_mode=258
 debug.cpurend.vsync=false
 debug.sf.hw=0
 debug.egl.hw=0
