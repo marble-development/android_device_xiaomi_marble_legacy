@@ -4,6 +4,7 @@ persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptiver2-aac-ld
 persist.vendor.btstack.enable.twsplus=true
 persist.vendor.btstack.enable.twsplussho=true
 persist.vendor.bt.a2dp.hal.implementation=true
+persist.vendor.bt.a2dp.aac_whitelist=false
 
 # Charger
 ro.charger.enable_suspend=1
