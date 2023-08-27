@@ -9,6 +9,7 @@ get_prop(system_server, vendor_fingerprint_prop);
 # Sysfs
 allow hal_fingerprint_default {
   sysfs_rtc
+  sysfs_wakeup
   vendor_sysfs_fingerprint
   vendor_sysfs_spss
 }: file rw_file_perms;
@@ -16,6 +17,7 @@ allow hal_fingerprint_default {
 allow hal_fingerprint_default {
   input_device
   sysfs_rtc
+  sysfs_wakeup
   vendor_sysfs_fingerprint
   vendor_sysfs_spss
 }: dir r_dir_perms;
