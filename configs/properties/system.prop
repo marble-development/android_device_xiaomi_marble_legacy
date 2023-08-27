@@ -61,4 +61,5 @@ ro.hardware.wlan.vendor=qcom
 persist.device_config.runtime_native.usap_pool_enabled=true
 
 # Xiaomi
+ro.miui.notch=1
 ro.product.mod_device=marble_global
