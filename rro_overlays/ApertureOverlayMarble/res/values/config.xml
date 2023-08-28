@@ -31,7 +31,7 @@
              </string-array>
     -->
     <string-array name="config_additionalVideoConfigurations">
-        <item>0</item> <item>sd|hd|fhd</item> <item>60</item>
+        <item>0</item> <item>sd|hd|fhd|uhd</item> <item>60</item>
         <item>1</item> <item>sd|hd|fhd</item> <item>60</item>
         <item>2</item> <item>sd|hd|fhd</item> <item>60</item>
         <item>3</item> <item>sd|hd</item> <item>30</item>
