@@ -1,0 +1,50 @@
+type hal_miperf_default, domain;
+type proc_perfmgr, fs_type, proc_type;
+type sysfs_perfmgr, fs_type, sysfs_type;
+
+allow platform_app proc_perfmgr:dir { search };
+allow platform_app proc_perfmgr:file { ioctl read getattr open };
+allowxperm platform_app proc_perfmgr:file ioctl { 0x6701 0x670f };
+allow surfaceflinger proc_perfmgr:dir { search };
+allow surfaceflinger proc_perfmgr:file { ioctl read getattr open };
+allowxperm surfaceflinger proc_perfmgr:file ioctl { 0x6701 0x670f };
+allow bootanim proc_perfmgr:dir { search };
+allow bootanim proc_perfmgr:file { ioctl read getattr open };
+allowxperm bootanim proc_perfmgr:file ioctl { 0x6701 0x670f };
+allow system_app proc_perfmgr:dir { search };
+allow system_app proc_perfmgr:file { ioctl read getattr open };
+allowxperm system_app proc_perfmgr:file ioctl { 0x6701 0x670f };
+allow untrusted_app_29 proc_perfmgr:dir { search };
+allow untrusted_app_29 proc_perfmgr:file { ioctl read getattr open };
+allowxperm untrusted_app_29 proc_perfmgr:file ioctl { 0x6701 0x670f };
+allow untrusted_app_27 proc_perfmgr:dir { search };
+allow untrusted_app_27 proc_perfmgr:file { ioctl read getattr open };
+allowxperm untrusted_app_27 proc_perfmgr:file ioctl { 0x6701 0x670f };
+allow untrusted_app_30 proc_perfmgr:dir { search };
+allow untrusted_app_30 proc_perfmgr:file { ioctl read getattr open };
+allowxperm untrusted_app_30 proc_perfmgr:file ioctl { 0x6701 0x670f };
+allow untrusted_app_25 proc_perfmgr:dir { search };
+allow untrusted_app_25 proc_perfmgr:file { ioctl read getattr open };
+allowxperm untrusted_app_25 proc_perfmgr:file ioctl { 0x6701 0x670f };
+allow untrusted_app proc_perfmgr:dir { search };
+allow untrusted_app proc_perfmgr:file { ioctl read getattr open };
+allowxperm untrusted_app proc_perfmgr:file ioctl { 0x6701 0x670f };
+allow mediaserver proc_perfmgr:dir { search };
+allow mediaserver proc_perfmgr:file { ioctl read getattr open };
+allowxperm mediaserver proc_perfmgr:file ioctl { 0x6701 0x670f };
+allow system_server proc_perfmgr:dir { search };
+allow system_server proc_perfmgr:file { ioctl read getattr open };
+allowxperm system_server proc_perfmgr:file ioctl { 0x6701 0x670f };
+allow cameraserver proc_perfmgr:dir { search };
+allow cameraserver proc_perfmgr:file { ioctl read getattr open };
+allowxperm cameraserver proc_perfmgr:file ioctl { 0x6701 0x670f };
+
+allow hal_miperf_default sysfs_perfmgr:dir { ioctl read getattr lock open watch watch_reads search };
+allow hal_miperf_default sysfs_perfmgr:file { ioctl read write getattr lock append map open watch watch_reads };
+allow hal_miperf_default sysfs_perfmgr:lnk_file { ioctl read write getattr lock append map open watch watch_reads };
+
+allow hal_miperf_default proc_perfmgr:dir { search };
+allow hal_miperf_default proc_perfmgr:file { ioctl read getattr open };
+allowxperm hal_miperf_default proc_perfmgr:file ioctl { 0x6701 0x670f };
+
+

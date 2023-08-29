@@ -7,6 +7,10 @@ genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/extcon u:object_r:sysf
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/soc/soc:spf_core_platform/soc:spf_core_platform:lpass-cdc/wcd938x-codec/extcon u:object_r:sysfs_extcon:s0
 
+# FEAS
+genfscon sysfs /module/perfmgr                        u:object_r:sysfs_perfmgr:s0
+genfscon proc /perfmgr                                u:object_r:proc_perfmgr:s0
+
 # Fingerprint
 genfscon sysfs /devices/platform/soc/soc:fpc1020                                u:object_r:vendor_sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/soc/soc:goodix_fp                              u:object_r:vendor_sysfs_fingerprint:s0

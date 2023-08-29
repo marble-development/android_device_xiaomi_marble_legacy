@@ -21,6 +21,9 @@ persist.debug.ftrace_events_disable=Yes
 # Disable Skia tracing by default
 debug.hwui.skia_atrace_enabled=false
 
+# FEAS
+ro.feas.enable=true
+
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
