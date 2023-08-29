@@ -636,6 +636,18 @@
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
 
+     <!-- Applications which are disabled unless matching a particular sku -->
+    <string-array name="config_disableApksUnlessMatchedSku_apk_list" translatable="false">
+        <item>com.android.nfc</item>
+        <item>com.android.se</item>
+        <item>com.android.apps.tag</item>
+        <item>com.google.android.tag</item>
+    </string-array>
+
+    <string-array name="config_disableApkUnlessMatchedSku_skus_list" translatable="false">
+        <item>marble</item>
+    </string-array>
+
     <!-- The default journal mode to use use when Write-Ahead Logging is not active.
          Choices are: OFF, DELETE, TRUNCATE, PERSIST and MEMORY.
          PERSIST may improve performance by reducing how often journal blocks are
