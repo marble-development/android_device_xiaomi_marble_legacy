@@ -306,8 +306,8 @@ ro.vendor.all_modes.colorpick_adjust=true
 vendor.gralloc.disable_ubwc=0
 
 # Refresh Rate
-ro.surface_flinger.set_display_power_timer_ms=1000
-ro.surface_flinger.set_idle_timer_ms=80
+ro.surface_flinger.set_display_power_timer_ms=3000
+ro.surface_flinger.set_idle_timer_ms=1000
 ro.surface_flinger.set_touch_timer_ms=200
 
 # Haptics
