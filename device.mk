@@ -424,6 +424,7 @@ PRODUCT_PACKAGES += \
 
 # Perf
 PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.3 \
     vendor.qti.hardware.perf@2.3.vendor
 
 # Rootdir
