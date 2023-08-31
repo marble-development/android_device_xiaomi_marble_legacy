@@ -194,10 +194,6 @@ persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
 ro.vendor.bluetooth.csip_qti=true
 
-# Audio steps
-ro.config.vc_call_vol_steps=11
-ro.config.media_vol_steps=25
-
 # Camera
 camera.disable_zsl_mode=true
 ro.camera.enableCamera1MaxZsl=1
