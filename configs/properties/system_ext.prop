@@ -1,6 +1,10 @@
 # Audio
+audio.sys.noisy.broadcast.delay=600
+audio.sys.offload.pstimeout.secs=3
 ro.qc.sdk.audio.ssr=false
 ro.qc.sdk.audio.fluencetype=none
+persist.audio.button_jack.profile=volume
+persist.audio.button_jack.switch=0
 persist.audio.fluence.voicecomm=true
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
