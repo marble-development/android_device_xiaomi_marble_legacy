@@ -18,7 +18,6 @@ vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
-vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # ADSP modules
 vendor/lib/rfsa/adsp/bm2n00.bin
@@ -1641,6 +1640,12 @@ vendor/lib64/librpmb.so
 vendor/lib64/libspl.so
 vendor/lib64/libssd.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
+
+# DSP
+vendor/bin/dspservice
+vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
+vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
+vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # eid
 vendor/bin/hw/vendor.qti.hardware.eid@1.0-service
