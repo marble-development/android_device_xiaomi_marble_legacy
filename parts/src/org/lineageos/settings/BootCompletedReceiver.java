@@ -25,6 +25,7 @@ import android.util.Log;
 import android.view.Display.HdrCapabilities;
 import android.view.SurfaceControl;
 
+import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
@@ -41,6 +42,13 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
+
+        // Dirac
+        try {
+            DiracUtils.getInstance(context);
+        } catch (Exception e) {
+            Log.d(TAG, "Dirac is not present in system");
+        }
 
         // Doze
         DozeUtils.checkDozeService(context);
