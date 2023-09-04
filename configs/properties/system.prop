@@ -9,10 +9,6 @@ persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.a2dp.hal.implementation=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
 
-# Camera
-persist.vendor.camera.privapp.list=org.lineageos.aperture.org.codeaurora.snapcam,com.android.camera,com.google.camera
-vendor.camera.aux.packagelist=org.lineageos.aperture,org.codeaurora.snapcam,com.android.camera,com.google.camera
-
 # Charger
 ro.charger.enable_suspend=1
 
