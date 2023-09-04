@@ -15,17 +15,11 @@
 #/vendor/bin/camera_cal u:object_r:DualCameraCal_exec:s0
 /vendor/lib(64)?/libQnnHtpV69Stub\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libQnnHtp\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libSNPE\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libSnpeGpu\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libSnpeHtpPrepare\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libSnpeHtpV68Stub\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libSnpeHtpV69Stub\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libc\+\+_shared\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libmialgo_ai_vision\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmialgo_utils\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmialgoengine\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libsnpe_dsp_domains_v2\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libsnpe_dsp_domains_v3\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libxmi_slow_motion_mein\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/rfsa/adsp/libQnnHtpV69Skel\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/rfsa/adsp/libSnpeHtpV68Skel\.so u:object_r:same_process_hal_file:s0

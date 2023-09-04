@@ -1,0 +1,14 @@
+# Allow hal_camera_default to read to vendor_sysfs_kgsl
+r_dir_file(hal_camera_default, vendor_sysfs_kgsl)
+
+# Allow hal_camera_default to read to mnt/vendor/persist/camera
+r_dir_file(hal_camera_default, camera_persist_file)
+
+r_dir_file(hal_camera_default, mnt_vendor_file)
+
+set_prop(hal_camera_default, vendor_camera_prop)
+
+add_hwservice(hal_camera_default, hal_xiaomi_camera_hwservice)
+
+allow hal_camera_default public_adsprpcd_file:file r_file_perms;
+allow hal_camera_default vendor_xdsp_device:chr_file r_file_perms;

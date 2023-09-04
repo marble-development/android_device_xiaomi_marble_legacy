@@ -269,10 +269,15 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
 # Camera
+system/lib/libhidltransport.so
+system/lib/libui.so
+system/lib64/libhidltransport.so
+system/lib64/libui.so
 vendor/bin/hw/vendor.qti.camera.provider@2.7-service_64
 vendor/bin/hw/vendor.xiaomi.hardware.quickcamera@1.0-service
 vendor/etc/init/vendor.qti.camera.provider@2.7-service_64.rc
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.quickcamera@1.0-service.xml
+vendor/lib/libhidltransport.so
 vendor/lib64/camera.device@1.0-impl.so
 vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
@@ -381,6 +386,7 @@ vendor/lib64/libcom.xiaomi.metadatautils.so
 vendor/lib64/libcom.xiaomi.pluginutils.so
 vendor/lib64/libdeflicker.so
 vendor/lib64/libhdr10plus.so
+vendor/lib64/libhidltransport.so
 vendor/lib64/libhta.so
 vendor/lib64/libhta_hexagon_runtime_snpe.so
 vendor/lib64/libipebpsstriping.so
