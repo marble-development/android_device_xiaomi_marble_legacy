@@ -111,7 +111,7 @@ public class ClearSpeakerFragment extends PreferenceFragment implements
                 mMediaPlayer.stop();
                 mMediaPlayer.reset();
                 mMediaPlayer.release();
-                mMediaPlayer=null;
+                mMediaPlayer = null;
             }
         }
         mAudioManager.setParameters("status_earpiece_clean=off");
