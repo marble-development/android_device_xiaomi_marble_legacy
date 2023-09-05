@@ -309,6 +309,10 @@ on post-fs-data
     # Create vpp directory
     mkdir /data/vendor/vpp 0770 media media
 
+    # Thermal Configs
+    chmod 0664 /sys/devices/virtual/thermal/thermal_message/sconfig
+    chown system system /sys/devices/virtual/thermal/thermal_message/sconfig
+
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
