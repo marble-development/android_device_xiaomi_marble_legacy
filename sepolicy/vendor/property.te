@@ -16,6 +16,9 @@ vendor_internal_prop(vendor_dolbyv_prop)
 vendor_public_prop(vendor_displayfeature_prop)
 vendor_internal_prop(vendor_ctl_vendor_display_prop)
 
+# Fastcharge HAL
+vendor_internal_prop(vendor_fastcharge_prop);
+
 # Fingerprint
 vendor_restricted_prop(vendor_fp_info_prop)
 vendor_public_prop(vendor_fp_prop)
@@ -26,6 +29,7 @@ vendor_public_prop(vendor_mi_ins_prop)
 
 # Mlipay
 vendor_public_prop(vendor_payment_security_prop)
+vendor_public_prop(vendor_mlipay_prop)
 
 # NFC
 vendor_public_prop(vendor_nfc_mi_prop)

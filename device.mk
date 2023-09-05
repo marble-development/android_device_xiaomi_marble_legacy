@@ -179,6 +179,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.fingerprint=fpc \
+    persist.vendor.sys.fp.vendor=fpc
+
+# Mlipay
+PRODUCT_PACKAGES += \
+    IFAAService \
+    vendor.xiaomi.hardware.mlipay@1.1.vendor \
+    vendor.xiaomi.hardware.mtdservice@1.0.vendor
+
 # F2FS utilities
 PRODUCT_PACKAGES += \
     sg_write_buffer \
