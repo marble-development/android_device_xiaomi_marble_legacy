@@ -116,12 +116,8 @@ ro.vendor.gnss.edgnss.downloadQxwzAk u:object_r:vendor_edgnss_qxwz_downloadak_pr
 vendor.panel. u:object_r:vendor_panel_info_prop:s0
 
 # Mlipay
-persist.vendor.sys.pay.fido u:object_r:vendor_payment_security_prop:s0
-persist.vendor.sys.pay.fido2 u:object_r:vendor_payment_security_prop:s0
-persist.vendor.sys.pay.ifaa u:object_r:vendor_payment_security_prop:s0
-persist.vendor.sys.pay.soter u:object_r:vendor_payment_security_prop:s0
-persist.vendor.sys.pay.widevine u:object_r:vendor_payment_security_prop:s0
-persist.vendor.sys.provision.status u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay. u:object_r:vendor_mlipay_prop:s0
+persist.vendor.sys.provision.status u:object_r:vendor_mlipay_prop:s0
 vendor.sys.feature_state u:object_r:vendor_payment_security_prop:s0
 vendor.sys.rpmb_state u:object_r:vendor_payment_security_prop:s0
 
