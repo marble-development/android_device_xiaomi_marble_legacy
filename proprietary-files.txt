@@ -3021,6 +3021,10 @@ vendor/bin/thermal-engine-v2
 vendor/etc/init/hw/init.mi_thermald.rc
 vendor/etc/init/init_thermal-engine-v2.rc
 
+# Thermal Service Client
+system_ext/lib/libthermalclient.qti.so
+system_ext/lib64/libthermalclient.qti.so
+
 # Time services
 vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
