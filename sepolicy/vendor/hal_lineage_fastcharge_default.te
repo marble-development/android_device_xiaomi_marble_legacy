@@ -1,9 +1,0 @@
-get_prop(hal_lineage_fastcharge, vendor_fastcharge_prop)
-set_prop(hal_lineage_fastcharge, vendor_fastcharge_prop)
-
-# Fast Charge Node Service Permissions
-allow hal_lineage_fastcharge_default sysfs_battery_supply:dir search;
-allow hal_lineage_fastcharge_default sysfs_battery_supply:file rw_file_perms;
-
-allow hal_lineage_fastcharge_default vendor_sysfs_battery_supply:dir search;
-allow hal_lineage_fastcharge_default vendor_sysfs_battery_supply:file rw_file_perms;
