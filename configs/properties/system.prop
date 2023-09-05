@@ -52,6 +52,7 @@ persist.vendor.data.mode=concurrent
 ril.subscription.types=NV,RUIM
 ro.telephony.default_network=33,33
 telephony.lteOnCdmaDevice=1
+persist.sys.radio.force_lte_ca=true
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
