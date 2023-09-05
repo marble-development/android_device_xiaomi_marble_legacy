@@ -259,8 +259,12 @@ ro.vendor.mi_sf.skip_90hz_forVrrVote=true
 persist.vendor.dc_backlight.enable=false
 persist.vendor.dc_backlight.threshold=0
 
-# Dolby
+# Dolby Music
 ro.vendor.dolby.dax.version=DAX3_3.6.1.6_r1
+
+# Dolby Vision
+ro.vendor.audio.dolby.vision.support=true
+debug.config.media.video.dolby_vision_suports=true
 
 # DPM
 persist.vendor.dpm.vndr.idletimer.mode=default
@@ -354,7 +358,6 @@ persist.sys.lmkd.extend_reclaim.enable=true
 
 # Media
 debug.c2.use_dmabufheaps=1
-debug.config.media.video.dolby_vision_suports=true
 debug.mdpcomp.logs=0
 debug.stagefright.omx_default_rank=0
 debug.stagefright.c2inputsurface=-1
