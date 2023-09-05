@@ -52,7 +52,7 @@ public final class ThermalUtils {
     private static final String THERMAL_GAMING = "thermal.gaming=";
     private static final String THERMAL_STREAMING = "thermal.streaming=";
 
-    private static final String THERMAL_SCONFIG = "/sys/class/thermal/thermal_message/sconfig";
+    private static final String THERMAL_SCONFIG = "/sys/devices/virtual/thermal/thermal_message/sconfig";
 
     private SharedPreferences mSharedPrefs;
 
