@@ -341,6 +341,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.audio.misound.disable=true \
     ro.vendor.audio.misound.bluetooth.enable=true
 
+# Mlipay
+PRODUCT_PACKAGES += \
+    IFAAService \
+    vendor.xiaomi.hardware.mlipay@1.1.vendor \
+    vendor.xiaomi.hardware.mtdservice@1.0.vendor
+
 # Network
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
