@@ -191,5 +191,10 @@
             </intent-filter>
         </service>
 
+        <service
+            android:name=".display.ColorService"
+            android:permission="ColorService">
+        </service>
+
     </application>
 </manifest>
