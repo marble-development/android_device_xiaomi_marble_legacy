@@ -426,11 +426,6 @@
           <item>0</item>
      </integer-array>
 
-     <!-- Amount of time it takes for the light sensor to warm up in milliseconds.
-         For this time after the screen turns on, the Power Manager
-         will not debounce light sensor readings -->
-     <integer name="config_lightSensorWarmupTime">100</integer>
-
      <!-- NOTE: The telephony module is no longer reading the configuration below for available
          APN types.  The set of APN types and relevant settings are specified within the telephony
          module and are non-configurable.  Whether or not data connectivity over a cellular network
