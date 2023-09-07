@@ -256,6 +256,7 @@ ro.vendor.thermal.dimming.enable=true
 ro.vendor.fps.switch.thermal=true
 ro.vendor.mi_sf.ultimate.perf.support=true
 ro.vendor.mi_sf.skip_90hz_forVrrVote=true
+ro.sf.force_hwc_brightness=1
 persist.vendor.dc_backlight.enable=false
 persist.vendor.dc_backlight.threshold=0
 
