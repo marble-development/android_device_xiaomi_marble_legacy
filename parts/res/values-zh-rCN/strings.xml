@@ -105,4 +105,11 @@
     <string name="refresh_title">刷新率设置</string>
     <string name="refresh_summary">设置特定应用的最大刷新率</string>
     <string name="refresh_default">默认</string>
+
+    <!-- Dolby Atmos -->
+    <string name="dolby_title">杜比全景声</string>
+    <string name="dolby_enable">启用</string>
+    <string name="dolby_summary">环绕音</string>
+    <string name="dolby_profile_title">选择配置</string>
+    <string name="dolby_profile_dynamic">动态</string>
 </resources>
