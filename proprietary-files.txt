@@ -129,7 +129,6 @@ vendor/etc/audio_policy_engine_product_strategies.xml
 vendor/etc/audio_policy_engine_stream_volumes.xml
 vendor/etc/card-defs.xml
 vendor/etc/kvh2xml.xml
-vendor/etc/microphone_characteristics.xml
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
@@ -1998,16 +1997,11 @@ vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_ukee.xml
 vendor/etc/media_ukee/video_system_specs.json
-vendor/etc/seccomp_policy/c2audio.vendor.base-arm.policy
-vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy
-vendor/etc/seccomp_policy/c2audio.vendor.ext-arm.policy
-vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
 vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
 vendor/lib/libEvrcSwCodec.so
-vendor/lib/libOmxCore.so
 vendor/lib/libQcelp13SwCodec.so
 vendor/lib/libmm-omxcore.so
 vendor/lib/libplatformconfig.so
@@ -2033,11 +2027,9 @@ vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
 vendor/lib/libstagefright_softomx.so
-vendor/lib/libstagefrighthw.so
 vendor/lib/libvideotxr.so
 vendor/lib/qti.video.utils.videobufferlayout.so
 vendor/lib64/libEvrcSwCodec.so
-vendor/lib64/libOmxCore.so
 vendor/lib64/libQcelp13SwCodec.so
 vendor/lib64/libavservices_minijail_vendor.so
 vendor/lib64/libdeccfg.so
@@ -2067,7 +2059,6 @@ vendor/lib64/libqcodec2_v4l2codec.so
 vendor/lib64/libstagefright_soft_ac4dec.so
 vendor/lib64/libstagefright_soft_ddpdec.so
 vendor/lib64/libstagefright_softomx.so
-vendor/lib64/libstagefrighthw.so
 vendor/lib64/libvideotxr.so
 vendor/lib64/qti.video.utils.videobufferlayout.so
 
