@@ -4,6 +4,12 @@ Redmi Note 12 Turbo/Poco F5 (codenamed _"marble"_) is a high-end, mid-range smar
 
 It was announced & released in March 2023.
 
+## Needed patches
+- https://review.lineageos.org/c/LineageOS/android_frameworks_av/+/342862
+- https://gist.github.com/YuKongA/81924b5685338645ee8e672fe4c2e5a0
+- https://github.com/pa-gr/android_frameworks_native/commit/61060ad
+- https://github.com/syberia-project/platform_hardware_interfaces/commit/962a90be9d530d652030976857cf758bc8a31556
+
 ## Device specifications
 
 |      Basic | Spec Sheet                                                        |
