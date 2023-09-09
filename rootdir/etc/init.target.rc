@@ -78,11 +78,6 @@ on init
     chmod 0660 /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
     start logd
 
-    # Initial cpusets
-    mkdir /dev/cpuset/foreground/boost
-    copy /dev/cpuset/cpus /dev/cpuset/foreground/boost/cpus
-    copy /dev/cpuset/mems /dev/cpuset/foreground/boost/mems
-
      # Initial cpuctl
     chmod 0666 /dev/cpuctl/background/cpu.shares
     chmod 0666 /dev/cpuctl/top-app/cpu.shares
