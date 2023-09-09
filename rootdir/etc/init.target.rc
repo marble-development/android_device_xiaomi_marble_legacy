@@ -79,9 +79,9 @@ on init
     start logd
 
     # Initial cpusets
-    mkdir /dev/cpuset/foreground/boost
-    copy /dev/cpuset/cpus /dev/cpuset/foreground/boost/cpus
-    copy /dev/cpuset/mems /dev/cpuset/foreground/boost/mems
+    #mkdir /dev/cpuset/foreground/boost
+    #copy /dev/cpuset/cpus /dev/cpuset/foreground/boost/cpus
+    #copy /dev/cpuset/mems /dev/cpuset/foreground/boost/mems
 
      # Initial cpuctl
     chmod 0666 /dev/cpuctl/background/cpu.shares
