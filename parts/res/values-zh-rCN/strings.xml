@@ -108,8 +108,11 @@
 
     <!-- Dolby Atmos -->
     <string name="dolby_title">杜比全景声</string>
-    <string name="dolby_enable">启用</string>
+    <string name="dolby_enable">启用杜比全景声</string>
     <string name="dolby_summary">环绕音</string>
     <string name="dolby_profile_title">选择配置</string>
     <string name="dolby_profile_dynamic">动态</string>
+    <string name="dolby_off">关闭</string>
+    <string name="dolby_on">开启</string>
+    <string name="dolby_on_with_profile">使用 (%1$s)</string>
 </resources>

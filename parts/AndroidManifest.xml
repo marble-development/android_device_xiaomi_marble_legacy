@@ -78,9 +78,14 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.sound" />
-            <meta-data android:name="com.android.settings.summary"
-                       android:resource="@string/dolby_summary" />
+            <meta-data android:name="com.android.settings.summary_uri"
+                       android:value="content://org.lineageos.settings.device.summary/dolby" />
         </activity>
+
+        <provider
+            android:name=".SummaryProvider"
+            android:authorities="org.lineageos.settings.device.summary">
+        </provider>
 
         <service
             android:name=".doze.DozeService"
