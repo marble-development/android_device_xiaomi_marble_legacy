@@ -17,6 +17,7 @@ android_app {
     system_ext_specific: true,
     privileged: true,
 
+    overrides: ["MusicFX"],
     static_libs: [
         "androidx.core_core",
         "androidx.preference_preference",
