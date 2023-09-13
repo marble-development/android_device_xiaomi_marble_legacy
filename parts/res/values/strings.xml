@@ -15,6 +15,9 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Xiaomi Parts -->
+    <string name="app_name">Xiaomi Parts</string>
+
     <!-- Dirac settings -->
     <string name="dirac_enable">Enable dirac</string>
     <string name="dirac_title">Dirac™ Sound</string>
