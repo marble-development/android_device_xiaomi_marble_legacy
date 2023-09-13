@@ -30,6 +30,8 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.KeyEvent;
 
+import org.lineageos.settings.R;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -167,6 +169,16 @@ public final class DolbyUtils {
         int profile = mDolbyAtmos.getProfile();
         Log.i(TAG, "getProfile: " + profile);
         return profile;
+    }
+
+    public String getProfileName() {
+        String profile = Integer.toString(mDolbyAtmos.getProfile());
+        List<String> profiles = Arrays.asList(mContext.getResources().getStringArray(
+                R.array.dolby_profile_values));
+        int profileIndex = profiles.indexOf(profile);
+        Log.i(TAG, "getProfileAsString: profile=" + profile + " index=" + profileIndex);
+        return profileIndex == -1 ? null : mContext.getResources().getStringArray(
+                R.array.dolby_profile_entries)[profileIndex];
     }
 
     public void setPreset(String preset) {
