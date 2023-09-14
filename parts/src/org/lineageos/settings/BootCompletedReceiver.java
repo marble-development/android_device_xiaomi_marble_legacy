@@ -25,6 +25,7 @@ import android.util.Log;
 import android.view.Display.HdrCapabilities;
 import android.view.SurfaceControl;
 
+import org.lineageos.settings.camera.NfcCameraService;
 import org.lineageos.settings.display.ColorService;
 import org.lineageos.settings.dolby.DolbyUtils;
 import org.lineageos.settings.doze.DozeUtils;
@@ -54,6 +55,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // DisplayFeature
         ColorService.startService(context);
+
+        // NFC
+        NfcCameraService.startService(context);
 
         // Override HDR types
         final IBinder displayToken = SurfaceControl.getInternalDisplayToken();
