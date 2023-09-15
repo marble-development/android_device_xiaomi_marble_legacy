@@ -7,6 +7,12 @@
     <!-- Enable auxiliary cameras selector. -->
     <bool name="config_enableAuxCameras">true</bool>
 
+    <!-- No use for macro currently. ID6 is broken. -->
+    <string-array name="config_ignoredAuxCameraIds">
+        <item>3</item>
+        <item>6</item>
+    </string-array>
+
     <!-- An array of triplets made of (camera ID, qualities, framerates).
          These video modes will be added to the available
          quality/framerate combinations of a camera device.
@@ -33,7 +39,6 @@
     <string-array name="config_additionalVideoConfigurations">
         <item>0</item> <item>sd|hd|fhd|uhd</item> <item>60</item>
         <item>1</item> <item>sd|hd|fhd</item> <item>60</item>
-        <item>2</item> <item>sd|hd|fhd</item> <item>60</item>
-        <item>3</item> <item>sd|hd</item> <item>30</item>
+        <item>2</item> <item>sd|hd</item> <item>60</item>
     </string-array>
 </resources>
