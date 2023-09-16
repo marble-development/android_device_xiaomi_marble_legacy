@@ -244,7 +244,6 @@ ro.vendor.bcbc.enable=true
 ro.vendor.dfps.enable=false
 ro.vendor.fps.switch.default=true
 ro.vendor.gcp.enable=1
-ro.vendor.sre.enable=true
 ro.vendor.localhbm.enable=true
 ro.vendor.video_box.version=2
 ro.vendor.soft_backlight.enable=true
