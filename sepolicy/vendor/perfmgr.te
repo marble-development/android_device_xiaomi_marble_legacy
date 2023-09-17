@@ -46,5 +46,3 @@ allow hal_miperf_default sysfs_perfmgr:lnk_file { ioctl read write getattr lock 
 allow hal_miperf_default proc_perfmgr:dir { search };
 allow hal_miperf_default proc_perfmgr:file { ioctl read getattr open };
 allowxperm hal_miperf_default proc_perfmgr:file ioctl { 0x6701 0x670f };
-
-

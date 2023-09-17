@@ -20,4 +20,3 @@ allow tee {
   vendor_persist_data_file
   vendor_persist_qti_fp_file
 }:file create_file_perms;
-

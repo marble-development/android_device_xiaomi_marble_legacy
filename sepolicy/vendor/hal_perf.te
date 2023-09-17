@@ -18,3 +18,4 @@ allow vendor_hal_perf_default mi_thermald:dir r_dir_perms;
 allow vendor_hal_perf_default mi_thermald:file r_file_perms;
 
 set_prop(vendor_hal_perf_default, vendor_wlc_public_prop)
+r_dir_file(vendor_hal_perf_default, system_server)

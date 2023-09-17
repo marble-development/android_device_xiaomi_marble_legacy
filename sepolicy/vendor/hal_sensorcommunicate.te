@@ -1,6 +1,6 @@
 type vendor_hal_sensorcommunicate_default, domain;
 type vendor_hal_sensorcommunicate_default_exec, exec_type, file_type, vendor_file_type;
-type vendor_hal_sensorcommunicate_hwservice, hwservice_manager_type;
+type vendor_hal_sensorcommunicate_hwservice, hwservice_manager_type, protected_hwservice;
 attribute vendor_hal_sensorcommunicate;
 attribute vendor_hal_sensorcommunicate_client;
 attribute vendor_hal_sensorcommunicate_server;
@@ -25,3 +25,8 @@ init_daemon_domain(vendor_hal_sensorcommunicate_default)
 hwbinder_use(vendor_hal_sensorcommunicate_default)
 hal_server_domain(vendor_hal_sensorcommunicate_default, vendor_hal_sensorcommunicate)
 add_hwservice(vendor_hal_sensorcommunicate_server, vendor_hal_sensorcommunicate_hwservice)
+
+binder_call(vendor_hal_sensorcommunicate_client, vendor_hal_sensorcommunicate_server)
+binder_call(vendor_hal_sensorcommunicate_server, vendor_hal_sensorcommunicate_client)
+
+binder_call(vendor_hal_sensorcommunicate_default, vendor_hal_citsensorservice_xiaomi_default)

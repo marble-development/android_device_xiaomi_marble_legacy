@@ -1,2 +1,2 @@
 display.mistcservice                                  u:object_r:vendor_mistcdisplay_service:s0
-DisplayFeatureControl                          u:object_r:vendor_DisplayFeatureControl_service:s0
+DisplayFeatureControl                                 u:object_r:vendor_DisplayFeatureControl_service:s0

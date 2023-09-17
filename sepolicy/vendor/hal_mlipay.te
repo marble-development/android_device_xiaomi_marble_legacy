@@ -28,4 +28,3 @@ add_hwservice(hal_mlipay_server, hal_mlipay_hwservice)
 init_daemon_domain(hal_mlipay_default)
 binder_call(hal_mlipay_client, hal_mlipay_server)
 r_dir_file(hal_mlipay_default, firmware_file)
-

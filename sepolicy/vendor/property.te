@@ -13,7 +13,6 @@ vendor_public_prop(vendor_cpuid_prop)
 vendor_internal_prop(vendor_dolbyv_prop)
 
 # Display
-vendor_public_prop(vendor_displayfeature_prop)
 vendor_internal_prop(vendor_ctl_vendor_display_prop)
 
 # Fingerprint
@@ -38,4 +37,5 @@ vendor_public_prop(vendor_panel_info_prop)
 type vendor_slad_prop, property_type, vendor_property_type;
 
 # Thermal
+vendor_internal_prop(vendor_thermal_prop)
 vendor_public_prop(vendor_thermal_normal_prop)

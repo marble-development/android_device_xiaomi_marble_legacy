@@ -1,7 +1,6 @@
 type vendor_hal_displayfeature_xiaomi_default, domain;
 type vendor_hal_displayfeature_xiaomi_default_exec, exec_type, file_type, vendor_file_type;
-type vendor_hal_displayfeature_xiaomi_hwservice, hwservice_manager_type;
-type vendor_mistcdisplay_service, vndservice_manager_type;
+type vendor_hal_displayfeature_xiaomi_hwservice, hwservice_manager_type, protected_hwservice;
 
 type vendor_displayfeature, domain;
 type vendor_displayfeature_exec, exec_type, file_type, vendor_file_type;
@@ -67,3 +66,26 @@ hal_client_domain(vendor_displayfeature, vendor_hal_display_color)
 hal_client_domain(vendor_displayfeature, vendor_hal_display_postproc)
 hal_client_domain(vendor_displayfeature, vendor_hal_displayfeature_xiaomi)
 add_service(vendor_displayfeature, vendor_DisplayFeatureControl_service)
+
+hal_attribute_hwservice(vendor_hal_displayfeature_xiaomi, vendor_hal_displayfeature_xiaomi_hwservice)
+
+vendor_restricted_prop(vendor_displayfeature_prop)
+
+binder_call(vendor_hal_displayfeature_xiaomi_client, vendor_hal_displayfeature_xiaomi_server)
+binder_call(vendor_hal_displayfeature_xiaomi_server, vendor_hal_displayfeature_xiaomi_client)
+
+hal_client_domain(system_app, vendor_hal_displayfeature_xiaomi)
+
+binder_call(system_server, vendor_hal_displayfeature_xiaomi_default)
+binder_call(vendor_displayfeature, system_server)
+binder_call(vendor_hal_displayfeature_xiaomi, hal_graphics_composer_default)
+binder_call(vendor_hal_displayfeature_xiaomi_default, system_server)
+binder_call(vendor_hal_displayfeature_xiaomi_default, vendor_hal_citsensorservice_xiaomi_default)
+
+allow vendor_hal_displayfeature_xiaomi_default graphics_device:chr_file rw_file_perms;
+
+allow vendor_hal_displayfeature_xiaomi_default vendor_sysfs_graphics:dir r_dir_perms;
+allow vendor_hal_displayfeature_xiaomi_default vendor_sysfs_graphics:file rw_file_perms;
+
+allow vendor_hal_displayfeature_xiaomi_default vendor_hal_citsensorservice_xiaomi_hwservice:hwservice_manager find;
+allow vendor_hal_displayfeature_xiaomi_default vendor_qdisplay_service:service_manager find;

@@ -1,3 +1,6 @@
+type hal_dms_default, domain;
+type hal_dms_default_exec, exec_type, file_type, vendor_file_type;
+type hal_dms_hwservice, hwservice_manager_type, protected_hwservice;
 #hal_attribute(dms)
 allow hal_dms_client hal_dms_server:binder { call transfer };
 allow hal_dms_client hal_dms_server:binder transfer;
@@ -13,3 +16,15 @@ init_daemon_domain(hal_dms_default)
 set_prop(hal_dms_default, vendor_audio_prop)
 hal_server_domain(hal_dms_default, hal_dms)
 add_hwservice(hal_dms_server, hal_dms_hwservice)
+
+hal_attribute_hwservice(hal_dms, hal_dms_hwservice)
+
+binder_call(hal_dms_client, hal_dms_server)
+binder_call(hal_dms_server, hal_dms_client)
+
+hal_client_domain(hal_audio_default, hal_dms)
+hal_client_domain(mediacodec, hal_dms)
+
+allow hal_dms_default mediacodec:binder call;
+binder_call(hal_dms_default, hal_audio_default)
+binder_call(hal_dms_default, platform_app)
