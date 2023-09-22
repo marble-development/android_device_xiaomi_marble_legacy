@@ -7,5 +7,5 @@
      package="com.android.server.telecom.overlay.common">
      <overlay android:targetPackage="com.android.server.telecom"
           android:isStatic="true"
-          android:priority="1000" />
+          android:priority="500" />
 </manifest>

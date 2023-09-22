@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Wifi driver supports beacon protection for softap -->
+    <bool translatable="false" name="config_vendor_softap_beacon_protection_supported">true</bool>
+
+    <!-- Wifi driver supports OCV for softap -->
+    <bool translatable="false" name="config_vendor_softap_ocv_supported">true</bool>
+
+    <!-- Boolean indicating whether the WiFi chipset has 6GHz band support -->
+    <bool translatable="false" name ="config_wifi6ghzSupport">true</bool>
+
+    <!-- Boolean indicating connected frequency enhancement is enabled/disabled -->
+    <bool name="config_wifiConnectedFrequencyEnhancementEnabled">true</bool>
+
+    <!-- Indicates whether or not the WLAN driver supports the NL80211_CMD_REG_CHANGE or
+         NL80211_CMD_WIPHY_REG_CHANGE events which indicate the current country code which is
+         being used by the WLAN driver. If the driver doesn't support these events
+         (configuration is `false`) then the driver must handle the setCountryCode request from
+         HAL as a blocking call. In such a case the country code will be applied
+         immediately after the country code is sent to the driver (if the method returns a
+         success). -->
+    <bool name="config_wifiDriverSupportedNl80211RegChangedEvent">true</bool>
+
+    <!-- Indicates whether or not the Soft AP needs to be restarted when country code changed -->
+    <bool name="config_wifiForcedSoftApRestartWhenCountryCodeChanged">false</bool>
+
+    <!-- Indicates that SAE Hash-to-Element is supported on this device -->
+    <bool name="config_wifiSaeH2eSupported">true</bool>
+
+    <!-- Wifi driver supports 6GHz band for softap when chip support 6GHz -->
+    <bool name="config_wifiSoftap6ghzSupported">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX for softap -->
+    <bool translatable="false" name="config_wifiSoftapIeee80211axSupported">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX single user beamformer for softap -->
+    <bool translatable="false" name="config_wifiSoftapHeSuBeamformerSupported">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX single user beamformee for softap -->
+    <bool translatable="false" name="config_wifiSoftapHeSuBeamformeeSupported">true</bool>
+
+    <!-- Boolean indicating performing a partial initial scan is enabled -->
+    <bool translatable="false" name="config_wifiEnablePartialInitialScan">true</bool>
+
+    <!-- Boolean indicating supports for quick connect -->
+    <bool translatable="false" name="config_wifi_framework_enable_quick_connect">true</bool>
+
+    <!-- Integer for Wifi Partial scan results fetching period(in ms) -->
+    <integer translatable="false" name="config_wifi_partial_scan_results_fetching_period_ms">1000</integer>
+
+    <!-- Configure wifi tcp buffersizes in the form:
+         rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
+    <string name="config_wifi_tcp_buffers" translatable="false">524288,1048576,16777216,262144,524288,16777216</string>
+
+    <!-- Array describing scanning schedule in seconds when device is disconnected and screen is on -->
+    <integer-array translatable="false" name="config_wifiDisconnectedScanIntervalScheduleSec">
+        <item>20</item>
+    </integer-array>
+
+    <!-- Indicates that bridged AP mode is supported on this device -->
+    <bool translatable="false" name="config_wifiBridgedSoftApSupported">true</bool>
+
+    <!-- Indicates that the framework should auto append lower bands to band configuration for
+         avoiding coexistence handling. For example: 5g only band will change to 2.4g|5g and
+         6g band will change to 2.4|5g|6g band -->
+    <bool translatable="false" name="config_wifiSoftapAutoAppendLowerBandsToBandConfigurationEnabled">false</bool>
+
+    <!-- Enable concurrent internet connectivity + internet connectivity
+         Note: this is conditional on the device supporting dual concurrent STAs. -->
+    <bool translatable="false" name="config_wifiMultiStaMultiInternetConcurrencyEnabled">true</bool>
+
+    <!-- Enable concurrent peer to peer + internet connectivity
+         Note: this is conditional on the device supporting dual concurrent STAs. -->
+    <bool translatable="false" name="config_wifiMultiStaLocalOnlyConcurrencyEnabled">true</bool>
+
+    <!-- Enable concurrent restricted connectivity + internet connectivity
+         Note: this is conditional on the device supporting dual concurrent STAs. -->
+    <bool translatable="false" name="config_wifiMultiStaRestrictedConcurrencyEnabled">true</bool>
+
+    <!-- Enable Make-Before-Break Wifi network switching.
+         Note: this is conditional on the device supporting dual concurrent STAs. -->
+    <bool translatable="false" name="config_wifiMultiStaNetworkSwitchingMakeBeforeBreakEnabled">true</bool>
+</resources>

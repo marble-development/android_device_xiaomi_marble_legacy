@@ -4,9 +4,8 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-     package="com.android.wifi.resources.overlay.common">
-     <overlay android:targetPackage="com.android.wifi.resources"
-          android:targetName="WifiCustomization"
+     package="com.android.carrierconfig.overlay.marble">
+     <overlay android:targetPackage="com.android.carrierconfig"
           android:isStatic="true"
           android:priority="1000" />
 </manifest>

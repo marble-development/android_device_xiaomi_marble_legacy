@@ -8,5 +8,5 @@
     <overlay
       android:targetPackage="com.android.networkstack.tethering"
       android:isStatic="true"
-      android:priority="1000"/>
+      android:priority="500"/>
 </manifest>

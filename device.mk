@@ -390,19 +390,17 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     AospWifiResOverlayMarble \
-    CarrierConfigResCommon \
+    ApertureOverlayMarble \
+    CarrierConfigResMarble \
     FrameworksResCommon \
     FrameworksResOverlayMarble \
     SettingsOverlayMarble \
-    SettingsResCommon \
     SystemUIOverlayMarble \
-    SystemUIResCommon \
     TelecommResCommon \
     TelephonyResCommon \
     TetheringResCommon \
-    WifiResCommon \
+    WifiResMarble \
     WifiResTarget \
-    ApertureOverlayMarble
 
 PRODUCT_PACKAGES += \
     AospWifiResOverlayMarbleChina \
