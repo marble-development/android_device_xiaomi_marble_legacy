@@ -1,0 +1,7 @@
+type feashelper, domain;
+type feashelper_exec, exec_type, file_type;
+type feashelper_file, file_type;
+
+init_daemon_domain(feashelper)
+
+allow feashelper feashelper_file:file { open read };
