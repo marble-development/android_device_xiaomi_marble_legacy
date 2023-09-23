@@ -17,12 +17,19 @@ import android.os.IBinder;
 import android.os.UserHandle;
 import android.util.Log;
 
+import java.util.Set;
+
 public class NfcCameraService extends Service {
     private static final String TAG = "NfcCameraService";
     private static final boolean DEBUG = true;
 
     private static final int MAX_POLLING_PAUSE_TIMEOUT = 40000;
     private static final String FRONT_CAMERA_ID = "1";
+
+    private static final Set<String> IGNORED_PACKAGES = Set.of(
+        "org.pixelexperience.faceunlock", // face unlock
+        "com.google.android.as" // auto rotate, screen attention etc
+    );
 
     private NfcAdapter mNfcAdapter;
     private CameraManager mCameraManager;
@@ -33,19 +40,19 @@ public class NfcCameraService extends Service {
     private final CameraManager.AvailabilityCallback mCameraCallback =
             new CameraManager.AvailabilityCallback() {
         @Override
-        public void onCameraAvailable(String cameraId) {
-            dlog("onCameraAvailable id:" + cameraId);
-            if (cameraId.equals(FRONT_CAMERA_ID)) {
-                mIsFrontCamInUse = false;
+        public void onCameraOpened(String cameraId, String packageId) {
+            dlog("onCameraOpened id=" + cameraId + " package=" + packageId);
+            if (cameraId.equals(FRONT_CAMERA_ID) && !IGNORED_PACKAGES.contains(packageId)) {
+                mIsFrontCamInUse = true;
                 updateNfcPollingState();
             }
         }
 
         @Override
-        public void onCameraUnavailable(String cameraId) {
-            dlog("onCameraUnavailable id:" + cameraId);
-            if (cameraId.equals(FRONT_CAMERA_ID)) {
-                mIsFrontCamInUse = true;
+        public void onCameraClosed(String cameraId) {
+            dlog("onCameraClosed id=" + cameraId);
+            if (cameraId.equals(FRONT_CAMERA_ID) && mIsFrontCamInUse) {
+                mIsFrontCamInUse = false;
                 updateNfcPollingState();
             }
         }
