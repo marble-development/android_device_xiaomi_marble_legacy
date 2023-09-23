@@ -1,0 +1,4 @@
+type feas_helper_exec, exec_type, file_type;
+type feas_helper_file, file_type;
+
+allow feas_helper_exec feas_helper_file:file { read };

@@ -454,6 +454,9 @@ PRODUCT_PACKAGES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
+    feas_helper.sh \
+    feas.txt \
+    FEASHelper \
     fstab.qcom \
     init.class_main.sh \
     init.marble.rc \
