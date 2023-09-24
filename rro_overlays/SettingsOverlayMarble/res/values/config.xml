@@ -21,7 +21,7 @@
     <integer name="config_vibration_supported_intensity_levels">3</integer>
 
     <!-- Whether to show Smooth Display feature in Settings Options -->
-    <bool name="config_show_smooth_display">true</bool>
+    <bool name="config_show_smooth_display">false</bool>
 
     <!-- Whether to show a preference item for regulatory information in About phone -->
     <bool name="config_show_regulatory_info">true</bool>
