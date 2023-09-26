@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appname">Chế độ bỏ túi tương thích pin</string>
+    <string name="pocketmode_title">Chế độ bỏ túi tương thích pin</string>
+    <string name="pocketmode_short_title">Chế độ bỏ túi</string>
+    <string name="pocketmode_summary">Chế độ bỏ túi tương thích pin</string>
+    <string name="pocketmode_description">Không giống như chế độ bỏ túi truyền thống liên tục kiểm tra cảm biến tiệm cận và cảm biến ánh sáng, chế độ này chỉ kiểm tra các cảm biến khi ở màn hình khóa. Bạn sẽ nhận được thời lượng pin và chế độ ngủ sâu tốt hơn.\n\nNếu điện thoại của bạn tự động tắt màn hình sau khi rời khỏi túi, điều này là do cảm biến vẫn chưa thay đổi trạng thái, hãy đợi thêm không quá 15 giây, mọi thứ sẽ hoạt động trở lại.</string>
+</resources>
