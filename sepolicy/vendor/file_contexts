@@ -9,6 +9,7 @@
 /vendor/bin/batterysecret                                                 u:object_r:batterysecret_exec:s0
 
 # Camera
+/data/user/0/com.android.camera(/.*)?                                     u:object_r:app_data_file:s0
 /vendor/bin/hw/vendor.xiaomi.hardware.quickcamera@1.0-service             u:object_r:hal_quickcamera_default_exec:s0
 /mnt/vendor/persist/camera(/.*)?                                          u:object_r:camera_persist_file:s0
 /vendor/lib(64)?/libSNPE\.so                                              u:object_r:same_process_hal_file:s0
@@ -51,6 +52,7 @@
 /vendor/lib(64)?/rfsa/adsp/libsnpe_htp_v66_skel\.so                       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/rfsa/adsp/libsnpe_htp_v68_skel\.so                       u:object_r:same_process_hal_file:s0
 
+
 # Diag
 /data/vendor/modem(/.*)?                                                  u:object_r:vendor_modem_data_file:s0
 
@@ -66,8 +68,8 @@
 /data/vendor/fpc(/.*)?                                                    u:object_r:vendor_fingerprint_data_file:s0
 /data/vendor/fpdump(/.*)?                                                 u:object_r:vendor_fingerprint_data_file:s0
 /data/vendor/goodix(/.*)?                                                 u:object_r:vendor_fingerprint_data_file:s0
-/data/vendor/goodix/gf_data(/.*)?		                                  u:object_r:vendor_fingerprint_data_file:s0
-/data/vendor_de/[0-9]+/goodix(/.*)?	                                      u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/goodix/gf_data(/.*)?		                                      u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor_de/[0-9]+/goodix(/.*)?	                                     	u:object_r:vendor_fingerprint_data_file:s0
 /dev/goodix_fp                                                            u:object_r:vendor_fingerprint_device:s0
 /mnt/vendor/persist/fpc(/.*)?                                             u:object_r:vendor_fingerprint_data_file:s0
 /mnt/vendor/persist/goodix(/.*)?                                          u:object_r:vendor_fingerprint_data_file:s0

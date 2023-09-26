@@ -1,4 +1,0 @@
-# FEASHelper
-/system/bin/feas_helper.sh                                                   u:object_r:feas_helper_exec:s0
-/system/bin/FEASHelper                                                       u:object_r:feas_helper_exec:s0
-/system/etc/feas.txt                                                         u:object_r:feas_helper_file:s0
