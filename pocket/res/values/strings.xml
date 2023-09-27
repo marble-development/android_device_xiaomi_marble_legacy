@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appname">Battery-friendly pocket mode</string>
+    <string name="pocketmode_title">Battery-friendly pocket mode</string>
+    <string name="pocketmode_short_title">Pocket mode</string>
+    <string name="pocketmode_summary">Battery-friendly pocket mode</string>
+    <string name="pocketmode_description">Unlike the traditional pocket mode that constantly checks the proximity and light sensors, this mode only checks them when the phone is in lockscreen. Therefore, the battery life will be extended and deep sleep mode will be optimised.\nIn case the screen automatically turns off after being taken out of the pocket, please wait for a few seconds and everything will work again.</string>
+</resources>
