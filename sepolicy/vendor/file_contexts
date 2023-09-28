@@ -73,10 +73,6 @@
 /mnt/vendor/persist/goodix(/.*)?                                          u:object_r:vendor_fingerprint_data_file:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
 
-# FEASHelper
-/system/bin/FEASHelper                                                    u:object_r:feashelper_exec:s0
-/system/etc/feas.txt                                                      u:object_r:feashelper_file:s0
-
 # GNSS
 /data/vendor/ins(/.*)?                                                    u:object_r:vendor_ins_vendor_data_file:s0
 /data/vendor/qxwz(/.*)?                                                   u:object_r:qx_oss_vendor_data_file:s0
