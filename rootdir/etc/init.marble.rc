@@ -19,6 +19,9 @@ on boot
     chown system system /sys/class/touch/touch_dev/palm_sensor
     chmod 0664 /sys/class/touch/touch_dev/palm_sensor
 
+    # Disable doze brightness handling
+    write /sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/doze_brightness -1
+
 on post-fs
     chown system system /sys/class/backlight/panel0-backlight/brightness
     chown system system /sys/class/backlight/panel0-backlight/max_brightness

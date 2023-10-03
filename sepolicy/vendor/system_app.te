@@ -10,3 +10,5 @@ r_dir_file(system_app, sysfs_battery_supply);
 # Xiaomi Parts
 allow system_app sysfs_thermal:file rw_file_perms;
 allow system_app nfc_service:service_manager find;
+allow system_app vendor_sysfs_graphics:dir r_dir_perms;
+allow system_app vendor_sysfs_graphics:file rw_file_perms;
