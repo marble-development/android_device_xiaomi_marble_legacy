@@ -34,7 +34,7 @@
 
     <uses-sdk
         android:minSdkVersion="30"
-        android:targetSdkVersion="33"/>
+        android:targetSdkVersion="33" />
 
     <application
         android:allowBackup="true"
@@ -74,7 +74,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
-                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.media.action.DISPLAY_AUDIO_EFFECT_CONTROL_PANEL" />
@@ -82,9 +82,9 @@
                 <category android:name="android.intent.category.CATEGORY_CONTENT_MUSIC" />
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
-                       android:value="com.android.settings.category.ia.sound" />
+                android:value="com.android.settings.category.ia.sound" />
             <meta-data android:name="com.android.settings.summary_uri"
-                       android:value="content://org.lineageos.settings.device.summary/dolby" />
+                android:value="content://org.lineageos.settings.device.summary/dolby" />
         </activity>
 
         <provider
@@ -103,13 +103,14 @@
             android:label="@string/ambient_display_title"
             android:exported="true">
             <intent-filter>
-                <action android:name="org.lineageos.settings.device.DOZE_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.display" />
         </activity>
 
         <activity
-            android:name=".speaker.ClearSpeakerActivity" 
+            android:name=".speaker.ClearSpeakerActivity"
             android:label="@string/clear_speaker_title"
             android:exported="true">
             <intent-filter>
@@ -151,7 +152,7 @@
             android:exported="true"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
 
@@ -197,7 +198,7 @@
             android:exported="true"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
 
