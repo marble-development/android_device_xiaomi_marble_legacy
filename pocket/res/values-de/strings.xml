@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="appname">Batterie-freundliche Tasche Modus</string>
-    <string name="pocketmode_title">Batterie-freundliche Tasche Modus</string>
-    <string name="pocketmode_short_title">Tasche Modus</string>
-    <string name="pocketmode_summary">Batterie-freundliche Tasche Modus</string>
-    <string name="pocketmode_description">Im Gegensatz zum traditionellen Taschenmodus, der den Näherungssensor und den Lichtsensor kontinuierlich überprüft, überprüft dieser Modus die Sensoren nur im Sperrbildschirm. Sie werden die Akkulaufzeit und den Tiefschlafmodus besser erhalten. Wenn Ihr Telefon den Bildschirm nach dem Verlassen der Tasche automatisch ausschaltet, liegt dies daran, dass der Sensor seinen Zustand nicht geändert hat, warten Sie keine weiteren 15 Sekunden mehr, alles funktioniert wieder.</string>
-</resources>
