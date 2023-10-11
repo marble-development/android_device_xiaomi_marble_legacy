@@ -157,3 +157,6 @@ ODM_MANIFEST_MARBLE_FILES := $(DEVICE_PATH)/configs/vintf/manifest_nfc.xml
 # Vendor API
 BOARD_API_LEVEL := 31
 BOARD_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
+
+# Inherit from the proprietary version
+-include vendor/xiaomi/marble/BoardConfigVendor.mk
