@@ -66,6 +66,12 @@ PRODUCT_PACKAGES += \
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# RIL
+PRODUCT_PACKAGES += \
+    Ims \
+    QtiTelephony \
+    qti-telephony-common
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
