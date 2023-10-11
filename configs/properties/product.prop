@@ -1,0 +1,14 @@
+# Audio
+audio.sys.mute.latency.factor=2
+audio.sys.routing.latency=0
+audio.offload.min.duration.secs=30
+media.stagefright.audio.deep=false
+
+# Blur
+ro.sf.blurs_are_expensive=1
+ro.surface_flinger.supports_background_blur=1
+
+# Radio
+persist.vendor.radio.hidl_dev_service=true
+ro.vendor.radio.5g=3
+ro.vendor.radio.features_common=3

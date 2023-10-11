@@ -1,0 +1,22 @@
+# Audio
+audio.sys.noisy.broadcast.delay=600
+audio.sys.offload.pstimeout.secs=3
+ro.qc.sdk.audio.ssr=false
+ro.qc.sdk.audio.fluencetype=none
+persist.audio.button_jack.profile=volume
+persist.audio.button_jack.switch=0
+persist.audio.fluence.voicecomm=true
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=true
+
+# Camera
+persist.vendor.camera.privapp.list=org.lineageos.aperture.org.codeaurora.snapcam,com.android.camera,com.google.camera
+vendor.camera.aux.packagelist=org.lineageos.aperture,org.codeaurora.snapcam,com.android.camera,com.google.camera
+
+# DPM
+persist.vendor.dpm.feature=11
+
+# RIL
+ro.telephony.sim_slots.count=2
+telephony.active_modems.max_count=2
