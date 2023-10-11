@@ -17,3 +17,10 @@ on boot
 on post-fs
     chown system system /sys/class/backlight/panel0-backlight/brightness
     chown system system /sys/class/backlight/panel0-backlight/max_brightness
+
+service citsensor-hal-2-0 /vendor/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service
+    class late_start
+    user system
+    group system input wakelock
+    override
+    task_profiles ServiceCapacityLow
