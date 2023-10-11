@@ -34,6 +34,18 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl
 
+# Overlays
+PRODUCT_PACKAGES += \
+    AospWifiResOverlayMarble \
+    FrameworksResCommon \
+    FrameworksResOverlayMarble \
+    SettingsOverlayMarble \
+    SystemUIOverlayMarble \
+    TelecommResCommon \
+    TelephonyResCommon \
+    WifiResMarble \
+    WifiResTarget
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
