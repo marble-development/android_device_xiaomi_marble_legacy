@@ -38,6 +38,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AospWifiResOverlayMarble \
     ApertureResOverlay \
+    CarrierConfigResMarble \
     FrameworksResCommon \
     FrameworksResOverlayMarble \
     SettingsOverlayMarble \
