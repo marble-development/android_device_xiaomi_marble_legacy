@@ -6,6 +6,10 @@ on early-boot
     write /sys/class/remoteproc/remoteproc3/recovery enabled
 
 on boot
+    # DT2W
+    chown system system /dev/xiaomi-touch
+    chmod 0660 /dev/xiaomi-touch
+
     # Pocket sensor
     chown system system /sys/class/touch/touch_dev/palm_sensor
     chmod 0664 /sys/class/touch/touch_dev/palm_sensor
