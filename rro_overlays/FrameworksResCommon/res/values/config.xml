@@ -146,7 +146,7 @@
     <integer-array name="config_availableColorModes">
         <item>0</item> <!-- COLOR_MODE_NATURAL   -->
         <item>1</item> <!-- COLOR_MODE_BOOSTED   -->
-        <item>2</item> <!-- COLOR_MODE_SATURATED -->
+        <item>256</item> <!-- saturated -->
         <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->
         <item>258</item> <!-- vivid -->
         <item>256</item> <!-- saturated -->
@@ -174,7 +174,7 @@
     <integer-array name="config_displayCompositionColorModes">
         <item>0</item> <!-- COLOR_MODE_NATURAL   -->
         <item>1</item> <!-- COLOR_MODE_BOOSTED   -->
-        <item>2</item> <!-- COLOR_MODE_SATURATED -->
+        <item>256</item> <!-- saturated -->
         <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->
         <item>258</item> <!-- vivid -->
         <item>256</item> <!-- saturated -->

@@ -11,6 +11,7 @@
      <string-array name="config_color_mode_options_strings" translatable="false">
           <item>Natural</item>
           <item>Boosted</item>
+          <item>Saturated</item>
           <item>Automatic</item>
           <item>Vivid</item>
           <item>Saturated</item>
@@ -25,6 +26,7 @@
      <integer-array name="config_color_mode_options_values" translatable="false">
           <item>0</item>
           <item>1</item>
+          <item>256</item>
           <item>3</item>
           <item>258</item>
           <item>256</item>
