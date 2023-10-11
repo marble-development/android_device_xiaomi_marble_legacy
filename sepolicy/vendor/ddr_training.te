@@ -1,0 +1,8 @@
+allow ddr_training ddr_training_exec:file { entrypoint execute getattr open read };
+allow ddr_training vendor_toolbox_exec:file { entrypoint execute execute_no_trans getattr open read };
+allow ddr_training block_device:dir r_dir_perms;
+allow ddr_training ddr_partition:blk_file rw_file_perms;
+init_daemon_domain(ddr_training)
+unix_socket_connect(ddr_training, property, init)
+type ddr_training, domain;
+type ddr_training_exec, exec_type, file_type, vendor_file_type;

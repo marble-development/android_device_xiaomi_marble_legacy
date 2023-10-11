@@ -10,6 +10,11 @@ on boot
     chown system system /dev/xiaomi-touch
     chmod 0660 /dev/xiaomi-touch
 
+    # Modem
+    chmod 0777 /dev/smd8
+    chown radio radio /dev/smd8
+    mkdir /data/vendor/modem 0777 radio radio
+
     # Pocket sensor
     chown system system /sys/class/touch/touch_dev/palm_sensor
     chmod 0664 /sys/class/touch/touch_dev/palm_sensor
@@ -17,6 +22,26 @@ on boot
 on post-fs
     chown system system /sys/class/backlight/panel0-backlight/brightness
     chown system system /sys/class/backlight/panel0-backlight/max_brightness
+
+on post-fs-data
+    # Camera
+    mkdir /mnt/vendor/persist/camera 0755 system cameraserver
+    mkdir /data/vendor/camera 0777 camera camera
+    mkdir /data/vendor/camera/offlinelog 0777 cameraserver audio
+    chmod 0666 /dev/camlog
+
+    # Fingerprint
+    mkdir /data/vendor/fpc 0770 system system
+    mkdir /data/vendor/fpdump 0770 system system
+    mkdir /data/vendor/goodix 0770 system system
+    mkdir /mnt/vendor/persist/fpc 0770 system system
+    mkdir /mnt/vendor/persist/goodix 0770 system system
+
+    # nv_mac
+    mkdir /data/vendor/mac_addr 0770 system wifi
+
+    # qrtr-lookup
+    mkdir /data/vendor/qrtr 0775 system system
 
 service citsensor-hal-2-0 /vendor/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service
     class late_start

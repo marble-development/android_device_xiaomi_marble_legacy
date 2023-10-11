@@ -1,0 +1,2 @@
+allow vendor_audioadsprpcd vendor_audio_data_file:dir search;
+allow vendor_audioadsprpcd vendor_audio_data_file:file { append create getattr open read setattr write };

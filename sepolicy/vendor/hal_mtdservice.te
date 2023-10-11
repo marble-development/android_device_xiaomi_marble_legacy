@@ -1,0 +1,56 @@
+type hal_mtdservice_default, domain;
+type hal_mtdservice_default_exec, exec_type, file_type, vendor_file_type;
+type hal_mtdservice_hwservice, hwservice_manager_type;
+hal_attribute(mtdservice)
+allow hal_mtdservice_client hal_mtdservice_server:binder { call transfer };
+allow hal_mtdservice_client hal_mtdservice_server:binder transfer;
+allow hal_mtdservice_client hal_mtdservice_server:fd *;
+allow hal_mtdservice_server hal_mtdservice_client:binder transfer;
+allow hal_mtdservice_server hal_mtdservice_client:binder { call transfer };
+allow hal_mtdservice_server hal_mtdservice_client:fd *;
+allow hal_mtdservice_default hal_mlipay_default:binder { call transfer };
+allow hal_mtdservice_default hal_mlipay_default:fd *;
+allow hal_mtdservice_default hal_mfidoca_default:binder { call transfer };
+allow hal_mtdservice_default hal_mfidoca_default:fd *;
+allow hal_mtdservice_default hal_mtdservice_hwservice:hwservice_manager add;
+allow hal_mtdservice_default firmware_file:dir r_dir_perms;
+allow hal_mtdservice_default firmware_file:file r_file_perms;
+allow hal_mtdservice_default ion_device:chr_file rw_file_perms;
+allow hal_mtdservice_default vendor_persist_drm_file:dir { create_dir_perms relabelto };
+allow hal_mtdservice_default vendor_persist_drm_file:file { create_file_perms relabelto };
+allow hal_mtdservice_default vendor_persist_file:dir r_dir_perms;
+allow hal_mtdservice_default mnt_vendor_file:dir { create_dir_perms relabelfrom };
+allow hal_mtdservice_default proc:file r_file_perms;
+allow hal_mtdservice_default tee_device:chr_file rw_file_perms;
+allow hal_mtdservice_default system_data_file:dir getattr;
+allow hal_mtdservice_default hal_mlipay_hwservice:hwservice_manager find;
+allow hal_mtdservice_default hal_mfidoca_hwservice:hwservice_manager find;
+allow hal_mtdservice_default platform_app:binder transfer;
+allow hal_mtdservice_default system_app:binder transfer;
+allow hal_mtdservice_default ta_data_file:file create_file_perms;
+allow hal_mtdservice_default ta_data_file:dir rw_dir_perms;
+allow hal_mtdservice_default vendor_hal_tui_comm_hwservice:hwservice_manager find;
+allow hal_mtdservice_default vendor_hal_tui_comm_hwservice:binder { call transfer };
+allow hal_mtdservice_default vendor_hal_tui_comm_qti:binder { call transfer };
+allow hal_mtdservice_default sysfs:dir { open read };
+allow hal_mtdservice_default sysfs:file { open read write };
+allow hal_mtdservice_default vendor_qce_device:chr_file rw_file_perms;
+allow hal_mtdservice_default vendor_sg_device:chr_file { open read };
+allow hal_mtdservice_default vendor_sg_device:chr_file { ioctl write };
+allow hal_mtdservice_default vendor_persist_data_file:dir getattr;
+allow hal_mtdservice_default vendor_smcinvoke_device:chr_file { ioctl open read write };
+allow hal_mtdservice_default system_server:binder transfer;
+allow hal_mtdservice_default block_device:dir r_dir_perms;
+allow hal_mtdservice_default vendor_dmabuf_qseecom_heap_device:chr_file { ioctl open read };
+allow hal_mtdservice_default vendor_dmabuf_qseecom_ta_heap_device:chr_file { ioctl open read };
+allow hal_mtdservice_default hal_tidaservice_default:binder transfer;
+allow hal_mtdservice_default hal_secure_element_default:binder transfer;
+type_transition hal_mtdservice mnt_vendor_file:dir vendor_persist_drm_file "fdsd";
+init_daemon_domain(hal_mtdservice_default)
+get_prop(hal_mtdservice_default, vendor_system_prop)
+set_prop(hal_mtdservice_default, vendor_system_prop)
+get_prop(hal_mtdservice_default, vendor_cpuid_prop)
+set_prop(hal_mtdservice_default, vendor_payment_security_prop)
+hwbinder_use(hal_mtdservice_default)
+hal_server_domain(hal_mtdservice_default, hal_mtdservice)
+add_hwservice(hal_mtdservice_server, hal_mtdservice_hwservice)

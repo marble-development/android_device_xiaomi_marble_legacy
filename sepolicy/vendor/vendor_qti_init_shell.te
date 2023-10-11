@@ -1,0 +1,11 @@
+allow vendor_qti_init_shell configfs:dir { add_name create write };
+# NECESSARY?
+allow vendor_qti_init_shell configfs:dir setattr;
+# END
+allow vendor_qti_init_shell sysfs_dm:file rw_file_perms;
+allow vendor_qti_init_shell sysfs_dm:dir r_dir_perms;
+allow vendor_qti_init_shell vendor_sysfs_msm_perf:file w_file_perms;
+allow vendor_qti_init_shell vendor_sysfs_qdss_dev:file { setattr write };
+set_prop(vendor_qti_init_shell, vendor_panel_info_prop)
+
+#get_prop(vendor_qti_init_shell, default_prop)

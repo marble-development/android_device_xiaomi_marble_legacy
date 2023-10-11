@@ -1,0 +1,10 @@
+allow vendor_hal_gnss_qti vendor_ins_vendor_data_file:dir rw_dir_perms;
+allow vendor_hal_gnss_qti vendor_ins_vendor_data_file:file create_file_perms;
+allow vendor_hal_gnss_qti vendor_persist_sensors_file:dir rw_dir_perms;
+allow vendor_hal_gnss_qti vendor_persist_sensors_file:file create_file_perms;
+allow vendor_hal_gnss_qti mnt_vendor_file:dir search;
+allow vendor_hal_gnss_qti mnt_vendor_file:dir rw_dir_perms;
+get_prop(vendor_hal_gnss_qti, vendor_sensors_prop)
+get_prop(vendor_hal_gnss_qti, vendor_mi_ins_prop)
+
+r_dir_file(vendor_hal_gnss_qti, vendor_persist_sensors_file)

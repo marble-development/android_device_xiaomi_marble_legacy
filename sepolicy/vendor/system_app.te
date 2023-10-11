@@ -1,0 +1,12 @@
+# Allow system_app to access Milpay interface
+allow system_app hal_mlipay_hwservice:hwservice_manager { find };
+
+# Allow system_app to call Milpay HAL by binder
+binder_call(system_app, hal_mlipay_default)
+
+# Battery Health
+r_dir_file(system_app, sysfs_battery_supply);
+
+# Xiaomi Parts
+allow system_app sysfs_thermal:file rw_file_perms;
+allow system_app nfc_service:service_manager find;

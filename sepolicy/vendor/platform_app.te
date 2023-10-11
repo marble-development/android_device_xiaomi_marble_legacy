@@ -1,0 +1,24 @@
+hal_client_domain(platform_app, vendor_hal_camerapostproc_xiaomi)
+
+binder_use(platform_app)
+binder_call(platform_app, vendor_hal_camerapostproc_xiaomi)
+binder_call(platform_app, vendor_hal_soter_qti)
+allow platform_app vendor_hal_camerapostproc_xiaomi_hwservice:hwservice_manager { find };
+allow platform_app adsprpcd_file:dir { open read search };
+allow platform_app vendor_xdsp_device:chr_file { ioctl open read write };
+allow platform_app vendor_qdsp_device:chr_file { ioctl open read write };
+allow platform_app vendor_camera_data_file:dir { append map r_dir_perms write };
+allow platform_app vendor_camera_data_file:file { getattr open read };
+allow platform_app vendor_hal_soter_hwservice:hwservice_manager { find };
+allow platform_app app_data_file:file { execute };
+allow platform_app hal_xiaomi_camera_hwservice:hwservice_manager { find };
+
+binder_call(platform_app, hal_camera_default)
+
+# Properties
+allow platform_app vendor_display_prop:file read;
+get_prop(platform_app, vendor_camera_sensor_prop)
+get_prop(platform_app, vendor_displayfeature_prop)
+get_prop(platform_app, vendor_panel_info_prop)
+get_prop(platform_app, vendor_camera_prop)
+get_prop(platform_app, vendor_fp_prop)

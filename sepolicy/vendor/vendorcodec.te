@@ -1,0 +1,25 @@
+type vendorcodec, domain;
+type vendorcodec_exec, exec_type, file_type, vendor_file_type;
+allow vendorcodec hal_sensors_hwservice:hwservice_manager find;
+allow vendorcodec fwk_sensor_hwservice:hwservice_manager find;
+allow vendorcodec hal_sensors_default:fd *;
+allow vendorcodec storage_file:lnk_file read;
+allow vendorcodec mnt_user_file:dir search;
+allow vendorcodec mnt_user_file:lnk_file read;
+allow vendorcodec hal_configstore_default:binder call;
+allow vendorcodec media_rw_data_file:file write;
+allow vendorcodec gpu_device:chr_file { getattr ioctl open read write };
+allow vendorcodec gpu_device:chr_file map;
+allow vendorcodec vendor_display_prop:file read;
+allow vendorcodec vendor_display_prop:file open;
+allow vendorcodec vendor_display_prop:file getattr;
+allow vendorcodec vendor_display_prop:file map;
+allow vendorcodec dmabuf_system_heap_device:chr_file { getattr ioctl open read };
+init_daemon_domain(vendorcodec)
+set_prop(vendorcodec, vendor_dolbyv_prop)
+vndbinder_use(vendorcodec)
+hal_server_domain(vendorcodec, hal_codec2)
+hal_client_domain(vendorcodec, hal_allocator)
+hal_client_domain(vendorcodec, hal_codec2)
+hal_client_domain(vendorcodec, hal_graphics_allocator)
+hal_client_domain(vendorcodec, hal_sensors)

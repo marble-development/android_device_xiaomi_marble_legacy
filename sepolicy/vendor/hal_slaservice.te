@@ -1,0 +1,17 @@
+type hal_slaservice_qti, domain;
+type hal_slaservice_qti_exec, exec_type, file_type, vendor_file_type;
+type hal_slaservice_hwservice, hwservice_manager_type;
+hal_attribute(slaservice)
+allow hal_slaservice_qti vendor_slad_prop:file read;
+allow hal_slaservice_qti socket_device:sock_file write;
+allow hal_slaservice_client hal_slaservice_server:binder { call transfer };
+allow hal_slaservice_client hal_slaservice_server:fd *;
+allow hal_slaservice_client hal_slaservice_hwservice:hwservice_manager find;
+allow hal_slaservice_server hal_slaservice_client:binder transfer;
+init_daemon_domain(hal_slaservice_qti)
+unix_socket_connect(hal_slaservice_qti, property, slad)
+unix_socket_connect(hal_slaservice_qti, slad, init)
+unix_socket_connect(hal_slaservice_qti, slad, slad)
+set_prop(hal_slaservice_qti, vendor_slad_prop)
+hal_server_domain(hal_slaservice_qti, hal_slaservice)
+add_hwservice(hal_slaservice_server, hal_slaservice_hwservice)

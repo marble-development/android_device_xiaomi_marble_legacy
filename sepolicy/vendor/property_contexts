@@ -1,0 +1,147 @@
+# Camera
+vendor.camera.                                        u:object_r:vendor_camera_prop:s0
+persist.camera.                                       u:object_r:vendor_camera_prop:s0
+ro.boot.camera.                                       u:object_r:vendor_camera_prop:s0
+
+# DDR
+vendor.ddr_training.is.start                          u:object_r:vendor_ddr_prop:s0
+
+# Device ID
+persist.vendor.radio.imei                             u:object_r:vendor_deviceid_prop:s0
+persist.vendor.radio.meid                             u:object_r:vendor_deviceid_prop:s0
+ro.vendor.oem.imei                                    u:object_r:vendor_deviceid_prop:s0
+ro.vendor.oem.meid                                    u:object_r:vendor_deviceid_prop:s0
+ro.vendor.oem.psno                                    u:object_r:vendor_sno_prop:s0
+ro.vendor.oem.sno                                     u:object_r:vendor_sno_prop:s0
+
+# Display
+persist.vendor.dc_backlight.enable                    u:object_r:vendor_displayfeature_prop:s0
+persist.vendor.dc_backlight.threshold                 u:object_r:vendor_displayfeature_prop:s0
+persist.vendor.df.color.temp                          u:object_r:vendor_displayfeature_prop:s0
+persist.vendor.df.extcolor.proc                       u:object_r:vendor_displayfeature_prop:s0
+persist.vendor.dfps.level                             u:object_r:vendor_displayfeature_prop:s0
+persist.vendor.disable_idle_fps                       u:object_r:vendor_displayfeature_prop:s0
+persist.vendor.disable_idle_fps.threshold             u:object_r:vendor_displayfeature_prop:s0
+persist.vendor.displayfeature.video.pq.type           u:object_r:vendor_displayfeature_prop:s0
+persist.vendor.dolbyvision.flat_on                    u:object_r:vendor_displayfeature_prop:s0
+persist.vendor.fod.modified.dc_status                 u:object_r:vendor_displayfeature_prop:s0
+persist.vendor.max.brightness                         u:object_r:vendor_displayfeature_prop:s0
+persist.vendor.power.dfps.level                       u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.all_modes.colorpick_adjust                  u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.aod.brightness.cust                         u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.aod_layer.check                             u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.bcbc.enable                                 u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.cabc.enable                                 u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.cct.need.check.touch.enable                 u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.colorpick_adjust                            u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.df.effect.conflict                          u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.dfps.enable                                 u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.ai_disp.enable                      u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.aod_monitor_default_fps             u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.benchmark_app                       u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.default_fps                         u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.dither                              u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.dolbyvision.support                 u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.dual_builtin_disp                   u:object_r:vendor_displayfeature_prop:s0
+#ro.vendor.display.dynamic_refresh_rate               u:object_r:vendor_promotion_prop:s0
+ro.vendor.display.expert_calib.enable                 u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.fod_monitor_default_fps             u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.hwc_thermal_dimming                 u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.idle_default_fps                    u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.idle_default_fps.support            u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.ltpo.idle.switch.powercloud         u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.ltpo.powerfull.with.charger.support u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.ltpo.sync.tp                        u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.ltpo.tp.idle.lowbrightness.support  u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.mi_calib.enable                     u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.nature_mode.enable                  u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.papercontrast.opt                   u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.primary.fps.limit                   u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.primary_idle_refresh_rate           u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.secondary_idle_refresh_rate         u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.set_fps_stat_timer_ms               u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.set_sec_idle_timer_ms               u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.switch_resolution.support           u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.touch.idle.enable                   u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.type                                u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.ultimate.perf.support               u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.display.video_or_camera_fps.support         u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.displayfeature.dump                         u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.dualpanel.dfps                              u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.eyecare.level                               u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.eyecare.threshold                           u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.fod.110nit.lux.level                        u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.fod.dimlayer.enable                         u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.fps.switch.default                          u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.fps.switch.thermal                          u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.gcp.enable                                  u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.hbm_backlight.enable                        u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.hist.threshold                              u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.histogram.enable                            u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.localhbm.enable                             u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.media.video.style.support                   u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.need.check.cup.hbm.coverlayer.enable        u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.pcc.dc.enable                               u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.sdr2hdr.by.layer.support                    u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.sf.enable_fb_scaling                        u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.soft_backlight.enable                       u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.sre.enable                                  u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.standard.video.enable                       u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.thermal.dimming.enable                      u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.use.partial.brightness                      u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.video.style.by.layer.support                u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.video_box.version                           u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.whitepoint_calibration_enable               u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.xiaomi.bl.poll                              u:object_r:vendor_displayfeature_prop:s0
+init.svc.vendor.displayfeature-hal-1-0                u:object_r:vendor_displayfeature_prop:s0
+vendor.display.enable_fb_scaling                      u:object_r:vendor_displayfeature_prop:s0
+vendor.display.hwc_backlight.support                  u:object_r:vendor_displayfeature_prop:s0
+vendor.displayfeature.entry.enable                    u:object_r:vendor_displayfeature_prop:s0
+vendor.hbm.enable                                     u:object_r:vendor_displayfeature_prop:s0
+vendor.video.mode.status                              u:object_r:vendor_displayfeature_prop:s0
+
+# Dolby
+vendor.dolbyv.                                        u:object_r:vendor_dolbyv_prop:s0
+
+# Fingerprint
+persist.vendor.sys.fp.                                u:object_r:vendor_fp_prop:s0
+persist.vendor.sys.fp.info                            u:object_r:vendor_fp_info_prop:s0
+persist.vendor.sys.fp.uid                             u:object_r:vendor_fp_info_prop:s0
+ro.hardware.fp.                                       u:object_r:vendor_fp_prop:s0
+vendor.fps_hal.                                       u:object_r:vendor_fp_prop:s0
+vendor.panel.display.                                 u:object_r:vendor_fp_prop:s0
+vendor.sys.fp                                         u:object_r:vendor_fp_prop:s0
+persist.vendor.goodix.                                u:object_r:vendor_fp_prop:s0
+persist.vendor.fpc.                                   u:object_r:vendor_fp_prop:s0
+
+# GNSS
+ro.vendor.gnss.edgnss.downloadQxwzAk                  u:object_r:vendor_edgnss_qxwz_downloadak_prop:s0
+
+# Panel
+vendor.panel.                                         u:object_r:vendor_panel_info_prop:s0
+
+# Mlipay
+persist.vendor.sys.pay.                               u:object_r:vendor_mlipay_prop:s0
+persist.vendor.sys.provision.status                   u:object_r:vendor_mlipay_prop:s0
+vendor.sys.feature_state                              u:object_r:vendor_payment_security_prop:s0
+vendor.sys.rpmb_state                                 u:object_r:vendor_payment_security_prop:s0
+
+# NFC
+ro.vendor.nfc.                                        u:object_r:vendor_nfc_mi_prop:s0
+ro.vendor.se.                                         u:object_r:vendor_nfc_mi_prop:s0
+
+# Sensors
+persist.vendor.sensors.ins.                           u:object_r:vendor_mi_ins_prop:s0
+persist.vendor.sensors.ins_debug                      u:object_r:vendor_mi_ins_prop:s0
+
+# SLA
+vendor.sla.enabled                                    u:object_r:vendor_slad_prop:s0
+vendor.sla.ifaces                                     u:object_r:vendor_slad_prop:s0
+vendor.sla.mode                                       u:object_r:vendor_slad_prop:s0
+vendor.sla.uidwhitelist                               u:object_r:vendor_slad_prop:s0
+vendor.sla.wlan.interface                             u:object_r:vendor_slad_prop:s0
+vendor.sla.wwan.interface                             u:object_r:vendor_slad_prop:s0
+
+# Thermal
+vendor.sys.thermal.                                   u:object_r:vendor_thermal_prop:s0
+vendor.sys.thermal.data.path                          u:object_r:vendor_thermal_normal_prop:s0

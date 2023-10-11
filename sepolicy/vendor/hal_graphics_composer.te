@@ -1,0 +1,15 @@
+allow hal_graphics_composer vendor_hal_displayfeature_xiaomi:binder transfer;
+allow hal_graphics_composer vendor_hal_citsensorservice_xiaomi_default:binder transfer;
+allow hal_graphics_composer vendor_hal_citsensorservice_xiaomi_hwservice:hwservice_manager find;
+allow hal_graphics_composer_default vendor_displayfeature_device:chr_file { ioctl open read };
+allow hal_graphics_composer_default vendor_sysfs_displayfeature:dir { open read search };
+allow hal_graphics_composer_default vendor_sysfs_displayfeature:file { open read write };
+allow hal_graphics_composer_default vendor_hal_citsensorservice_xiaomi_default:binder call;
+allow hal_graphics_composer_default vendor_hal_citsensorservice_xiaomi_default:binder { call transfer };
+allow hal_graphics_composer_default vendor_hal_citsensorservice_xiaomi_default:fd *;
+get_prop(hal_graphics_composer, vendor_displayfeature_prop)
+set_prop(hal_graphics_composer_default, vendor_ctl_vendor_display_prop)
+set_prop(hal_graphics_composer_default, vendor_display_prop)
+hal_client_domain(hal_graphics_composer_default, vendor_hal_displayfeature_xiaomi)
+allow hal_graphics_composer_default vendor_mistcdisplay_service:service_manager find;
+add_service(hal_graphics_composer_default, vendor_mistcdisplay_service)

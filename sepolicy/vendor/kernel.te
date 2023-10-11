@@ -1,0 +1,2 @@
+allow kernel efs_file:dir search;
+allow kernel self:capability { mknod };

@@ -1,0 +1,16 @@
+#allow vendor_wcnss_service self:netlink_generic_socket ioctl;
+allow vendor_wcnss_service self:capability { net_raw setgid setuid };
+#allow vendor_wcnss_service self:packet_socket { bind create getopt ioctl map read setopt };
+allow vendor_wcnss_service self:packet_socket write;
+allow vendor_wcnss_service sysfs_net:file read;
+allow vendor_wcnss_service vendor_mac_vendor_data_file:dir { add_name open read search setattr write };
+allow vendor_wcnss_service vendor_mac_vendor_data_file:dir rw_dir_perms;
+allow vendor_wcnss_service vendor_mac_vendor_data_file:file { create getattr open read setattr write };
+allow vendor_wcnss_service mnt_vendor_file:dir { add_name create read search write };
+allow vendor_wcnss_service mnt_vendor_file:file { create open read setattr write };
+#allow vendor_wcnss_service vendor_diag_device:chr_file { create ioctl open read write };
+allow vendor_wcnss_service vendor_sysfs_diag:dir search;
+allow vendor_wcnss_service vendor_sysfs_diag:file { open read };
+allow vendor_wcnss_service vendor_wifi_vendor_log_data_file:dir { add_name getattr open read remove_name search setattr write };
+allow vendor_wcnss_service vendor_wifi_vendor_log_data_file:file { append create getattr open read rename setattr unlink write };
+allow vendor_wcnss_service vendor_proc_wifi_dbg:file { create getattr open read setattr write };

@@ -1,0 +1,41 @@
+# Camera
+vendor_public_prop(vendor_camera_sensor_prop)
+
+# DDR
+vendor_public_prop(vendor_ddr_prop)
+
+# Device ID
+vendor_public_prop(vendor_deviceid_prop)
+vendor_public_prop(vendor_sno_prop)
+vendor_public_prop(vendor_cpuid_prop)
+
+# Dolby
+vendor_internal_prop(vendor_dolbyv_prop)
+
+# Display
+vendor_internal_prop(vendor_ctl_vendor_display_prop)
+
+# Fingerprint
+vendor_restricted_prop(vendor_fp_info_prop)
+vendor_public_prop(vendor_fp_prop)
+
+# GNSS
+vendor_public_prop(vendor_edgnss_qxwz_downloadak_prop)
+vendor_public_prop(vendor_mi_ins_prop)
+
+# Mlipay
+vendor_public_prop(vendor_payment_security_prop)
+vendor_public_prop(vendor_mlipay_prop)
+
+# NFC
+vendor_public_prop(vendor_nfc_mi_prop)
+
+# Panel
+vendor_public_prop(vendor_panel_info_prop)
+
+# SLA
+type vendor_slad_prop, property_type, vendor_property_type;
+
+# Thermal
+vendor_internal_prop(vendor_thermal_prop)
+vendor_public_prop(vendor_thermal_normal_prop)
