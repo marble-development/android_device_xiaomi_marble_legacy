@@ -270,9 +270,7 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
 # Camera
 system/lib/libhidltransport.so
-system/lib/libui.so
 system/lib64/libhidltransport.so
-system/lib64/libui.so
 vendor/bin/hw/vendor.qti.camera.provider@2.7-service_64
 vendor/bin/hw/vendor.xiaomi.hardware.quickcamera@1.0-service
 vendor/etc/init/vendor.qti.camera.provider@2.7-service_64.rc
