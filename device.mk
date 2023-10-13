@@ -465,7 +465,8 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc \
-    ueventd-odm.rc
+    ueventd-odm.rc \
+    init.logcat.rc
 
 # Secure element
 PRODUCT_PACKAGES += \
