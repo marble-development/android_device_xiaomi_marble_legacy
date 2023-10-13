@@ -131,6 +131,9 @@ function blob_fixup() {
     vendor/lib/libgnss.so)
         "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
         ;;
+    vendor/lib64/libqtikeymint.so)
+        "${PATCHELF}" --add-needed "android.hardware.security.rkp-V1-ndk.so" "${2}"
+        ;;
     esac
 }
 
