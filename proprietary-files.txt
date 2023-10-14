@@ -1310,28 +1310,10 @@ vendor/lib64/vendor.qti.diaghal@1.0.so
 
 # Display
 vendor/bin/feature_enabler_client
-vendor/bin/hw/vendor.qti.hardware.display.allocator-service
-vendor/bin/init.qti.display_boot.sh
 vendor/etc/init.panel_info.sh
 vendor/etc/init/feature_enabler_client.rc
-vendor/etc/init/init.qti.display_boot.rc
-vendor/etc/init/vendor.qti.hardware.display.allocator-service.rc
-vendor/etc/init/vendor.qti.hardware.display.composer-service.rc
-vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml
-vendor/lib/libdisplayconfig.qti.so
 vendor/lib/libdisplaydebug.so
-vendor/lib/libgpu_tonemapper.so
-vendor/lib/libgralloccore.so
-vendor/lib/libgrallocutils.so
-vendor/lib/libqservice.so
-vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdisplaydebug.so
-vendor/lib64/libgpu_tonemapper.so
-vendor/lib64/libgralloccore.so
-vendor/lib64/libgrallocutils.so
-vendor/lib64/libqservice.so
 
 # Display configs
 product/etc/displayconfig/display_id_4630946370515662722.xml:vendor/etc/displayconfig/display_id_4630946370515662722.xml
@@ -1369,7 +1351,6 @@ vendor/etc/mi_gc_1.txt
 vendor/etc/mi_gc_2.txt
 vendor/etc/mi_gc_3.txt
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.displayfeature@1.0-service.xml
-vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so
 vendor/lib/hw/displayfeature.default.so
 vendor/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
 vendor/lib/libMiDispDevManager.so
@@ -1392,7 +1373,6 @@ vendor/lib/libsre.so
 vendor/lib/libtruetone.so
 vendor/lib/libvideomode.so
 vendor/lib/vendor.xiaomi.hardware.displayfeature@1.0.so
-vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so
 vendor/lib64/hw/displayfeature.default.so
 vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
 vendor/lib64/libMiDispDevManager.so
@@ -1426,7 +1406,6 @@ vendor/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so
 
 # Display HWC
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
 vendor/etc/snapdragon_color_libs_config.xml
@@ -1438,8 +1417,6 @@ vendor/lib/libqdcm-algo.so
 vendor/lib/libqdcm-json-mode-parser.so
 vendor/lib/libqdcm-mode-parser.so
 vendor/lib/libqdutils.so
-vendor/lib/libsdmcore.so
-vendor/lib/libsdmutils.so
 vendor/lib/libsnapdragoncolor-manager.so
 vendor/lib/libsnapdragoncolor-qdcm.so
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
@@ -1453,8 +1430,6 @@ vendor/lib64/libqdcm-algo.so
 vendor/lib64/libqdcm-json-mode-parser.so
 vendor/lib64/libqdcm-mode-parser.so
 vendor/lib64/libqdutils.so
-vendor/lib64/libsdmcore.so
-vendor/lib64/libsdmutils.so
 vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libsnapdragoncolor-qdcm.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
