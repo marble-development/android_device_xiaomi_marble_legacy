@@ -1309,21 +1309,10 @@ vendor/lib/vendor.qti.diaghal@1.0.so
 vendor/lib64/vendor.qti.diaghal@1.0.so
 
 # Display
+vendor/etc/df_default.xml
 vendor/bin/feature_enabler_client
 vendor/etc/init.panel_info.sh
 vendor/etc/init/feature_enabler_client.rc
-vendor/lib/libdisplaydebug.so
-vendor/lib64/libdisplaydebug.so
-
-# Display configs
-product/etc/displayconfig/display_id_4630946370515662722.xml:vendor/etc/displayconfig/display_id_4630946370515662722.xml
-product/etc/displayconfig/display_id_4630946480857061762.xml:vendor/etc/displayconfig/display_id_4630946480857061762.xml
-
-# Displayfeature
-vendor/bin/displayfeature
-vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
-vendor/etc/df_default.xml
-vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
 vendor/etc/miLutInfo.txt
 vendor/etc/miLut_0.txt
 vendor/etc/miLut_1.txt
@@ -1350,14 +1339,10 @@ vendor/etc/mi_gc_0.txt
 vendor/etc/mi_gc_1.txt
 vendor/etc/mi_gc_2.txt
 vendor/etc/mi_gc_3.txt
-vendor/etc/vintf/manifest/vendor.xiaomi.hardware.displayfeature@1.0-service.xml
-vendor/lib/hw/displayfeature.default.so
-vendor/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
 vendor/lib/libMiDispDevManager.so
 vendor/lib/libcolortempmode.so
 vendor/lib/libdisplaycount.so
-vendor/lib/libdisplayfeature.so
-vendor/lib/libdisplayfeatureservice.so
+vendor/lib/libdisplaydebug.so
 vendor/lib/libdither.so
 vendor/lib/libeyecare.so
 vendor/lib/libflatmode.so
@@ -1372,14 +1357,10 @@ vendor/lib/libsdr2hdr.so
 vendor/lib/libsre.so
 vendor/lib/libtruetone.so
 vendor/lib/libvideomode.so
-vendor/lib/vendor.xiaomi.hardware.displayfeature@1.0.so
-vendor/lib64/hw/displayfeature.default.so
-vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
 vendor/lib64/libMiDispDevManager.so
 vendor/lib64/libcolortempmode.so
 vendor/lib64/libdisplaycount.so
-vendor/lib64/libdisplayfeature.so
-vendor/lib64/libdisplayfeatureservice.so
+vendor/lib64/libdisplaydebug.so
 vendor/lib64/libdither.so
 vendor/lib64/libeyecare.so
 vendor/lib64/libflatmode.so
@@ -1395,7 +1376,6 @@ vendor/lib64/libsre.so
 vendor/lib64/libtruetone.so
 vendor/lib64/libvideomode.so
 vendor/lib64/libwfddisplayconfig_vendor.so
-vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
 
 # Display HDR
 vendor/lib/libhdr_backlight_adapter.so
