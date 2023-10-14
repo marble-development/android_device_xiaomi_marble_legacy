@@ -149,8 +149,6 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.rc \
     init.qti.display_boot.sh \
     gralloc.default \
-    libdisplayconfig.qti \
-    libdisplayconfig.system.qti \
     libqdMetaData \
     libqdMetaData.system \
     libgpu_tonemapper \

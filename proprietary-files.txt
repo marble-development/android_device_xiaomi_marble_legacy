@@ -1341,6 +1341,7 @@ vendor/etc/mi_gc_2.txt
 vendor/etc/mi_gc_3.txt
 vendor/lib/libMiDispDevManager.so
 vendor/lib/libcolortempmode.so
+vendor/lib/libdisplayconfig.qti.so
 vendor/lib/libdisplaycount.so
 vendor/lib/libdisplaydebug.so
 vendor/lib/libdither.so
@@ -1359,6 +1360,7 @@ vendor/lib/libtruetone.so
 vendor/lib/libvideomode.so
 vendor/lib64/libMiDispDevManager.so
 vendor/lib64/libcolortempmode.so
+vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdisplaycount.so
 vendor/lib64/libdisplaydebug.so
 vendor/lib64/libdither.so
