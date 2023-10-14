@@ -1681,7 +1681,6 @@ vendor/app/CACertService/CACertService.apk
 vendor/bin/edgnss-daemon
 vendor/bin/engine-service
 vendor/bin/garden_app
-vendor/bin/hw/android.hardware.gnss-aidl-service-qti
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/mlid
@@ -1694,23 +1693,14 @@ vendor/etc/apdr.conf
 vendor/etc/batching.conf
 vendor/etc/cacert_location.pem
 vendor/etc/gps.conf
-vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
 vendor/etc/init/init.qdmastats.rc
 vendor/etc/init/loc-launcher.rc
 vendor/etc/izat.conf
 vendor/etc/lowi.conf
 vendor/etc/sap.conf
-vendor/etc/seccomp_policy/gnss@2.0-base.policy
-vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
-vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
-vendor/etc/seccomp_policy/gnss@2.0-xtwifi-inet-agent.policy
-vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
-vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
 vendor/etc/vintf/manifest/vendor.qti.gnss-service.xml
 vendor/etc/xtra_root_cert.pem
 vendor/etc/xtwifi.conf
-vendor/lib/hw/android.hardware.gnss-aidl-impl-qti.so
-vendor/lib/hw/android.hardware.gnss@2.1-impl-qti.so
 vendor/lib/libMiVDR.so
 vendor/lib/libasn1cper.so
 vendor/lib/libasn1crt.so
@@ -1753,8 +1743,6 @@ vendor/lib/libxtwifi_server_protocol.so
 vendor/lib/libxtwifi_server_protocol_uri_v3.so
 vendor/lib/vendor.qti.gnss-V1-ndk_platform.so
 vendor/lib/vendor.qti.gnss-service.so
-vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so
-vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so
 vendor/lib64/libMiVDR.so
 vendor/lib64/libasn1cper.so
 vendor/lib64/libasn1crt.so
@@ -1883,13 +1871,6 @@ product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGo
 product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk|002d5b186596826df1dfc82fac2a5762aa34acae
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|01b74943dc0ae9353883298d36fba94128536c9e
 system_ext/framework/com.android.hotwordenrollment.common.util.jar|a418f5697951468fb93788b6e92d2912e7ae7149
-
-# Identity service
-vendor/bin/hw/android.hardware.identity-service-qti
-vendor/etc/init/android.hardware.identity-service-qti.rc
-vendor/etc/vintf/manifest/manifest_lahaina_identity.xml
-vendor/lib/libqtiidentitycredential.so
-vendor/lib64/libqtiidentitycredential.so
 
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
