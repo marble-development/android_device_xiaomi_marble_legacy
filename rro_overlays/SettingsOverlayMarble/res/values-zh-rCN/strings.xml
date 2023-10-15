@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+     <!-- Color mode -->
+     <string name="color_mode_option_natural">"自然色"</string>
+     <string name="color_mode_option_boosted">"增强色"</string>
+     <string name="color_mode_option_saturated">"饱和色"</string>
+     <string name="color_mode_option_automatic">"自适应"</string>
+</resources>
