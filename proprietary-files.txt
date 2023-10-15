@@ -1377,7 +1377,6 @@ vendor/lib64/libsdr2hdr.so
 vendor/lib64/libsre.so
 vendor/lib64/libtruetone.so
 vendor/lib64/libvideomode.so
-vendor/lib64/libwfddisplayconfig_vendor.so
 
 # Display HDR
 vendor/lib/libhdr_backlight_adapter.so
@@ -3281,48 +3280,6 @@ vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/vendor_cmd.xml
 vendor/etc/wifi/wpa_supplicant_overlay.conf
-
-# Wi-Fi Display
-vendor/bin/wfdhdcphalservice
-vendor/bin/wfdvndservice
-vendor/bin/wifidisplayhalservice
-vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc
-vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
-vendor/etc/init/wfdvndservice.rc
-vendor/etc/seccomp_policy/wfdhdcphalservice.policy
-vendor/etc/seccomp_policy/wfdvndservice.policy
-vendor/etc/seccomp_policy/wifidisplayhalservice.policy
-vendor/etc/wfdconfig.xml
-vendor/lib/libmm-hdcpmgr.so
-vendor/lib64/hw/vendor.qti.hardware.wifidisplaysession@1.0-impl.so
-vendor/lib64/libFileMux_proprietary.so
-vendor/lib64/libmm-hdcpmgr.so
-vendor/lib64/libmmosal_vendor.so
-vendor/lib64/libmmrtpdecoder_vendor.so
-vendor/lib64/libmmrtpencoder_vendor.so
-vendor/lib64/libwfdaac_vendor.so
-vendor/lib64/libwfdcodecv4l2_proprietary.so
-vendor/lib64/libwfdcommonutils_proprietary.so
-vendor/lib64/libwfdconfigutils_proprietary.so
-vendor/lib64/libwfddisplayconfig_vendor.so
-vendor/lib64/libwfdhdcpcp.so
-vendor/lib64/libwfdhdcpservice_proprietary.so
-vendor/lib64/libwfdmminterface_proprietary.so
-vendor/lib64/libwfdmmservice_proprietary.so
-vendor/lib64/libwfdmmsrc_proprietary.so
-vendor/lib64/libwfdmodulehdcpsession.so
-vendor/lib64/libwfdrtsp_vendor.so
-vendor/lib64/libwfdsessionmodule.so
-vendor/lib64/libwfdsourcesession_proprietary.so
-vendor/lib64/libwfdsourcesm_proprietary.so
-vendor/lib64/libwfduibcinterface_vendor.so
-vendor/lib64/libwfduibcsink_vendor.so
-vendor/lib64/libwfduibcsinkinterface_vendor.so
-vendor/lib64/libwfduibcsrc_vendor.so
-vendor/lib64/libwfduibcsrcinterface_vendor.so
-vendor/lib64/libwfdutils_proprietary.so
-vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
-vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 
 # Xiaomi MAC address
 vendor/bin/nv_mac
